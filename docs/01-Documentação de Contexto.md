@@ -25,9 +25,14 @@ Apresente também alguns (pelo menos 2) objetivos específicos dependendo de ond
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+O projeto de aplicação da clínica especializada para mulheres pode ser justificado para atender às necessidades de incentivar as mulheres a se cuidarem mais, através da marcação de consultas com especialistas de forma totalmente gratuita.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+A criação da Medmulher, uma clínica especializada em oferecer atendimento gratuito a mulheres, surge como uma resposta crucial às deficiências e lacunas no atual sistema de saúde, especialmente no que tange ao cuidado específico e preventivo para as mulheres. Essa justificativa baseia-se na necessidade incontestável de fornecer acesso igualitário e de qualidade aos serviços de saúde, priorizando o bem-estar das mulheres, especialmente aquelas de baixa renda, que muitas vezes enfrentam barreiras significativas para obter atendimento especializado.
+
+Dados recentes e pesquisas de opinião demonstram uma demanda crescente por serviços de saúde especializados para mulheres. A Medmulher, ao abordar essa demanda não atendida, tem o potencial de se tornar uma instituição de referência na promoção da saúde feminina.
+
+Em síntese, o projeto Medmulher não apenas preenche uma lacuna crítica no sistema de saúde, mas também fortalece a posição das mulheres na sociedade, garantindo que todas as mulheres, independentemente de sua situação financeira, tenham acesso ao cuidado de saúde de que necessitam para levar uma vida saudável e produtiva. Com base em uma abordagem abrangente e bem estruturada, a Medmulher visa se tornar um farol de esperança e cuidado para todas as mulheres.
+
 
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
