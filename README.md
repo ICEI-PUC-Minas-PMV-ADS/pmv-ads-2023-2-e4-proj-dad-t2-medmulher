@@ -1,23 +1,24 @@
-# TÍTULO DO PROJETO
+# MedMulher
+`CURSO` Análise e Desenvolvimento de Sistemas
 
-`CURSO`
+`DISCIPLINA` Projeto: Desenvolvimento de uma Aplicação Distribuída - Turma 02 - 2023/2
 
-`DISCIPLINA`
-
-`SEMESTRE`
+`SEMESTRE` Eixo 4
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Fabiana Alkmim
+* Herbert Nordson
+* Letícia Rosolem
+* Rafael Penido
+* Ramon Bicalho
+* Sarah Ellem
 
 ## Orientador
 
-* Nome completo do professor 1
+* Leonardo Vilela Cardoso
 
 ## Instruções de utilização
 
