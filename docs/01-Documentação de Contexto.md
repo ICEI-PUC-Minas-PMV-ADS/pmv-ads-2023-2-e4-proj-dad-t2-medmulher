@@ -1,18 +1,17 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+A saúde feminina depende muito da realização do checkup periódico e do exame ginecológico preventivo. Ainda que não existam sintomas perceptivos, é necessário fazer esse acompanhamento periódico, já que existem doenças assintomáticas, principalmente na fase inicial.
+
+Assim, o que antes poderia ter sido resolvido de forma simples, se transforma em uma luta maior. Isso porque há muitas doenças silenciosas que atingem a saúde da mulher de forma lenta. Desse modo, a prevenção é sempre a melhor saída. Para as consultas de rotina, o ideal é ir ao ginecologista ao menos uma vez ao ano justamente para manter seus exames preventivos em dia. Além disso, a consulta é importante para conversar abertamente com o médico especialista para tirar as dúvidas e receber orientações.
+
+No cenário atual, o acesso a cuidados médicos de qualidade é uma necessidade fundamental, porém muitas mulheres de baixa renda enfrentam desafios significativos para obter assistência médica adequada, especialmente quando se trata de saúde feminina. Questões como exames ginecológicos regulares, orientações sobre planejamento familiar, prevenção e tratamento de doenças específicas podem ser negligenciadas devido a barreiras financeiras e sociais.
+
+Faz-se necessário abordar as disparidades de saúde enfrentadas pelas mulheres de baixa renda, incluindo jovens, mães solteiras, mulheres em situação de vulnerabilidade e aquelas que não têm acesso fácil a serviços de saúde. Também inclui suas famílias e comunidades, visto que uma abordagem holística é essencial para promover mudanças duradouras. A saúde feminina é muitas vezes negligenciada devido à falta de recursos e conscientização. Investir em um projeto como este não apenas melhora a saúde física das mulheres, mas também empodera-as com conhecimento e autonomia sobre seus próprios corpos, fortalecendo assim a comunidade como um todo.
+
+Portanto, o MedMulher busca criar um ambiente onde todas as mulheres tenham a oportunidade de cuidar adequadamente de sua saúde, receber educação sobre questões femininas e, assim, melhorar sua qualidade de vida. Ao atender às necessidades médicas e sociais, esse projeto busca fazer uma diferença significativa na vida das mulheres de baixa renda e na comunidade em geral.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+O problema central abordado por este projeto é a falta de uma clínica com acesso a serviços médicos abrangentes para mulheres de baixa renda. Isso leva a diagnósticos tardios, tratamentos inadequados e uma redução geral na qualidade de vida das mulheres afetadas. A falta de conscientização sobre questões de saúde feminina também contribui para a perpetuação desse ciclo prejudicial.
 
 ## Objetivos
 
