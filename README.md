@@ -5,7 +5,7 @@
 
 `SEMESTRE` Eixo 4
 
-MedMulher é uma aplicação focada em mulheres de baixa renda, que facilita e as incentiva a fazerem consultas periódicas de algumas especialidades e a cuidarem da saúde, onde é oferecido atendimento gratuito através de consultas agendadas previamente em nosso sistema.
+MedMulher é uma aplicação focada em mulheres de baixa renda, que facilita e as incentiva a cuidarem da saúde por meio de consultas periódicas de algumas especialidades médicas. Nossa aplicação oferece atendimento gratuito através de consultas agendadas previamente em nosso sistema.
 
 ## Integrantes
 
