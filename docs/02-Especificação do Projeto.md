@@ -73,51 +73,44 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+A tabela a seguir apresenta os requisitos funcionais do projeto, identificando suas respectivas prioridades de entrega.
 
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| Permitir que o usuário faça seu cadastro no sistema | ALTA | 
+|RF-002| Permitir que o usuário faça login e logout no sistema | ALTA |
+|RF-003| Permitir que o usuário gerencie o seu perfil cadastrado | MÉDIA |
+|RF-004| Permitir que o usuário marque consultas com o médico especialista de sua necessidade | ALTA | 
+|RF-005| Permitir que o usuário consulte datas e horários disponíveis para consultas | ALTA |
+|RF-006| Permitir que o usuário cadastrado visualize, altere e/ou cancele a data e a hora da consulta marcada | MÉDIA | 
+|RF-007| Alertar ao usuário quando a data da consulta estiver próxima | BAIXA |
+|RF-008| Permitir que o administrador do sistema cadastre datas, horários de consultas e médicos | ALTA | 
+|RF-009| Permitir que o administrador do sistema visualize o relatório de consultas marcadas | ALTA | 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|RNF-001| O sistema deve ser responsivo do lado móvel e web | MÉDIA | 
+|RNF-002| O sistema deve garantir a segurança dos dados dos usuários cadastrados |  ALTA | 
+|RNF-003| O sistema deve ser intuitivo e de fácil utilização para os usuários |  BAIXA | 
+|RNF-004| O sistema deve ser capaz de suportar um grande número de acessos simultâneos | MÉDIA | 
+|RNF-005| O sistema deve estar disponível 24 horas por dia, 7 dias por semana, para que o sebo possa marcar consultas a qualquer momento |  ALTA | 
+|RNF-006| O sistema deve ser confiável, sem apresentar falhas ou erros frequentes |  ALTA | 
+|RNF-007| A aplicação deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) e sistemas operacionais para smarthphones e tablets (Android e iOS. |  ALTA | 
+|RNF-008| A aplicação deve ser publicada em um ambiente acessível publicamente na Internet |  BAIXA | 
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+As questões que limitam a execução desse projeto e que se configuram como obrigações claras para o desenvolvimento do projeto em questão são apresentadas na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|ID|	Descrição|
+|-------|----------------------------------------------------------------------------------------------|
+|RE-01|	O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 10/12/2023.| 
+|RE-02|	A aplicação deve conter uma WEB API que faça a aplicação web e mobile interagirem simultaneamente |
+|RE-03|	A equipe não pode subcontratar o desenvolvimento do trabalho.|
 
 ## Diagrama de Casos de Uso
 
