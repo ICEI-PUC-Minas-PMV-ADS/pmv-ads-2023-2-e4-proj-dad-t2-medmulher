@@ -15,7 +15,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 | Helena Rodrigues                                                                                                             |                                       |                                  |
 |------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|----------------------------------|
-|![imagePersona2](https://github.com/ICEI-PUC-Minas-PMV-ADS/Chatter/assets/89920953/6a216dcb-1d0e-4f78-978c-38d3af46db58)      |**Idade:** 47 anos </br> **Ocupação:** Auxiliar administrativo </br>  **Faixa salarial:** 1,5 salários mínimos |                                   |
+|![imagePersona2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t2-sebo-e3/assets/89920953/6281ee33-9c3b-4e36-8a44-8d61255652e2)      |**Idade:** 47 anos </br> **Ocupação:** Auxiliar administrativo </br>  **Faixa salarial:** 1,5 salários mínimos |                                   |
 |**Motivações:** </br> Apesar da rotina corrida Helena, ela precisa tirar um tempo para cuidar de sua saúde, para conseguir dar suporte aos seus pais idosos e para seus filhos.  | **Frustrações e Pontos de dor:** </br> -Precisa se deslocar várias vezes para marcar apenas uma consulta com um médico especialista; </br> -Tem uma rotina muito corrida, e isso acaba dificultado Helena a marcar consultas presencialmente; </br> -Não consegue marcar consultas por telefone ou online.   | **Necessidades:** </br> Precisa de meios mais práticos e rápidos para marcar suas consultas com médicos especialistas, de preferencia que não demande nenhum tipo de deslocamento.|
 
 
