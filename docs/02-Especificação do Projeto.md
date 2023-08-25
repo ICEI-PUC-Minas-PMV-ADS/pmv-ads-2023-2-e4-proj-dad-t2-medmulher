@@ -8,19 +8,18 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+| Isabela Gomes                                                                                                                |                                       |                                  |
+|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|----------------------------------|
+|![imagePersona1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t2-sebo-e3/assets/89920953/58f0848b-9e09-44c9-ba80-cd98e80edd4f)|**Idade:** 25 anos </br> **Ocupação:** Estudante e estagiário de psicologia </br>  **Faixa salarial:** 0,5 salários mínimos |                                   |
+|**Motivações:** </br> Se esforça muito nos estudo pois sonha em dar uma vida melhor para sua família. Quer ter uma velhice saudável e por isso já pensa no futuro.    | **Frustrações e Pontos de dor:** </br> -Tem pouco tempo para cuidar da saúde porque está com uma rotina muito cheia; </br> -Não consegue marcar consultas com médicos especialistas com tanta facilidade no SUS; </br> - Já marcou consultas online quando tinha convênio, e por isso busca por uma solução prática para marcar consultas pelo SUS; </br> -Não tem dinheiro para frequentar clínicas particulares.   | **Necessidades:** </br> Tem a necessidade de tirar um tempo para cuidar da saúde e por isso está em busca de meios práticos para marcar consultas e exames. | 
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+| Helena Rodrigues                                                                                                             |                                       |                                  |
+|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|----------------------------------|
+|![imagePersona2](https://github.com/ICEI-PUC-Minas-PMV-ADS/Chatter/assets/89920953/6a216dcb-1d0e-4f78-978c-38d3af46db58)      |**Idade:** 47 anos </br> **Ocupação:** Auxiliar administrativo </br>  **Faixa salarial:** 1,5 salários mínimos |                                   |
+|**Motivações:** </br> Apesar da rotina corrida Helena, ela precisa tirar um tempo para cuidar de sua saúde, para conseguir dar suporte aos seus pais idosos e para seus filhos.  | **Frustrações e Pontos de dor:** </br> -Precisa se deslocar várias vezes para marcar apenas uma consulta com um médico especialista; </br> -Tem uma rotina muito corrida, e isso acaba dificultado Helena a marcar consultas presencialmente; </br> -Não consegue marcar consultas por telefone ou online.   | **Necessidades:** </br> Precisa de meios mais práticos e rápidos para marcar suas consultas com médicos especialistas, de preferencia que não demande nenhum tipo de deslocamento.|
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+
+
 
 ## Histórias de Usuários
 
