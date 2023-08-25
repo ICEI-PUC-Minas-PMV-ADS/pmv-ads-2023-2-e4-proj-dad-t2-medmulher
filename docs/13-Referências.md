@@ -1,7 +1,3 @@
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
-
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+YOUHEAL, A importância da prevenção ginecológica para a saúde da mulher, 2021. Disponível em: https://youheal.com.br/a-importancia-da-prevencao-ginecologica-para-a-saude-da-mulher/. Acesso em: 24 ago, 2023.
