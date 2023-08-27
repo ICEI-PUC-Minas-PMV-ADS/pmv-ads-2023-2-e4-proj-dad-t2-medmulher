@@ -51,13 +51,13 @@ Para realizar a análise da situação atual usamos como exemplo dois casos de c
 
 Para desenvolvimento da nossa proposta utilizaremos a notação BPMN. Segundo M. Chinosi, A. Trombetta (2012), o processo de negócio (BP) é um conjunto de um ou mais procedimentos ligados ou atividades executadas seguindo uma ordem predefinida que coletivamente realizam uma meta, normalmente dentro do contexto de uma estrutura organizacional que define funções ou relacionamentos funcionais. Um processo pode estar inteiramente contido em uma única unidade organizacional, bem como pode abranger várias organizações diferentes. Nosso projeto tem como objetivo criar uma aplicação móvel e web que permita que pacientes possam realizar o agendamento de seus cuidados médicos, gerenciamento e ativação de alertas sem que precisem comparecer pessoalmente ou fazer a ligação para a clínica da mulher,e para isso desenvolvemos um processo AS-IS e um processo TO-BE.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – PROCESSO AS-IS
 
 Esse processo tem como característica apresentar o modelo atual de agendamento de horário para atendimento em clínicas da mulher, onde o cliente precisa entrar em contato via telefone para fazer o agendamento.
 
 ![Processo 1](img/as-is-medmulher.png)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – PROCESSO TO-BE
 
 Esse processo tem como característica apresentar o modelo futuro de agendamento em clínica da mulher, onde o cliente pode realizar seu agendamento, gerenciamento e receber alerta de suas consultas de maneira online através do aplicativo desenvolvido.
 
