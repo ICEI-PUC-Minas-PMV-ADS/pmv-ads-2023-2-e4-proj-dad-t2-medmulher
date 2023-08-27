@@ -55,22 +55,23 @@ Para desenvolvimento da nossa proposta utilizaremos a notação BPMN. Segundo M.
 
 Esse processo tem como característica apresentar o modelo atual de agendamento de horário para atendimento em clínicas da mulher, onde o cliente precisa entrar em contato via telefone para fazer o agendamento.
 
-![Processo 1](img/02-bpmn-proc1.png)
+![Processo 1](img/as-is-medmulher.png)
 
 ### Processo 2 – NOME DO PROCESSO
 
 Esse processo tem como característica apresentar o modelo futuro de agendamento em clínica da mulher, onde o cliente pode realizar seu agendamento, gerenciamento e receber alerta de suas consultas de maneira online através do aplicativo desenvolvido.
 
-![Processo 2](img/02-bpmn-proc2.png)
+![Processo 2](img/to-be-medmulher.png)
+
+M. Chinosi, A. Trombetta. BPMN: An introduction to the standard. Computer Standards & Interfaces 34 (2012) 124–134
 
 ## Indicadores de Desempenho
 
 Os indicadores de desempenho serão apresentados abaixo, considerando as possibilidades de avaliação através das informações do diagrama de classes.
 
-Usar o seguinte modelo: 
 
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+![Indicadores de Desempenho](img/indicadores.png)
+
 
 ## Requisitos
 
