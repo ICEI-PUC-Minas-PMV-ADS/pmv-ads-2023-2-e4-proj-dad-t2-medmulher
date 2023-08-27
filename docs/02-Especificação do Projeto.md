@@ -43,27 +43,29 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Como apresentado na introdução do projeto, atualmente o acesso a cuidados médicos de qualidade é uma necessidade fundamental, porém muitas mulheres de baixa renda enfrentam desafios significativos para obter assistência médica adequada, especialmente quando se trata de saúde feminina. Sendo assim, para ter acesso ao atendimento adequado as necessidades médicas, as mulheres precisam entrar em contato com as clínicas através de ligações, que muitas vezes podem apresentar linha ocupada ou mesmo não ter um retorno da ligação feita. Isso acaba causando desistência em marcação de atendimentos e até atraso para receitar diagnósticos importante para a paciente. 
+Para realizar a análise da situação atual usamos como exemplo dois casos de clínicas/institutos da mulher onde o contato principal é feito via telefone, através dos links <https://www.feliciorocho.org.br/servicos/saude-da-mulher> e <https://www.ism.net.br/contato>.
+
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Para desenvolvimento da nossa proposta utilizaremos a notação BPMN. Segundo M. Chinosi, A. Trombetta (2012), o processo de negócio (BP) é um conjunto de um ou mais procedimentos ligados ou atividades executadas seguindo uma ordem predefinida que coletivamente realizam uma meta, normalmente dentro do contexto de uma estrutura organizacional que define funções ou relacionamentos funcionais. Um processo pode estar inteiramente contido em uma única unidade organizacional, bem como pode abranger várias organizações diferentes. Nosso projeto tem como objetivo criar uma aplicação móvel e web que permita que pacientes possam realizar o agendamento de seus cuidados médicos, gerenciamento e ativação de alertas sem que precisem comparecer pessoalmente ou fazer a ligação para a clínica da mulher,e para isso desenvolvemos um processo AS-IS e um processo TO-BE.
 
 ### Processo 1 – NOME DO PROCESSO
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+Esse processo tem como característica apresentar o modelo atual de agendamento de horário para atendimento em clínicas da mulher, onde o cliente precisa entrar em contato via telefone para fazer o agendamento.
 
 ![Processo 1](img/02-bpmn-proc1.png)
 
 ### Processo 2 – NOME DO PROCESSO
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Esse processo tem como característica apresentar o modelo futuro de agendamento em clínica da mulher, onde o cliente pode realizar seu agendamento, gerenciamento e receber alerta de suas consultas de maneira online através do aplicativo desenvolvido.
 
 ![Processo 2](img/02-bpmn-proc2.png)
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+Os indicadores de desempenho serão apresentados abaixo, considerando as possibilidades de avaliação através das informações do diagrama de classes.
 
 Usar o seguinte modelo: 
 
