@@ -156,12 +156,12 @@ Para a estimativa de custos foi considerado o prazo de 141 dias úteis para a ex
 
 Tabela de salários:
 
-
+![Orçamento](img/salarios_medmulher.png)
 
 Tabela 1 – Salários-hora considerados
+
 Estimativa de Custos:
 
-image
-Tabela 2 – Custos totais estimados
+![Orçamento](img/estimativacustos_medmulher.png)
 
-![Orçamento](img/02-orcamento.png)
+Tabela 2 – Custos totais estimados
