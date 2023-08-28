@@ -99,7 +99,7 @@ A tabela a seguir apresenta os requisitos funcionais do projeto, identificando s
 |RNF-002| O sistema deve garantir a segurança dos dados dos usuários cadastrados |  ALTA | 
 |RNF-003| O sistema deve ser intuitivo e de fácil utilização para os usuários |  BAIXA | 
 |RNF-004| O sistema deve ser capaz de suportar um grande número de acessos simultâneos | MÉDIA | 
-|RNF-005| O sistema deve estar disponível 24 horas por dia, 7 dias por semana, para que o sebo possa marcar consultas a qualquer momento |  ALTA | 
+|RNF-005| O sistema deve estar disponível 24 horas por dia, 7 dias por semana, para que os usuários possam marcar consultas a qualquer momento |  ALTA | 
 |RNF-006| O sistema deve ser confiável, sem apresentar falhas ou erros frequentes |  ALTA | 
 |RNF-007| A aplicação deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) e sistemas operacionais para smarthphones e tablets (Android e iOS. |  ALTA | 
 |RNF-008| A aplicação deve ser publicada em um ambiente acessível publicamente na Internet |  BAIXA | 
@@ -122,15 +122,10 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
 
-A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
+- Em "X" estão os requisitos funcionais e não funcionais que se adequam as queixas que os usuários aprensentam.
+- O colorido mostra a relação vertical para trás ou frente e horizontal.
 
-![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
-
-> **Links Úteis**:
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
-
+![imageMatrizrastreabilidade](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/167a2a1c-1f5f-4d6c-9ac3-db1ee03c054e)
 
 # Gerenciamento de Projeto
 
