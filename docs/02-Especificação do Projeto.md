@@ -148,6 +148,20 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 ## Gestão de Orçamento
 
-O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
+Para definição da gestão de orçamento foi necessário definir papéis e responsabilidades da equipe composta por Scrum Master, Product Owner (PO) e Desenvolvedores. Consideramos que a equipe possui 1 Scrum Master, 1 PO e 4 Desenvolvedores.
+
+O objetivo do gerenciamento de custos é realizar um estimativa dos possíveis custos a serem dispendidos no desenvolvimento da solução de acordo com os requisitos mapeados. Como se trata de um desenvolvimento iterativo para o gerenciamento de custos, esta sendo considerado a estimativa de horas de projeto a serem alocadas por pessoa, com relação ao custo de homem-hora, além de considerar custos fixos com equipamentos para o desenvolvimento das atividades.
+
+Para a estimativa de custos foi considerado o prazo de 141 dias úteis para a execução do projeto. Com uma equipe de 6 pessoas, composta por um Scrum Master, um PO e 4 desenvolvedores. O Scrum master atua em 4 projetos concomitantes. O PO atua em dois projetos, atuando em metade do período de desenvolvimento. Os desenvolvedores trabalham em tempo integral.
+
+Tabela de salários:
+
+
+
+Tabela 1 – Salários-hora considerados
+Estimativa de Custos:
+
+image
+Tabela 2 – Custos totais estimados
 
 ![Orçamento](img/02-orcamento.png)
