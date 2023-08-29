@@ -137,9 +137,9 @@ De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar 
 
 Para realização do acompanhamento do gerenciamento de tempo, utilizaremos a visão de Roadmap do Github. Essa visão apresenta o projeto como em um gráfico de Gantt considerando as datas de início e fim planejadas do projeto. Através dessa visão é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
-![gerenciamentodetempo.png](img/gerenciamentodetempo.png)
+Abaixo o gráfico de acompanhamento tempo (Gantt).
 
-Figura 2 – Gráfico acompanhamento tempo (Gantt).
+![gerenciamentodetempo.png](img/gerenciamentodetempo.png)
 
 ## Gerenciamento de Equipe
 
@@ -177,6 +177,18 @@ Enquanto tiverem tarefas de maiores prioridades disponíveis, não poderão ser 
 Abaixo, figura demonstrando a disposição das etiquetas:
 
 ![labelgab.png](img/labelgab.png)
+
+Como metodologia de trabalho foi optado pelo uso de métodos ágeis, sendo selecionado o Scrum para a organização do time. Devido à disponibilidade da equipe, foi definido o uso de reuniões semanais (weeklies), ao invés de diárias (dailies). A elaboração do backlog se dará como atividade a ser realizada após cada entrega por sprint. Ou seja, após a finalização da primeira sprint, a equipe irá se reunir para tratar quais são as novas prioridades e quem será responsável por sua execução.
+
+Para acompanhamento do desenvolvimento do projeto e gerenciamento da equipe iremos utilizar as visões de gráficos do github, como os dashboard de capacidade. Essa visão tem como objetivo apresentar a capacidade da esteira de projetos e possíveis alocações nas sprints.
+
+Abaixo o Dashboard para acompanhamento das atividades nas sprints:
+
+![prioridadexpessoa.png](img/prioridadexpessoa.png)
+
+![statusxpessoa.png](img/statusxpessoa.png)
+
+![tarefaxsprint.png](img/tarefaxsprint.png)
 
 
 ## Gestão de Orçamento
