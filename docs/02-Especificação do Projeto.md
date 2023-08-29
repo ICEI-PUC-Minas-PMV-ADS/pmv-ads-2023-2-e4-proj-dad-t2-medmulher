@@ -127,6 +127,7 @@ A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualizaç
 
 ![imageMatrizrastreabilidade](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/167a2a1c-1f5f-4d6c-9ac3-db1ee03c054e)
 
+
 # Gerenciamento de Projeto
 
 De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Já o manifesto ágil é baseado nos seguintes valores indivíduos e interações mais que processos e ferramentas, software em funcionamento mais que documentação abrangente, colaboração com o cliente mais que negociação de contratos e responder a mudanças mais que seguir um plano. O nosso projeto de desenvolvimento de software tem o objetivo de atender aos requisitos tradicionais de projetos, não obstante dos valores do manifesto ágil e sua metodologias, para esse projeto propomos uma visão híbrida do uso dos casos.
@@ -176,10 +177,6 @@ Enquanto tiverem tarefas de maiores prioridades disponíveis, não poderão ser 
 Abaixo, figura demonstrando a disposição das etiquetas:
 
 ![labelgab.png](img/labelgab.png)
-
-
-
-
 
 
 ## Gestão de Orçamento
