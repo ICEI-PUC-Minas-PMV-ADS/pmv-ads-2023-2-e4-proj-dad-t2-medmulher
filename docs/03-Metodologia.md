@@ -51,7 +51,7 @@ O gerenciamento e organização do projeto se baseia na metodologia ágil Scrum,
 - **Product Owner**: Ramon Bicalho Cruz Magalhães 
 - **Equipe de Desenvolvimento**:
      - Herbert Nordson Silva dos Santos 
-     - Rafael
+     - Rafael Penido de Souza
      - Letícia Alves dos Santos Rosolem
 - **Equipe de Design**:
      - Sarah Ellem
