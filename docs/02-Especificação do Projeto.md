@@ -43,7 +43,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Como apresentado na introdução do projeto, atualmente o acesso a cuidados médicos de qualidade é uma necessidade fundamental, porém muitas mulheres de baixa renda enfrentam desafios significativos para obter assistência médica adequada, especialmente quando se trata de saúde feminina. Sendo assim, para ter acesso ao atendimento adequado as necessidades médicas, as mulheres precisam entrar em contato com as clínicas através de ligações, que muitas vezes podem apresentar linha ocupada ou mesmo não ter um retorno da ligação feita. Isso acaba causando desistência em marcação de atendimentos e até atraso para receitar diagnósticos importante para a paciente. 
+O acesso a cuidados médicos de qualidade é uma necessidade fundamental, porém muitas mulheres de baixa renda enfrentam desafios significativos para obter assistência médica adequada, especialmente quando se trata de saúde feminina. Sendo assim, para ter acesso ao atendimento adequado as necessidades médicas, as mulheres precisam entrar em contato com as clínicas através de ligações, que muitas vezes podem apresentar linha ocupada ou mesmo não ter um retorno da ligação feita. Isso acaba causando desistência em marcação de atendimentos e até atraso para receitar diagnósticos importante para a paciente. 
 Para realizar a análise da situação atual usamos como exemplo dois casos de clínicas/institutos da mulher onde o contato principal é feito via telefone, através dos links <https://www.feliciorocho.org.br/servicos/saude-da-mulher> e <https://www.ism.net.br/contato>.
 
 
