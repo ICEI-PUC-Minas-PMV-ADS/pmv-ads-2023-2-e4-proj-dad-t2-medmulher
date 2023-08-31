@@ -102,7 +102,7 @@ A tabela a seguir apresenta os requisitos funcionais do projeto, identificando s
 |RNF-005| O sistema deve estar disponível 24 horas por dia, 7 dias por semana, para que os usuários possam marcar consultas a qualquer momento |  ALTA | 
 |RNF-006| O sistema deve ser confiável, sem apresentar falhas ou erros frequentes |  ALTA | 
 |RNF-007| A aplicação deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) e sistemas operacionais para smarthphones e tablets (Android e iOS). |  ALTA | 
-|RNF-008| A aplicação deve ser publicada em um ambiente acessível publicamente na Internet |  BAIXA | 
+|RNF-008| A aplicação deve ser publicada em um ambiente acessível publicamente na Internet, para que possa ser gerado um apk da mesma |  BAIXA | 
 
 ## Restrições
 
