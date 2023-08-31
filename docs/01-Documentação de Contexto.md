@@ -26,11 +26,9 @@ Apresente também alguns (pelo menos 2) objetivos específicos dependendo de ond
 
 O projeto de aplicação da clínica especializada para mulheres pode ser justificado para atender às necessidades de incentivar as mulheres a se cuidarem mais, através da marcação de consultas com especialistas de forma totalmente gratuita.
 
-A criação da Medmulher, uma clínica especializada em oferecer atendimento gratuito a mulheres, surge como uma resposta crucial às deficiências e lacunas no atual sistema de saúde, especialmente no que tange ao cuidado específico e preventivo para as mulheres. Essa justificativa baseia-se na necessidade incontestável de fornecer acesso igualitário e de qualidade aos serviços de saúde, priorizando o bem-estar das mulheres, especialmente aquelas de baixa renda, que muitas vezes enfrentam barreiras significativas para obter atendimento especializado.
+A criação da Medmulher, uma clínica especializada em oferecer atendimento gratuito a mulheres, surge como um auxílio no sistema de saúde, especialmente no que tange ao cuidado específico e preventivo para as mulheres. Essa justificativa baseia-se na necessidade de fornecer acesso igualitário e de qualidade aos serviços de saúde, priorizando o bem-estar das mulheres, especialmente aquelas de baixa renda, que muitas vezes enfrentam barreiras significativas para obter atendimento especializado.
 
-Dados recentes e pesquisas de opinião demonstram uma demanda crescente por serviços de saúde especializados para mulheres. A Medmulher, ao abordar essa demanda não atendida, tem o potencial de se tornar uma instituição de referência na promoção da saúde feminina.
-
-Em síntese, o projeto Medmulher não apenas preenche uma lacuna crítica no sistema de saúde, mas também fortalece a posição das mulheres na sociedade, garantindo que todas as mulheres, independentemente de sua situação financeira, tenham acesso ao cuidado de saúde de que necessitam para levar uma vida saudável e produtiva. Com base em uma abordagem abrangente e bem estruturada, a Medmulher visa se tornar um farol de esperança e cuidado para todas as mulheres.
+Em síntese, o projeto Medmulher não apenas auxilia no sistema de saúde, mas também foca nas mulheres, garantindo que todas elas, independentemente de sua situação financeira, tenham acesso ao cuidado de saúde de que necessitam para levar uma vida saudável e produtiva.
 
 ## Público-Alvo
 
