@@ -110,7 +110,7 @@ As questões que limitam a execução desse projeto e que se configuram como obr
 
 |ID|	Descrição|
 |-------|----------------------------------------------------------------------------------------------|
-|RE-01|	O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 10/12/2023.| 
+|RE-01|	O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 01/12/2023.| 
 |RE-02|	A aplicação deve conter uma WEB API que faça a aplicação web e mobile interagirem simultaneamente |
 |RE-03|	A equipe não pode subcontratar o desenvolvimento do trabalho.|
 
