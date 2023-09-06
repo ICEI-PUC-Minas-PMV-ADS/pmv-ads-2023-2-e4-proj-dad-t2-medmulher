@@ -53,6 +53,9 @@ O gerenciamento e organização do projeto se baseia na metodologia ágil Scrum,
      - Herbert Nordson Silva dos Santos 
      - Rafael Penido de Souza
      - Letícia Alves dos Santos Rosolem
+     - Ramon Bicalho Cruz Magalhães
+     - Fabiana Alkmim Avelar
+     - Sarah Ellem
 - **Equipe de Design**:
      - Sarah Ellem
 
