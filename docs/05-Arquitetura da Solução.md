@@ -2,7 +2,9 @@
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![DiagramaDeBlocos-v2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/89920953/50b63c59-6966-4a4a-aa75-d300ccdc54df)
+
+![Diagrama de blocos - v2](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/89920953/838074e7-697d-4500-b9ea-1278879c072e)
+
 
 ## Diagrama de Classes
 
