@@ -13,12 +13,25 @@ O problema central abordado por este projeto é a desinformação e a dificuldad
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Promover a saúde feminina: O objetivo principal é promover a saúde e o bem-estar das mulheres em todas as fases de suas vidas, desde a infância até a terceira idade. Isso inclui a prevenção de doenças, a promoção de hábitos saudáveis e o acesso a cuidados de saúde adequados.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Oferecer atendimento integral: A clínica da mulher do SUS busca fornecer cuidados de saúde abrangentes e integrados, abordando não apenas aspectos físicos, mas também emocionais e psicológicos. Isso pode incluir serviços ginecológicos, obstétricos, de saúde sexual e reprodutiva, além de aconselhamento e apoio emocional.
+
+Prevenir e diagnosticar doenças: A clínica tem como objetivo prevenir doenças femininas, como câncer de mama e câncer cervical, por meio de programas de rastreamento e educação. Além disso, busca diagnosticar precocemente condições de saúde ginecológicas e oferecer tratamento adequado.
+
+Oferecer serviços de planejamento familiar: A clínica do SUS visa ajudar as mulheres a tomar decisões informadas sobre planejamento familiar, oferecendo informações sobre contracepção e serviços relacionados.
+
+Atender gestantes: Um dos objetivos principais é fornecer cuidados pré-natais de qualidade, assistência ao parto e acompanhamento pós-parto para garantir uma gravidez saudável e um parto seguro.
+
+Promover a equidade de gênero: A clínica da mulher do SUS trabalha para promover a equidade de gênero na área de saúde, garantindo que as mulheres tenham acesso igualitário a serviços de saúde e que sejam tratadas com respeito e dignidade.
+
+Atender mulheres em situação de vulnerabilidade: Uma clínica do SUS tem a responsabilidade de atender mulheres em situação de vulnerabilidade social, incluindo aquelas em áreas rurais, indígenas, quilombolas e em condições socioeconômicas desfavoráveis.
+
+Educação e conscientização: Além dos cuidados diretos de saúde, a clínica da mulher do SUS pode oferecer programas educacionais e de conscientização sobre questões de saúde feminina, incluindo prevenção de DSTs, educação sexual e orientação sobre saúde reprodutiva.
+
+Pesquisa e capacitação: Muitas clínicas da mulher do SUS também têm como objetivo realizar pesquisas relacionadas à saúde feminina e capacitar profissionais de saúde para fornecer cuidados de qualidade.
+
+Em resumo, uma clínica da mulher do SUS busca fornecer uma ampla gama de serviços de saúde feminina, com foco na prevenção, diagnóstico e tratamento de doenças, bem como na promoção da saúde e bem-estar das mulheres, independentemente de sua situação econômica ou social. Ela desempenha um papel fundamental na garantia do acesso das mulheres aos cuidados de saúde necessários.
 
 ## Justificativa
 
@@ -30,13 +43,22 @@ Em síntese, o projeto Medmulher não apenas auxilia no sistema de saúde, mas t
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+Uma clínica da mulher do Sistema Único de Saúde (SUS) tem como público-alvo principalmente mulheres de baixa renda e em situação de vulnerabilidade social, que dependem dos serviços de saúde pública. O SUS visa atender a todos as mulheres, independentemente de sua condição financeira, e, portanto, uma clínica da mulher do SUS oferece serviços de saúde feminina acessíveis e de qualidade para a população em geral, com foco especial nas mulheres.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+O público-alvo de uma clínica da mulher do SUS inclui:
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Mulheres de todas as idades: A clínica atende mulheres desde a infância até a terceira idade, oferecendo cuidados de saúde ao longo de todas as fases da vida.
+
+Mulheres em idade reprodutiva: Isso inclui mulheres em idade fértil que podem precisar de serviços como planejamento familiar, cuidados pré-natais, partos e acompanhamento durante a gravidez.
+
+Mulheres em situação de gestação: A clínica presta atendimento às gestantes, oferecendo cuidados pré-natais, exames, assistência ao parto e acompanhamento pós-parto.
+
+Mulheres em busca de contracepção: O público-alvo inclui mulheres que desejam informações sobre métodos contraceptivos, prescrição de contraceptivos e serviços relacionados ao controle de natalidade.
+
+Mulheres em busca de prevenção e rastreamento de doenças: A clínica oferece exames de rastreamento de câncer, como mamografias e exames de Papanicolau, para prevenir e diagnosticar precocemente o câncer de mama e câncer cervical.
+
+Mulheres em busca de tratamento de doenças ginecológicas e infecções: A clínica trata problemas ginecológicos, como infecções, distúrbios menstruais, endometriose e outras condições de saúde.
+
+Mulheres em busca de aconselhamento e orientação de saúde sexual e reprodutiva: O público-alvo também inclui mulheres que precisam de aconselhamento sobre saúde sexual, contracepção, prevenção de doenças sexualmente transmissíveis (DSTs) e educação sobre saúde reprodutiva.
+
+Mulheres em situação de vulnerabilidade social: As clínicas do SUS têm um compromisso especial em atender mulheres em situação de vulnerabilidade, incluindo aquelas em áreas rurais, indígenas, quilombolas e em condições socioeconômicas desfavoráveis.
