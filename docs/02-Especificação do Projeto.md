@@ -207,6 +207,6 @@ Tabela 1 – Salários-hora considerados
 
 Estimativa de Custos:
 
-![Orçamento](img/custos_medmulher.png)
+![Orçamento](img/custos_medmulher2.png)
 
 Tabela 2 – Custos totais estimados
