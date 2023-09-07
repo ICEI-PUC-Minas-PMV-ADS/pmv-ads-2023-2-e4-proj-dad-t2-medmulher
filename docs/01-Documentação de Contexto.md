@@ -31,8 +31,6 @@ Educação e conscientização: Além dos cuidados diretos de saúde, a clínica
 
 Pesquisa e capacitação: Muitas clínicas da mulher do SUS também têm como objetivo realizar pesquisas relacionadas à saúde feminina e capacitar profissionais de saúde para fornecer cuidados de qualidade.
 
-Em resumo, uma clínica da mulher do SUS busca fornecer uma ampla gama de serviços de saúde feminina, com foco na prevenção, diagnóstico e tratamento de doenças, bem como na promoção da saúde e bem-estar das mulheres, independentemente de sua situação econômica ou social. Ela desempenha um papel fundamental na garantia do acesso das mulheres aos cuidados de saúde necessários.
-
 ## Justificativa
 
 O projeto de aplicação da clínica especializada para mulheres pode ser justificado para atender às necessidades de incentivar as mulheres a se cuidarem mais, através da marcação de consultas com especialistas de forma totalmente gratuita.
