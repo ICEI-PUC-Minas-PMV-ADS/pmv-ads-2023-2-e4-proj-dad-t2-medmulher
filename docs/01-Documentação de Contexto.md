@@ -13,23 +13,23 @@ O problema central abordado por este projeto é a desinformação e a dificuldad
 
 ## Objetivos
 
-- Promover a saúde feminina: O objetivo principal é promover a saúde e o bem-estar das mulheres em todas as fases de suas vidas, desde a infância até a terceira idade. Isso inclui a prevenção de doenças, a promoção de hábitos saudáveis e o acesso a cuidados de saúde adequados.
+- **Promover a saúde feminina**: O objetivo principal é promover a saúde e o bem-estar das mulheres em todas as fases de suas vidas, desde a infância até a terceira idade. Isso inclui a prevenção de doenças, a promoção de hábitos saudáveis e o acesso a cuidados de saúde adequados.
 
-- Oferecer atendimento integral: A clínica da mulher do SUS busca fornecer cuidados de saúde abrangentes e integrados, abordando não apenas aspectos físicos, mas também emocionais e psicológicos. Isso pode incluir serviços ginecológicos, obstétricos, de saúde sexual e reprodutiva, além de aconselhamento e apoio emocional.
+- **Oferecer atendimento integral**: A clínica da mulher do SUS busca fornecer cuidados de saúde abrangentes e integrados, abordando não apenas aspectos físicos, mas também emocionais e psicológicos. Isso pode incluir serviços ginecológicos, obstétricos, de saúde sexual e reprodutiva, além de aconselhamento e apoio emocional.
 
-- Prevenir e diagnosticar doenças: A clínica tem como objetivo prevenir doenças femininas, como câncer de mama e câncer cervical, por meio de programas de rastreamento e educação. Além disso, busca diagnosticar precocemente condições de saúde ginecológicas e oferecer tratamento adequado.
+- **Prevenir e diagnosticar doenças**: A clínica tem como objetivo prevenir doenças femininas, como câncer de mama e câncer cervical, por meio de programas de rastreamento e educação. Além disso, busca diagnosticar precocemente condições de saúde ginecológicas e oferecer tratamento adequado.
 
-- Oferecer serviços de planejamento familiar: A clínica do SUS visa ajudar as mulheres a tomar decisões informadas sobre planejamento familiar, oferecendo informações sobre contracepção e serviços relacionados.
+- **Oferecer serviços de planejamento familiar**: A clínica do SUS visa ajudar as mulheres a tomar decisões informadas sobre planejamento familiar, oferecendo informações sobre contracepção e serviços relacionados.
 
-- Atender gestantes: Um dos objetivos principais é fornecer cuidados pré-natais de qualidade, assistência ao parto e acompanhamento pós-parto para garantir uma gravidez saudável e um parto seguro.
+- **Atender gestantes**: Um dos objetivos principais é fornecer cuidados pré-natais de qualidade, assistência ao parto e acompanhamento pós-parto para garantir uma gravidez saudável e um parto seguro.
 
-- Promover a equidade de gênero: A clínica da mulher do SUS trabalha para promover a equidade de gênero na área de saúde, garantindo que as mulheres tenham acesso igualitário a serviços de saúde e que sejam tratadas com respeito e dignidade.
+- **Promover a equidade de gênero**: A clínica da mulher do SUS trabalha para promover a equidade de gênero na área de saúde, garantindo que as mulheres tenham acesso igualitário a serviços de saúde e que sejam tratadas com respeito e dignidade.
 
-- Atender mulheres em situação de vulnerabilidade: Uma clínica do SUS tem a responsabilidade de atender mulheres em situação de vulnerabilidade social, incluindo aquelas em áreas rurais, indígenas, quilombolas e em condições socioeconômicas desfavoráveis.
+- **Atender mulheres em situação de vulnerabilidade**: Uma clínica do SUS tem a responsabilidade de atender mulheres em situação de vulnerabilidade social, incluindo aquelas em áreas rurais, indígenas, quilombolas e em condições socioeconômicas desfavoráveis.
 
-- Educação e conscientização: Além dos cuidados diretos de saúde, a clínica da mulher do SUS pode oferecer programas educacionais e de conscientização sobre questões de saúde feminina, incluindo prevenção de DSTs, educação sexual e orientação sobre saúde reprodutiva.
+- **Educação e conscientização**: Além dos cuidados diretos de saúde, a clínica da mulher do SUS pode oferecer programas educacionais e de conscientização sobre questões de saúde feminina, incluindo prevenção de DSTs, educação sexual e orientação sobre saúde reprodutiva.
 
-- Pesquisa e capacitação: Muitas clínicas da mulher do SUS também têm como objetivo realizar pesquisas relacionadas à saúde feminina e capacitar profissionais de saúde para fornecer cuidados de qualidade.
+- **Pesquisa e capacitação**: Muitas clínicas da mulher do SUS também têm como objetivo realizar pesquisas relacionadas à saúde feminina e capacitar profissionais de saúde para fornecer cuidados de qualidade.
 
 ## Justificativa
 
