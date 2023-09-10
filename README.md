@@ -1,7 +1,6 @@
 # MedMulher
 
-![image](docs/img/Logo-rosa.png)
-
+![ezgif com-gif-maker](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/572fb5e7-de80-48be-b4d3-c786977aeea8)
 
 
 `CURSO` Análise e Desenvolvimento de Sistemas
