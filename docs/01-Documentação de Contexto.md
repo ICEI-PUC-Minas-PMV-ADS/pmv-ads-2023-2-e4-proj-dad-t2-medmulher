@@ -47,18 +47,18 @@ A clínica MedMulher direciona seus serviços principalmente para mulheres de ba
 
 No público-alvo da clínica icluem também os seguintes casos:
 
-Mulheres de todas as idades: A clínica atende mulheres desde a infância até a terceira idade, oferecendo cuidados de saúde ao longo de todas as fases da vida.
+- **Mulheres de todas as idades**: A clínica atende mulheres desde a infância até a terceira idade, oferecendo cuidados de saúde ao longo de todas as fases da vida.
 
-Mulheres em idade reprodutiva: Isso inclui mulheres em idade fértil que podem precisar de serviços como planejamento familiar, cuidados pré-natais, partos e acompanhamento durante a gravidez.
+- **Mulheres em idade reprodutiva**: Isso inclui mulheres em idade fértil que podem precisar de serviços como planejamento familiar, cuidados pré-natais, partos e acompanhamento durante a gravidez.
 
-Mulheres em situação de gestação: A clínica presta atendimento às gestantes, oferecendo cuidados pré-natais, exames, assistência ao parto e acompanhamento pós-parto.
+- **Mulheres em situação de gestação**: A clínica presta atendimento às gestantes, oferecendo cuidados pré-natais, exames, assistência ao parto e acompanhamento pós-parto.
 
-Mulheres em busca de contracepção: O público-alvo inclui mulheres que desejam informações sobre métodos contraceptivos, prescrição de contraceptivos e serviços relacionados ao controle de natalidade.
+- **Mulheres em busca de contracepção**: O público-alvo inclui mulheres que desejam informações sobre métodos contraceptivos, prescrição de contraceptivos e serviços relacionados ao controle de natalidade.
 
-Mulheres em busca de prevenção e rastreamento de doenças: A clínica oferece exames de rastreamento de câncer, como mamografias e exames de Papanicolau, para prevenir e diagnosticar precocemente o câncer de mama e câncer cervical.
+- **Mulheres em busca de prevenção e rastreamento de doenças**: A clínica oferece exames de rastreamento de câncer, como mamografias e exames de Papanicolau, para prevenir e diagnosticar precocemente o câncer de mama e câncer cervical.
 
-Mulheres em busca de tratamento de doenças ginecológicas e infecções: A clínica trata problemas ginecológicos, como infecções, distúrbios menstruais, endometriose e outras condições de saúde.
+- **Mulheres em busca de tratamento de doenças ginecológicas e infecções**: A clínica trata problemas ginecológicos, como infecções, distúrbios menstruais, endometriose e outras condições de saúde.
 
-Mulheres em busca de aconselhamento e orientação de saúde sexual e reprodutiva: O público-alvo também inclui mulheres que precisam de aconselhamento sobre saúde sexual, contracepção, prevenção de doenças sexualmente transmissíveis (DSTs) e educação sobre saúde reprodutiva.
+- **Mulheres em busca de aconselhamento e orientação de saúde sexual e reprodutiva**: O público-alvo também inclui mulheres que precisam de aconselhamento sobre saúde sexual, contracepção, prevenção de doenças sexualmente transmissíveis (DSTs) e educação sobre saúde reprodutiva.
 
-Mulheres em situação de vulnerabilidade social: As clínicas do SUS têm um compromisso especial em atender mulheres em situação de vulnerabilidade, incluindo aquelas em áreas rurais, indígenas, quilombolas e em condições socioeconômicas desfavoráveis.
+- **Mulheres em situação de vulnerabilidade social**: As clínicas do SUS têm um compromisso especial em atender mulheres em situação de vulnerabilidade, incluindo aquelas em áreas rurais, indígenas, quilombolas e em condições socioeconômicas desfavoráveis.
