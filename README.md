@@ -1,4 +1,9 @@
 # MedMulher
+
+![image](img/Logo-rosa.png)
+
+Logo-rosa.png
+
 `CURSO` Análise e Desenvolvimento de Sistemas
 
 `DISCIPLINA` Projeto: Desenvolvimento de uma Aplicação Distribuída - Turma 02 - 2023/2
