@@ -43,6 +43,8 @@ Em síntese, o projeto Medmulher não apenas auxilia no sistema de saúde, mas t
 
 Uma clínica da mulher do Sistema Único de Saúde (SUS) tem como público-alvo principalmente mulheres de baixa renda e em situação de vulnerabilidade social, que dependem dos serviços de saúde pública. O SUS visa atender a todos as mulheres, independentemente de sua condição financeira, e, portanto, uma clínica da mulher do SUS oferece serviços de saúde feminina acessíveis e de qualidade para a população em geral, com foco especial nas mulheres.
 
+A clínica MedMulher direciona seus serviços principalmente para mulheres de baixa renda com idades compreendidas entre as faixas etárias de 35 à 42 anos. Essas mulheres enfrentam desafios no dia a dia, requerem acompanhamento hormonal por estarem enquadradas no quadro de risco de gravidez e se encontram aptas para receberem tratamentos especializados, adaptados às suas necessidades específicas.
+
 O público-alvo de uma clínica da mulher do SUS inclui:
 
 Mulheres de todas as idades: A clínica atende mulheres desde a infância até a terceira idade, oferecendo cuidados de saúde ao longo de todas as fases da vida.
