@@ -26,8 +26,8 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 ## Kanban e Gantt
 
-<a href="https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/510/views/3"> Kanban</a>
-<a href="https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/510/insights/7"> Gantt </a>
+- <a href="https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/510/views/3"> Kanban</a>
+- <a href="https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/510/insights/7"> Gantt </a>
 
 # Documentação
 
