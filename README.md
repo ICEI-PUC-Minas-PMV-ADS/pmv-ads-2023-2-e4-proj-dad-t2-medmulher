@@ -1,6 +1,6 @@
 # MedMulher
 
-![image](img/Logo-rosa.png)
+![image](docs/img/Logo-rosa.png)
 
 Logo-rosa.png
 
