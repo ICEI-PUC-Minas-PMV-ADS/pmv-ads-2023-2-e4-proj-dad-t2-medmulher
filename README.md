@@ -24,6 +24,11 @@ MedMulher é uma aplicação focada em mulheres de baixa renda, que facilita e a
 
 Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
 
+## Kanban e Gantt
+
+<a href="https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/510/views/3"> Kanban</a>
+<a href="https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/510/insights/7"> Gantt </a>
+
 # Documentação
 
 <ol>
