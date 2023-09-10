@@ -62,3 +62,5 @@ No público-alvo da clínica icluem também os seguintes casos:
 - **Mulheres em busca de aconselhamento e orientação de saúde sexual e reprodutiva**: O público-alvo também inclui mulheres que precisam de aconselhamento sobre saúde sexual, contracepção, prevenção de doenças sexualmente transmissíveis (DSTs) e educação sobre saúde reprodutiva.
 
 - **Mulheres em situação de vulnerabilidade social**: As clínicas do SUS têm um compromisso especial em atender mulheres em situação de vulnerabilidade, incluindo aquelas em áreas rurais, indígenas, quilombolas e em condições socioeconômicas desfavoráveis.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/69546112/aa0d5f1e-7df0-4f32-bc01-e2fc6e3153b0)
