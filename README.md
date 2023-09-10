@@ -2,7 +2,7 @@
 
 ![image](docs/img/Logo-rosa.png)
 
-Logo-rosa.png
+
 
 `CURSO` Análise e Desenvolvimento de Sistemas
 
