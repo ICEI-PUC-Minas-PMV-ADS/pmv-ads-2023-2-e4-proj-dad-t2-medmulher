@@ -17,25 +17,41 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 > - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
 > - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
 
-## Modelo ER
+## Documentação do Banco de Dados
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
+### Esquema Chave-Valor
+```
+{
+    "_id" : UsuarioId("012980123324312"),
+    "nome" : "Leonardo Vilela Cardoso",
+    "cpf" : "01234567891",
+    "endereco" : "Rua Puc Minas, 2023, Bairro Coração Eucarístico, Belo Horizonte, Minas Gerais",
+    "email" : "leonardocardoso@puc.br",
+    "senha" : "pucminasvirtual"
+}
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
+{
+    "_id" : MedicoId("012980123322134"),
+    "nomeMedico" : "Cristina Mourão de Assis",
+    "especialidade" : "Ginecologista",
+    "dataConsulta" : "10/12/2023"
+}
 
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+{
+    "_id" : ConsultaId("012980123320129"),
+    "nomeMedico" : "Cristina Mourão de Assis",
+    "especialidade" : "Ginecologista",
+    "estadoSaude" : "Dor pélvica",
+    "sintomas" : "Cólica menstrual",
+    "observacao" : "Menstruação intensa",
+    "dataConsulta": "10/12/2023"
+}
 
-## Esquema Relacional
-
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
-
-> - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
-
-## Modelo Físico
-
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+{
+    "_id" : AdministradorId("012980123321233"),
+    "nomeAdministrador" : "Marta Koffman Hills"
+}
+```
 
 ## Tecnologias Utilizadas
 
