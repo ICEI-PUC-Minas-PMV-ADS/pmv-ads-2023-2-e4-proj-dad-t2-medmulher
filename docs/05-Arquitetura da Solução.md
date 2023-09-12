@@ -23,10 +23,10 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 ```
 {
     "_id" : UsuarioId("012980123324312"),
-    "nome" : "Leonardo Vilela Cardoso",
+    "nome" : "Helena Rodrigues",
     "cpf" : "01234567891",
-    "endereco" : "Rua Puc Minas, 2023, Bairro Coração Eucarístico, Belo Horizonte, Minas Gerais",
-    "email" : "leonardocardoso@puc.br",
+    "endereco" : "Rua Conde de Linhares, 2023, Bairro Cidade Jardim, Belo Horizonte, Minas Gerais",
+    "email" : "helenarodrigues07@gmail.com",
     "senha" : "pucminasvirtual"
 }
 
@@ -41,7 +41,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
     "_id" : ConsultaId("012980123320129"),
     "nomeMedico" : "Cristina Mourão de Assis",
     "especialidade" : "Ginecologista",
-    "estadoSaude" : "Dor pélvica",
+    "estadoSaude" : "mediano",
     "sintomas" : "Cólica menstrual",
     "observacao" : "Menstruação intensa",
     "dataConsulta": "10/12/2023"
