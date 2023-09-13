@@ -64,9 +64,7 @@ A linguagem de programação JavaScript, atrelado a biblioteca React Native e Re
 | React JS     |  FrontEnd WEB       | 
 | React Native |  FrontEnd Mobile    | 
 
-
-
-
+![image](img/Tecnologias.png)
 
 ## Hospedagem
 
