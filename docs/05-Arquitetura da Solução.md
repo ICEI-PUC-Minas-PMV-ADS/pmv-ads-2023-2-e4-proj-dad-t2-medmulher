@@ -15,7 +15,7 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/2dfaefad-52ed-44ae-85db-5ef24804b262)
 
 
-## Documentação do Banco de Dados
+## Documentação do Banco de Dados Não Relacional
 
 ### Esquema Chave-Valor
 ```
