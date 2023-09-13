@@ -53,9 +53,17 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+|  Linguagem  |      Aplicação      | 
+|--------------|---------------------|
+| Node.js	   |  WebAPI Rest        | 
+| Mongo DB     |  Banco de Dados     | 
+| VSCode       |  Software de Código | 
+| Node.js	   |  BackEnd            | 
+| React JS     |  FrontEnd WEB       | 
+| React Native |  FrontEnd Mobile    | 
+
+
 
 ## Hospedagem
 
