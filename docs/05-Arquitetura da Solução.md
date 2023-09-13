@@ -53,6 +53,7 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
 
 ## Tecnologias Utilizadas
 
+A linguagem de programação JavaScript, atrelado a biblioteca React Native e React JS, juntamente com o framework e Node.js foram escolhidas para a aplicação porque a combinação dessas ferramentas e tecnologias permitem criar uma aplicação robusta e escalável, permitindo assim, que sejam realizados acessos simultâneos.
 
 |  Linguagem  |      Aplicação      | 
 |--------------|---------------------|
@@ -62,6 +63,8 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
 | Node.js	   |  BackEnd            | 
 | React JS     |  FrontEnd WEB       | 
 | React Native |  FrontEnd Mobile    | 
+
+
 
 
 
