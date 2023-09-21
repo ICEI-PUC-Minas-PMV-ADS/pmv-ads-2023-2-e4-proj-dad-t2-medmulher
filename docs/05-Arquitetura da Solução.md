@@ -20,36 +20,49 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
 ### Esquema Chave-Valor
 ```
 {
+    "address": {
+        "street": "Rua Sapucaí",
+        "district": "MG",
+        "city": "Belo Horizonte",
+        "complement": "lado A",
+        "number": 2023,
+        "postal_code": "30380-30"
+    }
     "_id": "650b9a36099fd9f53e17fc6e",
     "name": "Helena Rodrigues",
-    "cpf": "022.123.412-55",
-    "address": "Rua Sapucaí, 2023, Floresta, Belo Horizonte, MG",
-    "email": "helenarodrigues07@gmail.com",
     "password": "puc@minasvirtual",
+    "email": "helenarodrigues07@gmail.com",
+    "cpf": "022.123.412-55",
     "created_date": "2023-09-21T01:19:50.701Z",
     "update_user_date": "2023-09-21T01:20:22.34IZ"
 }
 
 {
-    "_id" : MedicoId("012980123322134"),
-    "nomeMedico" : "Cristina Mourão de Assis",
-    "especialidade" : "Ginecologista",
-    "dataConsulta" : "10/12/2023"
+    "_id": "980a9b36099jd9j53e17fc7f",
+    "name": "Cristina Mourão de Assis",
+    "specialty": "Ginecologista",
+    "consultation_date": "10/12/2023"
+    "created_date": "2023-09-21T01:19:51.701Z",
+    "update_user_date": "2023-09-21T01:20:22.34IZ"
 }
 
 {
-    "_id" : ConsultaId("012980123320129"),
-    "nomeMedico" : "Cristina Mourão de Assis",
-    "especialidade" : "Ginecologista",
-    "estadoSaude" : "mediano",
-    "sintomas" : "Cólica menstrual",
-    "observacao" : "Menstruação intensa",
-    "dataConsulta": "10/12/2023"
+    "_id": "210c9d36099gd9g53e17fc8g",
+    "name": "Cristina Mourão de Assis",
+    "specialty": "Ginecologista",
+    "health_status": "Mediano",
+    "symptoms": "Cólica menstrual",
+    "observation": "Menstruação intensa",
+    "consultation_date": "10/12/2023"
+    "created_date": "2023-09-21T01:19:52.701Z",
+    "update_user_date": "2023-09-21T01:20:22.34IZ"
 }
 
 {
-    "_id" : AdministradorId("012980123321233"),
-    "nomeAdministrador" : "Marta Koffman Hills"
+    "_id": "430e9f36099fh9f53h17fc4h",
+    "name": "Marta Koffman Hills"
+    "created_date": "2023-09-21T01:19:53.701Z",
+    "update_user_date": "2023-09-21T01:20:22.34IZ"
 }
 ```
 
