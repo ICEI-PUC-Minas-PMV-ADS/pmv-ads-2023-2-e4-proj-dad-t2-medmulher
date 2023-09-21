@@ -25,8 +25,8 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
     "cpf": "01234567891",
     "address": "Rua Conde de Linhares, 2023, Bairro Cidade Jardim, Belo Horizonte, Minas Gerais",
     "email": "helenarodrigues07@gmail.com",
-    "password": "pucminasvirtual"
-    "created_date": "2023-09-21T01:19:50.701Z"
+    "password": "pucminasvirtual",
+    "created_date": "2023-09-21T01:19:50.701Z",
     "update_user_date": "2023-09-21T01:20:22.34IZ"
 }
 
