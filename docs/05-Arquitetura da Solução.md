@@ -27,7 +27,7 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
         "complement": "lado A",
         "number": 2023,
         "postal_code": "30380-30"
-    }
+    },
     "_id": "650b9a36099fd9f53e17fc6e",
     "name": "Helena Rodrigues",
     "password": "puc@minasvirtual",
