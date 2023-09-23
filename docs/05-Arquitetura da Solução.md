@@ -93,22 +93,25 @@ Na tabela abaixo, identificamos as rotas (ROUTES) criadas na API Node.JS para in
 | UPDATE       |  PATCH          | 
 | DELETE	   |  DELETE         | 
 
-- CREATE
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/646cc21b-be02-4a41-83fb-a39346042c40)
+
+- CREATE: Criando Usuáio
 
   
   
-- READ
+- READ: Visulizar Usuário
 
   
   
-- UPDATE
+- UPDATE: Alterar Usuário
 
   
   
-- DELETE
+- DELETE: Deletar Usuário
 
 
-
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/28a7ab92-7faf-4985-b291-2604223f2a0d)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/8f7eb678-24ad-4a15-ba0d-418a4f32ed1a)
 
 ## Hospedagem
 
