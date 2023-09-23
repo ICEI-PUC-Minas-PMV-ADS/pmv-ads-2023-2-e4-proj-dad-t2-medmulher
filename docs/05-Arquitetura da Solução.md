@@ -12,7 +12,7 @@ O front-end da aplicação web será desenvolvido com CSS, React e JavaScript, e
 
 No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquitetura cliente-servidor, na qual o servidor fornece serviços aos clientes por meio da marcação de consultas. Essas consultas podem ser realizadas tanto pelo aplicativo móvel quanto pelo aplicativo desktop, contanto que estejam conectados à Internet. A seguir, encontram-se os diagramas Web e Mobile, respectivamente.
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/788fee4c-4b2d-404c-8b8b-ed6afd257aa9)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/5563a3e2-59b9-4461-97cf-1c755aa00719)
 
 
 ## Documentação do Banco de Dados Não Relacional
