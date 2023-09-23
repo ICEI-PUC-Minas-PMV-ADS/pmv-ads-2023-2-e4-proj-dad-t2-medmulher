@@ -55,7 +55,7 @@ Segue abaixo o arquivo JSON de criação da tabela "Médico" no banco de dados. 
 }
 ```
 
-Segue abaixo o arquivo JSON de criação da tabela "Consulta" no banco de dados. Neste modelo é definido os campos que farão parte da tabela, a chave e seu respectivo valor.
+Segue abaixo o arquivo JSON de criação da tabela "Consulta" no banco de dados. Neste modelo é definido os campos que farão parte da tabela: a chave e seu respectivo valor.
 
 ```
 {
@@ -69,7 +69,7 @@ Segue abaixo o arquivo JSON de criação da tabela "Consulta" no banco de dados.
 }
 ```
 
-Segue abaixo o arquivo JSON de criação da tabela "Administrador do Sistema" no banco de dados. Neste modelo é definido os campos que farão parte da tabela, a chave e seu respectivo valor.
+Segue abaixo o arquivo JSON de criação da tabela "Administrador do Sistema" no banco de dados. Neste modelo é definido os campos que farão parte da tabela: a chave e seu respectivo valor.
 
 ```
 {
