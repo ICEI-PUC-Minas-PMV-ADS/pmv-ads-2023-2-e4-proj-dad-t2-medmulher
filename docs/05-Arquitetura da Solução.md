@@ -19,6 +19,9 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
 ## Documentação do Banco de Dados Não Relacional
 
 ### Esquema Chave-Valor
+
+Segue abaixo o arquivo JSON de criação da tabela "Usuários" no banco de dados. Neste modelo é definido os campos que farão parte da tabela: a chave e seu respectivo valor.
+
 ```
 {
     "address": {
@@ -37,7 +40,11 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
     "created_date": "2023-09-21T01:19:50.701Z",
     "update_user_date": "2023-09-21T01:20:22.34IZ"
 }
+```
 
+Segue abaixo o arquivo JSON de criação da tabela "Médico" no banco de dados. Neste modelo é definido os campos que farão parte da tabela: a chave e seu respectivo valor.
+
+```
 {
     "_id": "980a9b36099jd9j53e17fc7f",
     "name": "Cristina Mourão de Assis",
@@ -46,7 +53,11 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
     "created_date": "2023-09-21T01:19:51.701Z",
     "update_user_date": "2023-09-21T01:20:22.34IZ"
 }
+```
 
+Segue abaixo o arquivo JSON de criação da tabela "Consulta" no banco de dados. Neste modelo é definido os campos que farão parte da tabela, a chave e seu respectivo valor.
+
+```
 {
     "_id": "210c9d36099gd9g53e17fc8g",
     "name": "Cristina Mourão de Assis",
@@ -55,15 +66,15 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
     "symptoms": "Cólica menstrual",
     "observation": "Menstruação intensa",
     "consultation_date": "10/12/2023"
-    "created_date": "2023-09-21T01:19:52.701Z",
-    "update_user_date": "2023-09-21T01:20:22.34IZ"
 }
+```
 
+Segue abaixo o arquivo JSON de criação da tabela "Administrador do Sistema" no banco de dados. Neste modelo é definido os campos que farão parte da tabela, a chave e seu respectivo valor.
+
+```
 {
     "_id": "430e9f36099fh9f53h17fc4h",
     "name": "Marta Koffman Hills"
-    "created_date": "2023-09-21T01:19:53.701Z",
-    "update_user_date": "2023-09-21T01:20:22.34IZ"
 }
 ```
 
