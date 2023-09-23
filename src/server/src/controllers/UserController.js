@@ -1,15 +1,32 @@
 const { Users } = require("../models/");
+const { hash } = require("bcryptjs");
 
 class UserController {
   // CREATE
   async create(req, res) {
-    const { name, password, cpf, address, email, } = req.body;
-    const create_date = new Date()
-    const updated_user_date = new Date()
+    const { name, password, cpf, address, email } = req.body;
+    const create_date = new Date();
+    const updated_user_date = new Date();
+
+    const checkEmail = await Users.findOne({ email });
+    if (checkEmail) {
+      return res
+        .status(400)
+        .json({ message: "O e-mail inserido já está sendo utilizado!" });
+    }
+
+    const checkCPF = await Users.findOne({ cpf });
+    if (checkCPF) {
+      return res
+        .status(400)
+        .json({ message: "O CPF inserido já está sendo utilizado!" });
+    }
+
+    const hashedPassword = await hash(password, 8);
 
     const user = {
       name,
-      password,
+      password: hashedPassword,
       cpf,
       address: {
         street: address.street,
@@ -17,11 +34,11 @@ class UserController {
         city: address.city,
         complement: address.complement,
         number: address.number,
-        postal_code: address.postal_code
+        postal_code: address.postal_code,
       },
       email,
       create_date,
-      updated_user_date
+      updated_user_date,
     };
 
     try {
@@ -38,7 +55,7 @@ class UserController {
     const id = req.params.id;
 
     const { name, password, cpf, address, email } = req.body;
-    const updated_user_date = new Date()
+    const updated_user_date = new Date();
 
     const user = {
       name,
@@ -46,7 +63,7 @@ class UserController {
       cpf,
       address,
       email,
-      updated_user_date
+      updated_user_date,
     };
 
     try {
@@ -109,6 +126,44 @@ class UserController {
       res.status(500).json({ error });
     }
   }
+
+  // Forgot Password
+  async regainAccess(req, res) {
+    const email = req.params.email;
+    const user = await Users.findOne({ email });
+
+    if (!user) {
+      res.status(422).json({ message: "Usuário não cadastrado!" });
+      return;
+    }
+
+    if (user) {
+      return res
+        .status(200)
+        .json({
+          message: "Usuário encontrado com sucesso! ",
+          userID: user._id,
+        });
+    }
+
+    return res
+      .status(500)
+      .json({ error: "Problemas para se conectar ao servidor!" });
+  }
+
+  async updatePassword(req, res) {
+    const id = req.params.id;
+    const { password } = req.body;
+
+    try {
+      const updatedUser = await Users.updateOne({ _id: id }, password);
+
+      res.status(200).json({ message: `Senha alterada com sucesso!` });
+    } catch (error) {
+      res.status(500).json({ error });
+    }
+  }
+
 }
 
 module.exports = UserController;
