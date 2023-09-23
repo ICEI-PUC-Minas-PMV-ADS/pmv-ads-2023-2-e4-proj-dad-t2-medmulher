@@ -95,7 +95,7 @@ Na tabela abaixo, identificamos as rotas (ROUTES) criadas na API Node.JS para in
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/646cc21b-be02-4a41-83fb-a39346042c40)
 
-- CREATE: Criando Usuário
+- CREATE: Criar Usuário
 
   
   
