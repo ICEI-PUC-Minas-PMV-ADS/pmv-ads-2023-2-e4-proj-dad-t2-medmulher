@@ -71,7 +71,7 @@ No diagrama de classes do projeto MedMulher, este seguirá a estrutura da arquit
 
 A linguagem de programação JavaScript, atrelado a biblioteca React Native e React JS, juntamente com o framework e Node.js foram escolhidas para a aplicação porque a combinação dessas ferramentas e tecnologias permitem criar uma aplicação robusta e escalável, permitindo assim, lidar com um número crescente de clientes ou usuários
 
-|  Linguagem  |      Aplicação      | 
+|  Linguagem   |      Aplicação      | 
 |--------------|---------------------|
 | Node.js	   |  WebAPI Rest        | 
 | Mongo DB     |  Banco de Dados     | 
@@ -81,6 +81,34 @@ A linguagem de programação JavaScript, atrelado a biblioteca React Native e Re
 | React Native |  FrontEnd Mobile    | 
 
 ![image](img/Tecnologias1.png)
+
+## Documentação da Implementação da WEB API Rest
+
+Na tabela abaixo, identificamos as rotas (ROUTES) criadas na API Node.JS para interagir com o banco de dados do MongoDB, com o objetivo de realizar as operações de CRUD.
+
+|  OPERAÇÃO    |      ROUTES     | 
+|--------------|-----------------|
+| CREATE	   |  POST           | 
+| READ         |  GET            | 
+| UPDATE       |  PATCH          | 
+| DELETE	   |  DELETE         | 
+
+- CREATE
+
+  
+  
+- READ
+
+  
+  
+- UPDATE
+
+  
+  
+- DELETE
+
+
+
 
 ## Hospedagem
 
