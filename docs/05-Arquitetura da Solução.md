@@ -99,7 +99,7 @@ Na tabela abaixo, identificamos as rotas (ROUTES) criadas na API Node.JS para in
 
   
   
-- READ: Visulizar Usuário
+- READ: Visualizar Usuário
 
   
   
