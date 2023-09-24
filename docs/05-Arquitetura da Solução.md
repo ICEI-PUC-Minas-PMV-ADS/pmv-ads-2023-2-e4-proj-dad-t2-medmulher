@@ -111,6 +111,8 @@ O modelo Business Process Model and Notation (BPMN ou em português Modelo e Not
 
 Abaixo está o modelo do fluxo de mensagens entre os usuarios A e B e suas determinadas interações com a Aplicação durante uma conversa:
 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/blob/main/docs/img/BPMN_aplicativo.png)
+
 ## Metas e Indicadores
 
 ## Quadro Visual Atual e Gestão de Trabalho
