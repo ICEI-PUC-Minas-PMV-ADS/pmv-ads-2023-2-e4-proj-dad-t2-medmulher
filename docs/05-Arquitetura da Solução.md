@@ -78,6 +78,43 @@ Segue abaixo o arquivo JSON de criação da tabela "Administrador do Sistema" no
 }
 ```
 
+## Processos e suas Respectivas Atividades
+
+Para gerenciamento do projeto o grupo irá utilizar a metodologia ScrumBan, e o processo será notado através do BPMN. O modelo Scrumban é considerado como um arcabouço para os projetos, com o objetivo padronizar o processo para que a equipe possa contar com uma estrutura facilmente reprodutível a cada mudança entre projetos. De acordo com (Asana,2023) o fluxo de trabalho básico conta com três estágios principais: 
+•	backlog de tarefas, tarefas em andamento e concluídas. Os membros da equipe transferem os cartões do backlog de tarefas para a coluna de tarefas em andamento à medida que trabalham nelas e, em seguida, movem-nos para a coluna de tarefas concluídas conforme os critérios de conclusão definidos pela equipe.
+•	Por prioridade das tarefas: as tarefas são organizadas por prioridade. Este quadro inteiro é considerado como o backlog. Deste quadro, os cartões são movidos para um segundo quadro Kanban, onde são alinhados ao estágio correspondente da tarefa, com base no fluxo de trabalho da equipe.
+•	Por story points: de modo semelhante ao método baseado na prioridade das tarefas, os cartões podem ser organizados por story points. Os story points são usados na metodologia Agile para fazer uma estimativa do esforço ou do tempo exigidos pela tarefa. As tarefas marcadas com mais story points são priorizadas em relação àquelas com menos pontos. 
+
+Para o gerenciamento, organização e distribuição das tarefas, utiliza-se a ferramenta do Github. As Sprints estão estruturadas no formato de marcos, conforme demonstrado abaixo:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/blob/main/docs/img/sprint.png)
+
+
+Além disso, temos o Backlog do Produto elaborado pelo grupo no GitHub, cujo acesso é possível através da URL: [https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/510]
+
+Os entregáveis estão dispostos no “Product Backlog” e apresentados em método Kanban conforme andamento da atividade:
+•	Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista.
+•	To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando.
+•	In Progress: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
+•	Test: Checagem de Qualidade. Quando as tarefas são concluídas, eles são movidas para o “CQ”. No final da semana, eu revejo essa lista para garantir que tudo saiu perfeito.
+•	Locked: Quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está travando a tarefa.
+•	Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
+
+Abaixo, figura demonstrando a disposição dos entregáveis:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/blob/main/docs/img/kanban.png)
+
+## Modelo e Notação de Processos de Negócio
+
+O modelo Business Process Model and Notation (BPMN ou em português Modelo e Notação de Processos de Negócio), foi utilizado para descrever o processo de metodologia adotado para o processo de desenvolvimento e para o processo de negócios. Por ser padronizada, a notação BPMN facilitará o entendimento das pessoas envolvidas no projeto. Neste sentido, com o modelo BPMN, utilizaremos o seu conjunto de elementos gráficos para representar aquelas atividades de trabalho, agrupadas em processos, para indicar como eles serão executados.
+
+Abaixo está o modelo do fluxo de mensagens entre os usuarios A e B e suas determinadas interações com a Aplicação durante uma conversa:
+
+## Metas e Indicadores
+
+## Quadro Visual Atual e Gestão de Trabalho
+
+
 ## Tecnologias Utilizadas
 
 A linguagem de programação JavaScript, atrelado a biblioteca React Native e React JS, juntamente com o framework e Node.js foram escolhidas para a aplicação porque a combinação dessas ferramentas e tecnologias permitem criar uma aplicação robusta e escalável, permitindo assim, lidar com um número crescente de clientes ou usuários
@@ -138,15 +175,23 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+A qualidade em diversas áreas é considerada fundamental para que possamos entregar melhor para nossos clientes e buscar menores custos. O conceito de qualidade pode ser desenvolvido através de diversas interpretações e com diferentes gerações de valores. Um conceito mais atual de qualidade é apresentado por (Maxim et Kessentini, 2016), onde a discussão proposta sobre qualidade está baseada em entrega de satisfação do cliente como também atender os requisitos dos produtos em conformidade.
+No contexto de desenvolvimento de software, qualidade pode ser entendida como uma gestão de qualidade efetiva aplicada de modo a criar um produto útil que forneça valor mensurável para aqueles que o produzem e para aqueles que o utilizam, através da avaliação de qualidade dos requisitos funcionais e não funcionais d produto. (Pressman et Maxim,2020). Os autores propõe três pontos relevantes para a qualidade de software que são: gestão da qualidade efetiva, produto útil e agregar valor para fabricante e usuário.
+Para avaliação da qualidade de software de nosso trabalho utilizaremos o modelo de qualidade ISO/IEC 25010, que é uma norma atualizada que define as características principais dos modelos de qualidade em uso e da qualidade de produtos. O primeiro modelo foca em modelos para utilizar o produto em um determinado contexto, e o segundo tem foco na natureza dinâmica e a estática dos sistemas de computador. Segundo (Pressman et Maxim,2020), as principais características dos modelos são:
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+Modelo de Qualidade de uso:
+•	Eficácia: Precisão e completude com as quais os usuários atingem suas metas;
+•	Eficiência: Recursos despendidos para atingir completamente os objetivos dos usuários com precisão;
+•	Satisfação: Utilidade, confiança, prazer e conforto;
+•	Ausência de Risco: Mitigação dos riscos econômicos, de saúde, de segurança e ambientais;
+•	Cobertura e contexto: Completude e flexibilidade.
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
-
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+Qualidade de Produto:
+•	Adequação funcional: Completo, correto e apropriado;
+•	Eficiência e desempenho: Tempestividade, utilização de recursos e capacidade;
+•	Compatibilidade: Coexistência, interoperabilidade;
+•	Usabilidade: Adequabilidade, facilidade de aprendizagem, operabilidade, proteção contra erros, estética e acessibilidade;
+•	Confiabilidade: Maturidade, disponibilidade, tolerância a falhas, facilidade de recuperação;
+•	Segurança: Confidencialidade, integridade, responsabilidade e autenticidade;
+•	Facilidade de manutenção: Modularidade, reusabilidade e modificabilidade e e testabilidade;
+•	Portabilidade: Adaptabilidade, instalabilidade e facilidade de substituição.
