@@ -81,9 +81,9 @@ Segue abaixo o arquivo JSON de criação da tabela "Administrador do Sistema" no
 ## Processos e suas Respectivas Atividades
 
 Para gerenciamento do projeto o grupo irá utilizar a metodologia ScrumBan, e o processo será notado através do BPMN. O modelo Scrumban é considerado como um arcabouço para os projetos, com o objetivo padronizar o processo para que a equipe possa contar com uma estrutura facilmente reprodutível a cada mudança entre projetos. De acordo com (Asana,2023) o fluxo de trabalho básico conta com três estágios principais: 
-•	backlog de tarefas, tarefas em andamento e concluídas. Os membros da equipe transferem os cartões do backlog de tarefas para a coluna de tarefas em andamento à medida que trabalham nelas e, em seguida, movem-nos para a coluna de tarefas concluídas conforme os critérios de conclusão definidos pela equipe.
-•	Por prioridade das tarefas: as tarefas são organizadas por prioridade. Este quadro inteiro é considerado como o backlog. Deste quadro, os cartões são movidos para um segundo quadro Kanban, onde são alinhados ao estágio correspondente da tarefa, com base no fluxo de trabalho da equipe.
-•	Por story points: de modo semelhante ao método baseado na prioridade das tarefas, os cartões podem ser organizados por story points. Os story points são usados na metodologia Agile para fazer uma estimativa do esforço ou do tempo exigidos pela tarefa. As tarefas marcadas com mais story points são priorizadas em relação àquelas com menos pontos. 
+> - backlog de tarefas, tarefas em andamento e concluídas. Os membros da equipe transferem os cartões do backlog de tarefas para a coluna de tarefas em andamento à medida que trabalham nelas e, em seguida, movem-nos para a coluna de tarefas concluídas conforme os critérios de conclusão definidos pela equipe.
+> - Por prioridade das tarefas: as tarefas são organizadas por prioridade. Este quadro inteiro é considerado como o backlog. Deste quadro, os cartões são movidos para um segundo quadro Kanban, onde são alinhados ao estágio correspondente da tarefa, com base no fluxo de trabalho da equipe.
+> - Por story points: de modo semelhante ao método baseado na prioridade das tarefas, os cartões podem ser organizados por story points. Os story points são usados na metodologia Agile para fazer uma estimativa do esforço ou do tempo exigidos pela tarefa. As tarefas marcadas com mais story points são priorizadas em relação àquelas com menos pontos. 
 
 Para o gerenciamento, organização e distribuição das tarefas, utiliza-se a ferramenta do Github. As Sprints estão estruturadas no formato de marcos, conforme demonstrado abaixo:
 
@@ -93,12 +93,12 @@ Para o gerenciamento, organização e distribuição das tarefas, utiliza-se a f
 Além disso, temos o Backlog do Produto elaborado pelo grupo no GitHub, cujo acesso é possível através da URL: [https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/510]
 
 Os entregáveis estão dispostos no “Product Backlog” e apresentados em método Kanban conforme andamento da atividade:
-•	Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista.
-•	To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando.
-•	In Progress: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
-•	Test: Checagem de Qualidade. Quando as tarefas são concluídas, eles são movidas para o “CQ”. No final da semana, eu revejo essa lista para garantir que tudo saiu perfeito.
-•	Locked: Quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está travando a tarefa.
-•	Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
+> - Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista.
+> - To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando.
+> - In Progress: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
+> - Test: Checagem de Qualidade. Quando as tarefas são concluídas, eles são movidas para o “CQ”. No final da semana, eu revejo essa lista para garantir que tudo saiu perfeito.
+> - Locked: Quando alguma coisa impede a conclusão da tarefa, ela é movida para esta lista juntamente com um comentário sobre o que está travando a tarefa.
+> - Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
 
 Abaixo, figura demonstrando a disposição dos entregáveis:
 
@@ -179,19 +179,19 @@ A qualidade em diversas áreas é considerada fundamental para que possamos entr
 No contexto de desenvolvimento de software, qualidade pode ser entendida como uma gestão de qualidade efetiva aplicada de modo a criar um produto útil que forneça valor mensurável para aqueles que o produzem e para aqueles que o utilizam, através da avaliação de qualidade dos requisitos funcionais e não funcionais d produto. (Pressman et Maxim,2020). Os autores propõe três pontos relevantes para a qualidade de software que são: gestão da qualidade efetiva, produto útil e agregar valor para fabricante e usuário.
 Para avaliação da qualidade de software de nosso trabalho utilizaremos o modelo de qualidade ISO/IEC 25010, que é uma norma atualizada que define as características principais dos modelos de qualidade em uso e da qualidade de produtos. O primeiro modelo foca em modelos para utilizar o produto em um determinado contexto, e o segundo tem foco na natureza dinâmica e a estática dos sistemas de computador. Segundo (Pressman et Maxim,2020), as principais características dos modelos são:
 
-Modelo de Qualidade de uso:
-•	Eficácia: Precisão e completude com as quais os usuários atingem suas metas;
-•	Eficiência: Recursos despendidos para atingir completamente os objetivos dos usuários com precisão;
-•	Satisfação: Utilidade, confiança, prazer e conforto;
-•	Ausência de Risco: Mitigação dos riscos econômicos, de saúde, de segurança e ambientais;
-•	Cobertura e contexto: Completude e flexibilidade.
+> **Modelo de Qualidade de uso**:
+> - Eficácia: Precisão e completude com as quais os usuários atingem suas metas;
+> - Eficiência: Recursos despendidos para atingir completamente os objetivos dos usuários com precisão;
+> - Satisfação: Utilidade, confiança, prazer e conforto;
+> - Ausência de Risco: Mitigação dos riscos econômicos, de saúde, de segurança e ambientais;
+> - Cobertura e contexto: Completude e flexibilidade.
 
-Qualidade de Produto:
-•	Adequação funcional: Completo, correto e apropriado;
-•	Eficiência e desempenho: Tempestividade, utilização de recursos e capacidade;
-•	Compatibilidade: Coexistência, interoperabilidade;
-•	Usabilidade: Adequabilidade, facilidade de aprendizagem, operabilidade, proteção contra erros, estética e acessibilidade;
-•	Confiabilidade: Maturidade, disponibilidade, tolerância a falhas, facilidade de recuperação;
-•	Segurança: Confidencialidade, integridade, responsabilidade e autenticidade;
-•	Facilidade de manutenção: Modularidade, reusabilidade e modificabilidade e e testabilidade;
-•	Portabilidade: Adaptabilidade, instalabilidade e facilidade de substituição.
+> **Qualidade de Produto**:
+> - Adequação funcional: Completo, correto e apropriado;
+> - Eficiência e desempenho: Tempestividade, utilização de recursos e capacidade;
+> - Compatibilidade: Coexistência, interoperabilidade;
+> - Usabilidade: Adequabilidade, facilidade de aprendizagem, operabilidade, proteção contra erros, estética e acessibilidade;
+> - Confiabilidade: Maturidade, disponibilidade, tolerância a falhas, facilidade de recuperação;
+> - Segurança: Confidencialidade, integridade, responsabilidade e autenticidade;
+> - Facilidade de manutenção: Modularidade, reusabilidade e modificabilidade e e testabilidade;
+> - Portabilidade: Adaptabilidade, instalabilidade e facilidade de substituição.
