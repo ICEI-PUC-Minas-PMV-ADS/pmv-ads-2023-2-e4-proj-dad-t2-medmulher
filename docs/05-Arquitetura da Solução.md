@@ -176,15 +176,17 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 ## Qualidade de Software
 
 A qualidade em diversas áreas é considerada fundamental para que possamos entregar melhor para nossos clientes e buscar menores custos. O conceito de qualidade pode ser desenvolvido através de diversas interpretações e com diferentes gerações de valores. Um conceito mais atual de qualidade é apresentado por (Maxim et Kessentini, 2016), onde a discussão proposta sobre qualidade está baseada em entrega de satisfação do cliente como também atender os requisitos dos produtos em conformidade.
+
 No contexto de desenvolvimento de software, qualidade pode ser entendida como uma gestão de qualidade efetiva aplicada de modo a criar um produto útil que forneça valor mensurável para aqueles que o produzem e para aqueles que o utilizam, através da avaliação de qualidade dos requisitos funcionais e não funcionais d produto. (Pressman et Maxim,2020). Os autores propõe três pontos relevantes para a qualidade de software que são: gestão da qualidade efetiva, produto útil e agregar valor para fabricante e usuário.
+
 Para avaliação da qualidade de software de nosso trabalho utilizaremos o modelo de qualidade ISO/IEC 25010, que é uma norma atualizada que define as características principais dos modelos de qualidade em uso e da qualidade de produtos. O primeiro modelo foca em modelos para utilizar o produto em um determinado contexto, e o segundo tem foco na natureza dinâmica e a estática dos sistemas de computador. Segundo (Pressman et Maxim,2020), as principais características dos modelos são:
 
-> **Modelo de Qualidade de uso**:
-> - Eficácia: Precisão e completude com as quais os usuários atingem suas metas;
-> - Eficiência: Recursos despendidos para atingir completamente os objetivos dos usuários com precisão;
-> - Satisfação: Utilidade, confiança, prazer e conforto;
-> - Ausência de Risco: Mitigação dos riscos econômicos, de saúde, de segurança e ambientais;
-> - Cobertura e contexto: Completude e flexibilidade.
+**Modelo de Qualidade de uso**:
+- Eficácia: Precisão e completude com as quais os usuários atingem suas metas;
+- Eficiência: Recursos despendidos para atingir completamente os objetivos dos usuários com precisão;
+- Satisfação: Utilidade, confiança, prazer e conforto;
+- Ausência de Risco: Mitigação dos riscos econômicos, de saúde, de segurança e ambientais;
+- Cobertura e contexto: Completude e flexibilidade.
 
 > **Qualidade de Produto**:
 > - Adequação funcional: Completo, correto e apropriado;
