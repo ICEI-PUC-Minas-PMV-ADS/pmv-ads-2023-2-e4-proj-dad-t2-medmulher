@@ -1,5 +1,5 @@
 const { Users } = require("../models/");
-const { hash } = require("bcryptjs");
+const { hash, compare } = require("bcryptjs");
 
 class UserController {
   // CREATE
@@ -56,10 +56,10 @@ class UserController {
 
     const { name, password, cpf, address, email } = req.body;
     const updated_user_date = new Date();
-
+    const hashedPassword = await hash(password, 8);
     const user = {
       name,
-      password,
+      password: hashedPassword,
       cpf,
       address,
       email,
@@ -138,12 +138,10 @@ class UserController {
     }
 
     if (user) {
-      return res
-        .status(200)
-        .json({
-          message: "Usuário encontrado com sucesso! ",
-          userID: user._id,
-        });
+      return res.status(200).json({
+        message: "Usuário encontrado com sucesso! ",
+        userID: user._id,
+      });
     }
 
     return res
@@ -154,9 +152,20 @@ class UserController {
   async updatePassword(req, res) {
     const id = req.params.id;
     const { password } = req.body;
+    const { name, cpf, address, email } = await Users.findOne({ _id: id });
+    const updated_user_date = new Date();
+    const hashedPassword = await hash(password, 8);
 
+    const user = {
+      name,
+      password: hashedPassword,
+      cpf,
+      address,
+      email,
+      updated_user_date,
+    };
     try {
-      const updatedUser = await Users.updateOne({ _id: id }, password);
+      const updatedUser = await Users.updateOne({ _id: id }, user);
 
       res.status(200).json({ message: `Senha alterada com sucesso!` });
     } catch (error) {
@@ -164,6 +173,29 @@ class UserController {
     }
   }
 
+  // Authenticator / Login
+
+  async auth(req, res) {
+    const { email, password } = req.body;
+
+    const user = await Users.findOne({ email });
+
+    if (!user) {
+      res.status(422).json({ message: "Usuário não cadastrado!" });
+      return;
+    }
+
+    const checkPassword = await compare(password, user.password);
+    if (checkPassword) {
+      return res.status(200).json({ message: `Login efetuado com sucesso!` });
+    }
+
+    return res.status(403).json({
+      message: `Usuário não encontrado, verificar e-mail e senha informada.`,
+      email: true,
+      password: checkPassword,
+    });
+  }
 }
 
 module.exports = UserController;
