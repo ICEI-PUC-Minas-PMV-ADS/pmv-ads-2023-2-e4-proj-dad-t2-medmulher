@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 const app = express();
