@@ -1,5 +1,6 @@
 const { Users } = require("../models/");
 const { hash, compare } = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 class UserController {
   // CREATE
@@ -187,7 +188,11 @@ class UserController {
 
     const checkPassword = await compare(password, user.password);
     if (checkPassword) {
-      return res.status(200).json({ message: `Login efetuado com sucesso!` });
+      const id = user._id;
+      const token = jwt.sign({ id }, process.env.SECRET);
+      return res
+        .status(200)
+        .json({ message: `Login efetuado com sucesso!`, auth: true, token });
     }
 
     return res.status(403).json({
