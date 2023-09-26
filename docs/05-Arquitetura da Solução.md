@@ -147,18 +147,20 @@ Na tabela abaixo, identificamos as rotas (ROUTES) criadas na API Node.JS para in
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/646cc21b-be02-4a41-83fb-a39346042c40)
 
 - CREATE: Criar Usuário
-
-  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/ed21bacc-8932-41dd-8944-2afffcc5fc03)
   
 - READ: Visualizar Usuário
-
-  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/0d4fc80b-a976-4195-b528-edc05d3f0648)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/f698794a-b03f-4c3c-a738-cd76e8df73ac)
   
 - UPDATE: Alterar Usuário
-
-  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/3456ccd4-db2f-45ab-bb2a-4c08188edc13)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/5cb9f51a-899f-4f71-a13b-5f4145c5fdaf)
   
 - DELETE: Deletar Usuário
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/36c3ccfa-03e6-45b6-b9ca-2b7249fd86be)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/05345336-f550-4b56-8a20-f1db2875c8e4)
+
 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/28a7ab92-7faf-4985-b291-2604223f2a0d)
