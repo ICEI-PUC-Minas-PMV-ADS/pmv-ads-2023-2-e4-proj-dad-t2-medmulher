@@ -8,11 +8,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | --- | --- |
 | Requisito Associado | RF-001 e RF-003 |
 | Descrição | O teste consiste em verificar se é possível realizar o cadastro de um usuário na aplicação. |
-| Passos | 
-| 1. Abrir a página de cadastro de usuário |
-| 2. Preencher os campos obrigatórios: nome, e-mail, senha, endereço e CPF |
-| 3. Clicar no botão "Cadastrar" |
-| 4. Verificar se o usuário é redirecionado para a página de login |
+| Passos |  1) Abrir a página de cadastro de usuário </br> 2) Preencher os campos obrigatórios: nome, e-mail, senha, endereço e CPF </br>  3) Clicar no botão "Cadastrar" </br>  4) Verificar se o usuário é redirecionado para a página de login |
 | Resultado Esperado | O usuário deve ser capaz de se cadastrar na aplicação com sucesso e ser redirecionado para a página de login. |
 
 #
