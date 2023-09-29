@@ -8,8 +8,7 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 
 | **Caso de Teste** 	| **CT-02 – Cadastro* 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| . RF-001 – Permitir que o usuário faça seu cadastro no sistema
-. RF-003 - Permitir que o usuário gerencie o seu perfil cadastrado | 
+|	Requisito Associado 	| RF-001 – Permitir que o usuário faça seu cadastro no sistema e RF-003 - Permitir que o usuário gerencie o seu perfil cadastrado | 
 | Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação, alterar os dados e excluir a conta. |
 | Passos 	| 1) Acessar o aplicativo “Med Mulher” pela versão Web ou mobile 2) Visualizar a página de Login, clicando em Cadastre-se na página inicial 3) Cadastrar um novo usuário 4) Preencher os campos solicitados (nome, e-mail, senha, endereço e CPF) 5) Clique no botão cadastrar. |
 |Critério de Êxito | - O cadastro foi realizado com sucesso, caso não seja bem-sucedido deverá obedecer aos critérios de senha: - Crie uma senha com no mínimo 8 caracteres, - Adicione letras minúsculas, -Adicione pelo menos uma letra maiúscula. |
