@@ -115,8 +115,58 @@ Abaixo está o modelo do fluxo de mensagens entre os usuarios A e B e suas deter
 
 ## Metas e Indicadores
 
+Para o processo apresentado na notação BPMN o grupo estabeleceu as seguintes metas e indicadores para processo de desenvolvimento:
+
+1.	Separar regras de negócio das aplicações - visibilidade e processos mais inteligentes.
+2.	Expressar regras de negócio em termos que as pessoas de negócio compreendam - Visibilidade dos modelos de decisão
+3.	Estimular a colaboração entre pessoas de negócio e TI - Agilidade
+   
+Como meta de negócio, sabe-se que o cliente utilizará o produto com o objetivo de realizar marcações de consultas e exames em clínicas da mulher. Sendo assim, é importante que ele consiga fazer o agendamento ou gerenciamento de suas marcações no máximo em 10 minutos. Outro ponto relevante, é que o médico precisar acessar sua agenda com as marcações confirmadas com 24 horas de antecedência.
+O objetivo é criar um produto que otimize o processo de agendamento e gerenciamento de consultas, onde o tempo de instalação e configurações de uso fiquem dentro da margem de aceite (MA) estabelecida pela meta.
+
+
+|  Classificação de indicadores  |      Métrica      | 
+|--------------|---------------------|
+| Viável       |  Dentro da Meta     | 
+| Aceitável    |  Meta + (MA)        | 
+| Inviável     |  Acima da meta+(MA) | 
+
+
+|  Evento   |      Descrição      | Meta | Margem de Aceite (MA)  |
+|--------------|---------------------|---------------------|---------------------|
+| Agendamento  |  Avaliar o tempo de  agendamento dos clientes | 8 minutos  | 5 minutos  |
+| Cancelamento |  Acesso ao app, gerenciamento de conta e cancelar marcação | 5 minutos | 3 minutos |
+| Cadastro de Médico |  Cadastrar médicos no app para agendamento de consultas | 8 minutos  | 5 minutos  |
+
+|  Metas de Negócio  |      Méta      |       MA      | 
+|--------------|---------------------|---------------------|
+| downloads    | aumento de 35% em downloads no app   | 3.0 |
+| agendamento  | aumento de 25% no uso do app para agendamento| 3.0 |
+| retenção     |  nenhuma redução na retenção | 3.0 |
+
+
+Para alcançar as metas, o grupo utilizará o método SMART, estabelecendo-se 5 indicadores de desempenho:
+1.	Specific/Específico = Projeto completo até a data 01/12/2022. Utilização do aplicativo pra agendamento do usuário em 10 minutos.
+2.	Measurable/Mensurável = em quanto tempo o resultado deve ser alcançado alcançado? Em 2 meses
+3.	Attainable/Atingível = considerando a capacidade produtiva dos membros do grupo, é viável a construção de um pomodoro cuja utilização e configuração para uso, não ultrapasse 10 minutos até a data final da conclusão do projeto.
+4.	Relevante/Relevant = a meta é importante pois o serviço está relacionado à administração de tempo e produtividade. Caso o produto atrase o usuário em seus estudos ou tarefas, o produto torna-se completamente inútil. A relevãncia é apresentada por label de prioridade como apresentado abaixo, diposta em 3 cores: vermelha, amarela e verde.
+5.	Time Base = Os membros do grupo deverão ser consultados sobre os prazos de cada etapa do processo, de modo que o cronograma seja definido de forma conjunta entre todos os envolvidos. Cada atividade deverá constar o nome do responsável e data de conclusão.
+
+          - Vermelha: prioridade alta 
+          - Amarela: prioridade média 
+          - Verde: prioridade baixa 
+          
+As tarefas serão livres para qualquer membro do time poder executá-las ou direcionadas a determinado membro do time, que tenha mais experiência em determinada área de conhecimento. Com relação a livre escolha de tarefas, obrigatoriamente, deve ser respeitada a hierarquia de prioridades. Enquanto tiverem tarefas de maiores prioridades disponíveis, não poderão ser iniciadas as tarefas de menor prioridade, a prioridade padrão é a amarela, devendo ser vermelhas as prioridades urgentes que surgirem ao longo do projeto.  
+
+Abaixo, figura demonstrando a disposição das etiquetas:
+
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/blob/main/docs/img/Etiquetas_projeto.png)
 
 ## Quadro Visual Atual e Gestão de Trabalho
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/blob/main/docs/img/gerenciamento_atualizado1.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/blob/main/docs/img/gerenciamento_atualizado2.png)
 
 
 ## Tecnologias Utilizadas
