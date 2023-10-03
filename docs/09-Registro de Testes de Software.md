@@ -4,7 +4,7 @@
 
 Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
 
-| CT-02 | Realizar Cadastro |
+| CT-01 | Realizar Cadastro |
 | --- | --- |
 | Requisito Associado | RF-001 e RF-003 |
 | Descrição | O teste consiste em verificar se é possível realizar o cadastro de um usuário na aplicação. |
@@ -13,7 +13,16 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 #
 
-| CT-0X	| Cadastro de médicos e agenda |
+| CT-02 | Login |
+| --- | --- |
+| Requisito Associado | RF-002 |
+| Descrição | O teste consiste em verificar se é possível fazer o Login e o Logout na aplicação |
+| Passos |  1) Acessar a aplicação “Med Mulher” </br> 2) Visualizar a área de login </br> 3) Preencher as informações de Login e senha cadastrados previamente </br> 4) Fazer login no sistema </br> 5) Ser redirecionado para a home do paciente </br> |
+| Resultado | x |
+
+#
+
+| CT-03	| Cadastro de médicos e agenda |
 | ---	| ---	|
 |	Requisito Associado	| RF-008 | 
 | Objetivo do Teste	| Verificar se o administrador conseguirá cadastrar e salvar na aplicação, as informações do médico e de sua agenda (data e horários de atendendo). |
@@ -22,7 +31,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 #
 
-| CT-0? | Agendamento de consultas |
+| CT-04 | Agendamento de consultas |
 | --- | --- |
 | Requisito Associado | RF-004 |
 | Descrição | O teste consiste em verificar se é possível fazer o agendamento de uma consulta |
