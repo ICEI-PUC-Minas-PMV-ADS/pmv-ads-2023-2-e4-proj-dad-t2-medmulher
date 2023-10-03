@@ -26,7 +26,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | --- | --- |
 | Requisito Associado | RF-004 |
 | Descrição | O teste consiste em verificar se é possível fazer o agendamento de uma consulta |
-| Passos |  1) Acessar o aplicativo “Med Mulher” pela versão Web ou mobile 2) Visualizar a área de login 3) Fazer cadastro caso ainda não tenha se cadastrado 4) Fazer login no sistema 5) Ir para a página de agendamento de consultas 6) Agendar consulta |
+| Passos |  1) Acessar o aplicativo “Med Mulher” </br> 2) Visualizar a área de login </br> 3) Fazer cadastro caso ainda não tenha se cadastrado </br> 4) Fazer login no sistema </br> 5) Ir para a página de agendamento de consultas </br> 6) Agendar consulta |
 | Resultado | x |
 
 
