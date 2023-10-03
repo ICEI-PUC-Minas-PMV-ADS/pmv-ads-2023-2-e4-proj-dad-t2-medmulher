@@ -21,6 +21,16 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 | Objetivo do Teste 	| Verificar se o administrador conseguirá cadastrar e salvar na aplicação, as informações do médico e de sua agenda (data e horários de atendendo).  |
 | Passos 	| 1) Acessar a área de administrador da aplicação “Med Mulher”; </br> 2) Clicar em "Cadastrar médico"; </br> 3) Preencher as informações pessoais do médico e sua especialidade médica; </br> 4) Preencher os dias e horários em que o médico estará atendendo; </br> 5) Confirmar que os dados foram devidamente salvos no banco de dados. |
 |Critério de Êxito | - O cadastro terá sido realizado com sucesso, se os dados do médico e de sua agenda estiverem salvos no banco de dados. |
+
+| **Caso de Teste** 	| **CT-0? – Agendamento* 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-004	Permitir que o usuário marque consultas com o médico especialista de sua necessidade | 
+| Objetivo do Teste 	| Verificar se o usuário consegue fazer o agendamento da consulta, selecionando o médico e sua especialidade |
+| Passos 	| 1) Acessar o aplicativo “Med Mulher” pela versão Web ou mobile 2) Visualizar a área de login 3) Fazer cadastro caso ainda não tenha se cadastrado 4) Fazer login no sistema 5) Ir para a página de agendamento de consultas 6) Agendar consulta |
+|Critério de Êxito | - A consulta deve ser agendada com sucesso e aparecer na área "Minhas Consultas" |
+|  	|  	|
+
+
 ## Ferramentas de Testes (Opcional)
 
 Comente sobre as ferramentas de testes utilizadas.
