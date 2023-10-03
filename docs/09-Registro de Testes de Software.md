@@ -20,6 +20,17 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | Passos | 1) Acessar a área de administrador da aplicação “Med Mulher”; </br> 2) Clicar em "Cadastrar médico"; </br> 3) Preencher as informações pessoais do médico e sua especialidade médica; </br> 4) Preencher os dias e horários em que o médico estará atendendo; </br> 5) Confirmar que os dados foram devidamente salvos no banco de dados. |
 | Resultado Obtido |  |
 
+#
+
+| CT-0? | Agendamento de consultas |
+| --- | --- |
+| Requisito Associado | RF-004 |
+| Descrição | O teste consiste em verificar se é possível fazer o agendamento de uma consulta |
+| Passos |  1) Acessar o aplicativo “Med Mulher” pela versão Web ou mobile 2) Visualizar a área de login 3) Fazer cadastro caso ainda não tenha se cadastrado 4) Fazer login no sistema 5) Ir para a página de agendamento de consultas 6) Agendar consulta |
+| Resultado | x |
+
+
+
 ### Evidências do teste realizado
 (vídeo ou imagem do teste)
 
