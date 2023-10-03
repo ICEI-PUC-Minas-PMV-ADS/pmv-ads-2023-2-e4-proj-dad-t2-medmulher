@@ -6,7 +6,7 @@ Apresente os cenários de testes utilizados na realização dos testes da sua ap
 
 Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
 
-| **Caso de Teste** 	| **CT-02 – Cadastro* 	|
+| **Caso de Teste** 	| **CT-01 – Cadastro* 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-001 – Permitir que o usuário faça seu cadastro no sistema </br> RF-003 - Permitir que o usuário gerencie o seu perfil cadastrado | 
 | Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação, alterar os dados e excluir a conta. |
@@ -14,15 +14,22 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 |Critério de Êxito | - O cadastro foi realizado com sucesso, caso não seja bem-sucedido deverá obedecer aos critérios de senha: - Crie uma senha com no mínimo 8 caracteres, - Adicione letras minúsculas, -Adicione pelo menos uma letra maiúscula. |
 |  	|  	|
 
-
-| **Caso de Teste** 	| **CT-0X – Cadastro de médicos e agenda* 	|
+| **Caso de Teste** 	| **CT-02 – Login* 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-008	Permitir que o administrador do sistema cadastre datas, horários de consultas e médicos | 
+|	Requisito Associado 	| RF-002 -	Permitir que o usuário faça login e logout no sistema | 
+| Objetivo do Teste 	| Verificar se o usuário consegue fazer o Login e o Logout corretamente |
+| Passos 	| 1) Acessar o aplicativo “Med Mulher” pela versão Web ou mobile </br> 2) Visualizar a área de login </br> 3) Preencher as informações de Login e senha previamente cadastradas </br> 4) Fazer login no sistema </br> 5) Fazer Logout quando quiser sair da aplicação |
+|Critério de Êxito | - A tela de login deve abrir corretamente - O login e senha cadastrados devem direcionar o usuário para a tela de home do paciante - Login e senha incorretos devem exibir uma mensagem de login ou senha incorretos - O usuário deverar conseguir realizar o logout do sistema |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-03 – Cadastro de médicos e agenda* 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-008	- Permitir que o administrador do sistema cadastre datas, horários de consultas e médicos | 
 | Objetivo do Teste 	| Verificar se o administrador conseguirá cadastrar e salvar na aplicação, as informações do médico e de sua agenda (data e horários de atendendo).  |
 | Passos 	| 1) Acessar a área de administrador da aplicação “Med Mulher”; </br> 2) Clicar em "Cadastrar médico"; </br> 3) Preencher as informações pessoais do médico e sua especialidade médica; </br> 4) Preencher os dias e horários em que o médico estará atendendo; </br> 5) Confirmar que os dados foram devidamente salvos no banco de dados. |
 |Critério de Êxito | - O cadastro terá sido realizado com sucesso, se os dados do médico e de sua agenda estiverem salvos no banco de dados. |
 
-| **Caso de Teste** 	| **CT-0? – Agendamento* 	|
+| **Caso de Teste** 	| **CT-04 - Agendamento* 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-004	Permitir que o usuário marque consultas com o médico especialista de sua necessidade | 
 | Objetivo do Teste 	| Verificar se o usuário consegue fazer o agendamento da consulta, selecionando o médico e sua especialidade |
