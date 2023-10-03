@@ -18,7 +18,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | Requisito Associado | RF-002 |
 | Descrição | O teste consiste em verificar se é possível fazer o Login e o Logout na aplicação |
 | Passos |  1) Acessar a aplicação “Med Mulher” </br> 2) Visualizar a área de login </br> 3) Preencher as informações de Login e senha cadastrados previamente </br> 4) Fazer login no sistema </br> 5) Ser redirecionado para a home do paciente </br> |
-| Resultado | x |
+| Resultado | O usuário deverá conseguir realizar login e logout no sistema |
 
 #
 
