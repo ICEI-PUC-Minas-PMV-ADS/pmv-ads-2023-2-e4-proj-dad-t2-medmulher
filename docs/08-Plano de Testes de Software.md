@@ -10,7 +10,7 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-001 – Permitir que o usuário faça seu cadastro no sistema </br> RF-003 - Permitir que o usuário gerencie o seu perfil cadastrado | 
 | Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação, alterar os dados e excluir a conta. |
-| Passos 	| 1) Acessar o aplicativo “Med Mulher” pela versão Web ou mobile 2) Visualizar a página de Login, clicando em Cadastre-se na página inicial 3) Cadastrar um novo usuário 4) Preencher os campos solicitados (nome, e-mail, senha, endereço e CPF) 5) Clique no botão cadastrar. |
+| Passos 	| 1) Acessar o aplicativo “Med Mulher” pela versão Web ou mobile </br> 2) Visualizar a página de Login, clicando em Cadastre-se na página inicial </br> 3) Cadastrar um novo usuário </br> 4) Preencher os campos solicitados (nome, e-mail, senha, endereço e CPF) </br> 5) Clique no botão cadastrar. |
 |Critério de Êxito | - O cadastro foi realizado com sucesso, caso não seja bem-sucedido deverá obedecer aos critérios de senha: - Crie uma senha com no mínimo 8 caracteres, - Adicione letras minúsculas, -Adicione pelo menos uma letra maiúscula. |
 |  	|  	|
 
@@ -26,7 +26,7 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-004	Permitir que o usuário marque consultas com o médico especialista de sua necessidade | 
 | Objetivo do Teste 	| Verificar se o usuário consegue fazer o agendamento da consulta, selecionando o médico e sua especialidade |
-| Passos 	| 1) Acessar o aplicativo “Med Mulher” pela versão Web ou mobile 2) Visualizar a área de login 3) Fazer cadastro caso ainda não tenha se cadastrado 4) Fazer login no sistema 5) Ir para a página de agendamento de consultas 6) Agendar consulta |
+| Passos 	| 1) Acessar o aplicativo “Med Mulher” pela versão Web ou mobile </br> 2) Visualizar a área de login </br> 3) Fazer cadastro caso ainda não tenha se cadastrado </br> 4) Fazer login no sistema </br> 5) Ir para a página de agendamento de consultas </br> 6) Agendar consulta |
 |Critério de Êxito | - A consulta deve ser agendada com sucesso e aparecer na área "Minhas Consultas" |
 |  	|  	|
 
