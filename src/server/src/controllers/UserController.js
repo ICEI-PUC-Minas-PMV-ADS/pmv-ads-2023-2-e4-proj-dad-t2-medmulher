@@ -85,7 +85,6 @@ class UserController {
   async get(req, res) {
     try {
       const users = await Users.find();
-
       res.status(200).json(users);
     } catch (error) {
       res.status(500).json({ error });
@@ -165,8 +164,9 @@ class UserController {
       email,
       updated_user_date,
     };
+
     try {
-      const updatedUser = await Users.updateOne({ _id: id }, user);
+      await Users.updateOne({ _id: id }, user);
 
       res.status(200).json({ message: `Senha alterada com sucesso!` });
     } catch (error) {

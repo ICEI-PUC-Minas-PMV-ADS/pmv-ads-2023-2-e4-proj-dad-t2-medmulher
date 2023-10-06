@@ -1,3 +1,5 @@
 const Users = require("./User")
+const Doctors = require("./Doctor")
+const Consultations = require("./Consultation")
 
-module.exports = { Users }
+module.exports = { Users, Doctors, Consultations }
