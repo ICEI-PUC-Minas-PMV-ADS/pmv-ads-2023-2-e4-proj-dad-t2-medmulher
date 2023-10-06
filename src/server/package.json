@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --passWithNoTests",
     "start": "nodemon ./src/server.js localhost 3000"
   },
   "keywords": [],
@@ -19,5 +19,8 @@
     "mongoose": "^7.5.2",
     "node-fetch": "^2.7.0",
     "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
