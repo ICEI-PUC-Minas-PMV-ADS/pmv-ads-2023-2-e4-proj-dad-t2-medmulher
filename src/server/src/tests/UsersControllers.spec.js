@@ -1,7 +1,3 @@
-// DESCRIBRE
-// IT OR TEST
-// EXPECT
-
 const request = require("supertest");
 const UserController = require("../controllers/UserController");
 
@@ -47,9 +43,15 @@ describe("User Controller Test", () => {
     await request(baseURL).get(`/${user[0]._id}`).expect(200);
   });
 
+  it("PATCH Doctor", async () => {
+    const req = {
+      password: "Fulano@321!",
+    };
+
+    await request(baseURL).patch(`/${user[0]._id}`).send(req).expect(200);
+  });
+
   it("DELETE User ID", async () => {
     await request(baseURL).delete(`/${user[0]._id}`).expect(200);
   });
-
-
 });
