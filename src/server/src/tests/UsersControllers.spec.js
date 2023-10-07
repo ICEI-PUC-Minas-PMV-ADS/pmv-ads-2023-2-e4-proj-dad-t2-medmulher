@@ -1,7 +1,3 @@
-// DESCRIBRE
-// IT OR TEST
-// EXPECT
-
 const request = require("supertest");
 const UserController = require("../controllers/UserController");
 
@@ -50,6 +46,4 @@ describe("User Controller Test", () => {
   it("DELETE User ID", async () => {
     await request(baseURL).delete(`/${user[0]._id}`).expect(200);
   });
-
-
 });
