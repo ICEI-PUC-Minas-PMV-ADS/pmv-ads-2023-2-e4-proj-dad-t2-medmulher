@@ -44,5 +44,19 @@ describe("Doctor Controller Test", () => {
 
     await request(baseURL).post("/").send(req).expect(201);
   });
+
+  it("GET Doctors", async () => {
+    const doctors = await request(baseURL).get("/");
+
+    if (doctors) {
+      doctor = doctors.body.filter((doc) => doc.name === "Fulano Test");
+    }
+
+    expect(doctors.statusCode).toBe(200);
+  });
+
+  it("DELETE Doctor ID", async () => {
+    await request(baseURL).delete(`/${doctor[0]._id}`).expect(200);
+  });
 });
 
