@@ -42,19 +42,22 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 ### Evidências do teste realizado
 
-. Testes Users / Doctor e Consultation: 
+- **Tests no JEST "Users / Doctor e Consultation"**: 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/e5116873-8f26-4779-ad1a-56407fdabc28)
 
-. UsersControllers.spec.js:
+
+- **UsersControllers.spec.js**:
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/76a48985-f459-4ff3-b917-c4995555e135)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/90adc0e3-89d0-4cc4-94b0-b1de8c3c6a1c)
 
-. DoctorControllers.spec.js:
+
+- **DoctorControllers.spec.js**:
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/7e69ee79-a2bc-401d-8b7b-5926f240fea1)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/428701b4-b1f8-4aae-b0ca-24fa8a11ba1e)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/b1f641ec-7861-489a-9d11-2f9b4633f729)
 
-. ConsultationControllers.spec.js:
+
+- **ConsultationControllers.spec.js**:
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/536b41f7-b993-4860-9551-e86d80bdc7b9)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/da949037-9150-4c77-bf40-3f7d61717fd8)
 
