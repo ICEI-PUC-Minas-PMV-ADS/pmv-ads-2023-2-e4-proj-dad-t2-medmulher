@@ -63,7 +63,10 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 ## Avaliação
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+Os resultados obtidos no Prompt de Comando indicam que os testes de integração foram bem-sucedidos, seguindo o plano de testes de software proposto. Obedecendo os comandos de "POST, GET, GET ID, PATCH e DELETE", em todas as funcionalidades do banco de dados Mongo DB aplicados no projeto MedMulher.
 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/dec8d5c4-9180-4421-a3c2-0fc29def69f0)
+
+
+
+
