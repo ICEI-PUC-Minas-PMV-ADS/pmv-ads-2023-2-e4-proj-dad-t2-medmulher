@@ -38,14 +38,26 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 |  	|  	|
 
 
-## Ferramentas de Testes (Opcional)
+# Ferramentas de Testes
 
-Comente sobre as ferramentas de testes utilizadas.
- 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+## Utilização do Jest para Testes de Aplicação Node.js
+Os testes desempenham um papel crucial na garantia da qualidade do código e na confiabilidade de nossas aplicações, e a decisão de adotar o Jest foi tomada após uma análise cuidadosa das opções disponíveis.
+
+## Razões para a Escolha do Jest
+- Simplicidade e Facilidade de Uso: O Jest é amplamente reconhecido pela sua simplicidade e facilidade de uso. Isso permite que nossa equipe de desenvolvimento se concentre na criação de testes eficazes em vez de lidar com complexas configurações.
+- Rapidez na Execução: A velocidade de execução dos testes é uma consideração crítica para o fluxo de trabalho de desenvolvimento. O Jest é otimizado para ser rápido, permitindo que os testes sejam executados rapidamente, o que é essencial para um desenvolvimento ágil.
+- Bateria de Recursos Abrangente: O Jest oferece uma ampla gama de funcionalidades, como suporte para testes síncronos e assíncronos, asserções, mocks e spies, que atendem às nossas necessidades de teste.
+- Ampla Comunidade e Documentação: O Jest possui uma comunidade ativa de desenvolvedores e uma documentação abrangente. Isso significa que podemos encontrar suporte e soluções para problemas comuns de forma eficaz.
+- Integração com o Ecossistema Node.js: Como uma ferramenta desenvolvida para JavaScript e Node.js, o Jest se integra perfeitamente com nosso ambiente de desenvolvimento atual.
+- Boas Práticas de Teste: O Jest promove boas práticas de teste, como testes isolados e independentes. Isso nos ajuda a escrever testes mais confiáveis e eficazes.
+- Snapshot Testing: O recurso de "snapshot testing" do Jest permite que capturemos automaticamente o estado da saída de nossos componentes e a comparemos com versões anteriores. Isso é valioso para a detecção rápida de regressões visuais.
+
+## Processo de Adoção do Jest
+A transição para o uso do Jest em nossa aplicação Node.js envolveu as seguintes etapas:
+- Avaliação de Necessidades: Avaliamos nossos requisitos de teste e consideramos as opções disponíveis para determinar qual framework melhor atenderia às nossas necessidades.
+- Instalação e Configuração: Instalamos o Jest como dependência de desenvolvimento em nosso projeto e configuramos os ambientes de teste conforme necessário.
+- Criação de Testes: Adaptamos nossos testes existentes e escrevemos novos testes usando as funcionalidades do Jest.
+- Execução de Testes Automatizados: Configuramos a execução de testes automatizados em nosso ambiente de integração contínua (CI/CD) para garantir que os testes sejam executados sempre que houver alterações no código.
+
+## Conclusão
+A decisão de adotar o Jest para nossos testes de aplicação Node.js foi baseada em sua simplicidade, desempenho e robustez. Acreditamos que essa escolha contribuirá significativamente para a qualidade e a confiabilidade de nossos produtos, permitindo-nos entregar software de alto nível aos nossos usuários.

@@ -3,7 +3,7 @@
 // EXPECT -> asserções do resultado - validar resultados
 
 const request = require("supertest");
-const ConsulationController = require("../controllers/ConsultationController");
+const ConsultationController = require("../controllers/ConsultationController");
 
 describe("Consultation Controller Test", () => {
     const Consultation = new ConsultationController();
@@ -30,4 +30,20 @@ describe("Consultation Controller Test", () => {
 
         await request(baseURL).post("/").send(req).expect(201);
     });
+});
+
+/* 
+it("GET Consultations", async () => {
+    const consultations = await request(baseURL).get("/");
+
+    if (consultations) {
+      
+    }
+
+    expect(consultations.statusCode).toBe(200);
+  });
+*/
+
+it("DELETE Consultation", async () => {
+    await request(baseURL).delete(`/${consultation[0]._id}`).expect(200);
 });
