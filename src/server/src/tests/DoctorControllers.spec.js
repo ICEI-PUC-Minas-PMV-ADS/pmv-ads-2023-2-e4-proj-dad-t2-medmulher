@@ -55,6 +55,18 @@ describe("Doctor Controller Test", () => {
     expect(doctors.statusCode).toBe(200);
   });
 
+  it("GET Doctor ID", async () => {
+    await request(baseURL).get(`/${doctor[0]._id}`).expect(200);
+  });
+
+  it("PATCH Doctor", async () => {
+    const req = {
+      crm: "CRM800",
+    };
+
+    await request(baseURL).patch(`/${doctor[0]._id}`).send(req).expect(200);
+  });
+
   it("DELETE Doctor ID", async () => {
     await request(baseURL).delete(`/${doctor[0]._id}`).expect(200);
   });
