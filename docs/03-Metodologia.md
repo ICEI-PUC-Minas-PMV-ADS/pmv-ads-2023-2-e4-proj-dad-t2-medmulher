@@ -1,10 +1,42 @@
 
 # Metodologia
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+A metodologia de trabalho do grupo para abordar o problema de desenvolvimento do projeto envolve uma série de elementos, incluindo ambientes de trabalho, gestão de código fonte e organização da equipe. Aqui está uma descrição desses elementos:
 
+Ambientes de Trabalho:
+
+Ambiente de Desenvolvimento: A equipe utiliza o Visual Studio Code como a principal IDE (Integrated Development Environment) para escrever, depurar e testar código. Ele oferece suporte a várias linguagens de programação e é altamente configurável.
+
+Design de Interface: Para o design de interfaces de usuário e prototipagem, a equipe utiliza o Figma, uma ferramenta de design colaborativa baseada na web. Isso permite que os membros da equipe colaborem na criação e revisão de designs de forma eficiente.
+
+Modelagem de Software: Para modelagem de software e criação de diagramas UML, a equipe utiliza o Astah, uma ferramenta de modelagem que ajuda a visualizar a arquitetura do sistema e os relacionamentos entre os componentes.
+
+Controle de Versão: O GitHub é a plataforma escolhida para controle de versão e colaboração em código-fonte. A equipe utiliza o Git para gerenciar todas as alterações no código, permitindo rastreamento de versão, revisões de código e colaboração eficaz.
+
+Comunicação: Para comunicação em equipe, o WhatsApp é usado como uma ferramenta de mensagens instantâneas para discussões rápidas e atualizações diárias.
+
+Estrutura para Gestão do Código Fonte:
+
+A gestão do código fonte é uma parte crítica do desenvolvimento do projeto. A equipe utiliza o GitHub para manter um repositório centralizado do código-fonte, que inclui recursos como:
+
+Branches: A equipe trabalha com branches separados para desenvolver novos recursos ou correções de bugs. Isso permite que as alterações sejam desenvolvidas e testadas em ambientes isolados antes de serem incorporadas à versão principal (branch master).
+
+Pull Requests: Para promover a colaboração e revisão de código, a equipe cria pull requests ao concluir uma tarefa. Isso permite que outros membros da equipe revisem o código, discutam alterações e garantam a qualidade antes de mesclá-lo com o branch principal.
+
+Issues e Milestones: As issues são usadas para rastrear tarefas, bugs e recursos específicos do projeto. Os milestones são usados para agrupar e planejar tarefas em marcos ou versões específicas do projeto.
+
+Processo e Ferramentas de Gestão de Times:
+
+A equipe utiliza uma abordagem ágil para gerenciar o projeto e priorizar tarefas. As ferramentas incluem:
+
+Kanban Board: Um quadro Kanban digital é usado para visualizar o progresso das tarefas. Isso ajuda a equipe a acompanhar o fluxo de trabalho, identificar gargalos e priorizar tarefas.
+
+Gantt: Um gráfico de Gantt é usado para criar um cronograma de projeto visual que mostra as datas de início e conclusão das tarefas. Isso auxilia na programação e no gerenciamento de prazos.
+
+WhatsApp: Além de comunicação diária, o WhatsApp também pode ser usado para manter os membros da equipe atualizados sobre mudanças urgentes ou atualizações críticas do projeto.
+
+A combinação dessas ferramentas e práticas permite que a equipe colabore eficazmente, gerencie o desenvolvimento de software de forma eficiente e mantenha um alto nível de organização ao enfrentar o problema do projeto de desenvolvimento. Isso ajuda a garantir que o projeto progrida de maneira eficaz e atenda aos objetivos e prazos estabelecidos.
 ## Relação de Ambientes de Trabalho
 
 Na tabela abaixo está representada as plataformas onde foram desevolvidos os artefatos durante o projeto, e seus respectivos links para acessá-los:
