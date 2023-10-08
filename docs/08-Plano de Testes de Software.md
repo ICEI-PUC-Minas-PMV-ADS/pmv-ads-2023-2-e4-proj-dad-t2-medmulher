@@ -1,5 +1,7 @@
 # Plano de Testes de Software
 
+Plano de testes definido pela equipe:
+
 | **Caso de Teste** 	| **CT-01 – Cadastro* 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-001 – Permitir que o usuário faça seu cadastro no sistema </br> RF-003 - Permitir que o usuário gerencie o seu perfil cadastrado | 
