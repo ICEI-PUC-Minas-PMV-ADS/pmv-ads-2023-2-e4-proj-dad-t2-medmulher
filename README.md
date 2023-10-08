@@ -26,7 +26,27 @@ MedMulher é uma aplicação focada em mulheres de baixa renda, que facilita e a
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+- Servidor mongoDB conectado!
+  
+        cd src/server
+        npm install
+        npm start
+  
+
+-  Jest (Tests)
+
+        npm install --save-dev jest
+        module.exports =
+        {
+        testEnvironment: 'node',
+        testMatch: ['**/__tests__/**/*.js?(x)', '**/?(*.)+(spec|test).js?(x)']
+        }
+        "test": "jest --passWithNoTests"
+        npm test
+
+- Postman
+ Segue abaixo o link do Postman:
+- <a href="https://web.postman.co/workspace/My-Workspace~39ee1a3c-ed65-44b3-8678-8fbe9e20cd6b/collection/29943307-41b07825-321e-4702-8b80-47bf2f78f874"> Postman </a>
 
 ## Kanban e Gantt
 
