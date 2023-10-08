@@ -27,7 +27,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 |	Requisito Associado	| RF-008 | 
 | Objetivo do Teste	| Verificar se o administrador conseguirá cadastrar e salvar na aplicação, as informações do médico e de sua agenda (data e horários de atendendo). |
 | Passos | 1) Acessar a área de administrador da aplicação “Med Mulher”; </br> 2) Clicar em "Cadastrar médico"; </br> 3) Preencher as informações pessoais do médico e sua especialidade médica; </br> 4) Preencher os dias e horários em que o médico estará atendendo; </br> 5) Confirmar que os dados foram devidamente salvos no banco de dados. |
-| Resultado Obtido | Cadastro de médico e da sua agenda realizados com sucesso. |
+| Resultado Obtido | Cadastro de médico e da agenda realizados com sucesso. |
 
 #
 
