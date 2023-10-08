@@ -63,7 +63,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 Os resultados obtidos no Prompt de Comando indicam que os testes de integração foram bem-sucedidos, seguindo o plano de testes de software proposto. Obedecendo os comandos de "POST, GET, GET ID, PATCH e DELETE", em todas as funcionalidades do banco de dados MongoDB aplicados no projeto MedMulher.
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/blob/main/docs/img/npmtest.jpg)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/dec8d5c4-9180-4421-a3c2-0fc29def69f0)
 
 
 
