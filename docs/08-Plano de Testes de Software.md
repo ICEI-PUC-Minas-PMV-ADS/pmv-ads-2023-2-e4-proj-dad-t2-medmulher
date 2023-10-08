@@ -28,7 +28,7 @@ Plano de testes definido pela equipe:
 | **Caso de Teste** 	| **CT-04 - Agendamento* 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RF-004	Permitir que o usuário marque consultas com o médico especialista de sua necessidade | 
-| Objetivo do Teste 	| Verificar se o usuário consegue fazer o agendamento da consulta, selecionando o médico e sua especialidade |
+| Objetivo do Teste 	| Verificar se o usuário consegue fazer o agendamento da consulta, selecionando o médico e sua especialidade, bem como a data e o horário |
 | Passos 	| 1) Acessar o aplicativo “Med Mulher” pela versão Web ou mobile </br> 2) Visualizar a área de login </br> 3) Fazer cadastro caso ainda não tenha se cadastrado </br> 4) Fazer login no sistema </br> 5) Ir para a página de agendamento de consultas </br> 6) Agendar consulta |
 |Critério de Êxito | - A consulta deve ser agendada com sucesso e aparecer na área "Minhas Consultas" |
 |  	|  	|
