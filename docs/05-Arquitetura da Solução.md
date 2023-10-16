@@ -182,8 +182,6 @@ A linguagem de programação JavaScript, atrelado a biblioteca React Native e Re
 | React JS     |  FrontEnd WEB       | 
 | React Native |  FrontEnd Mobile    | 
 
-![image](img/Tecnologias1.png)
-
 ## Documentação da Implementação da WEB API Rest
 
 Na tabela abaixo, identificamos as rotas (ROUTES) criadas na API Node.JS para interagir com o banco de dados do MongoDB, com o objetivo de realizar as operações de CRUD.
@@ -194,8 +192,6 @@ Na tabela abaixo, identificamos as rotas (ROUTES) criadas na API Node.JS para in
 | READ         |  GET            | 
 | UPDATE       |  PATCH          | 
 | DELETE	   |  DELETE         | 
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/646cc21b-be02-4a41-83fb-a39346042c40)
 
 - **CREATE**: Criar Usuário
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/ed21bacc-8932-41dd-8944-2afffcc5fc03)
