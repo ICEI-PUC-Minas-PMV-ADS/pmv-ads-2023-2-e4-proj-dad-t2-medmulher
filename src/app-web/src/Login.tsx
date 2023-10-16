@@ -4,7 +4,6 @@ import Logo from "./assets/Logo-rosa.svg"
 const Login = () => {
   return (
     <div className="Login">
-
       <div className="header">
         <img className="header-logo" src={Logo} alt="Logo do MedMulher" />
       </div>
