@@ -46,3 +46,40 @@
 .navbar-icons2 {
     color: #1E1E1E;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 89vh;
+}
+  
+.main-content {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background: #FDF2FF;
+    padding: 50px;
+    gap: 50px;
+
+}
+
+.welcome-text {
+    width: 948px;
+    height: 86px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+h1 {
+    color: #1E1E1E;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+p {
+    color: #404040;
+    font-size: 16px;
+    font-weight: 400;
+}
