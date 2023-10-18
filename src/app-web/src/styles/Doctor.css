@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+.page {
+    max-width: 1280px;
+    padding: 4rem 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.title {
+    color: #1E1E1E;
+    margin-bottom: 2rem;
+}
+
+.title > h1{
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.button-search {
+    display: flex;
+    justify-content: right;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    width: 278px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(141, 70, 152, 0.40);
+}
+
+.card > main > h2,
+.card > main > p {
+    text-align: left;
+}
+.card > main > h2 {
+    font-weight: 700;
+    font-size: 18px;
+}
