@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.Register {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+    background-image: url('./assets/Background-right.svg'), url('./assets/Background-letf.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, left;
+}
+
+.header {
+    padding-top: 30px;
+    padding-left: 100px;
+}
+
+.header-logo {
+    width: 150px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(141, 70, 152, 0.40);
+    padding: 110px;
+}
+
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 8px;
+    cursor: text;
+}
+
+.input-box input {
+    width: 324px;
+    padding: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #9D9D9D;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.input-box select {
+    width: 324px;
+    padding: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #9D9D9D;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: transparent;
+}
+
+.input-box input:focus {
+    outline: none;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: #1E1E1E;
+    font-weight: 600;
+    padding-top: 8px;
+}
+
+.register {
+    font-size: 14px;
+    color: #1E1E1E;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.register a {
+    font-size: 14px;
+    color: #1E1E1E;
+    font-weight: 600;
+}
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #1E1E1E;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+button {
+    width: 324px;
+    padding: 16px;
+    border-radius: 10px;
+    background: #8D4698;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6A2974;
+}
+
+.line-container {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #9D9D9D;
+    margin: 0 10px;
+}
+
+.or-text {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 5px;
+}
