@@ -1,11 +1,11 @@
-import "./App.css";
-import Doctor from "./screens/doctor";
+import "./styles/Home.css";
+import Home from "./screens/home";
 
 
 function App() {
   return (
     <>
-      <Doctor />
+      <Home />
     </>
   );
 }
