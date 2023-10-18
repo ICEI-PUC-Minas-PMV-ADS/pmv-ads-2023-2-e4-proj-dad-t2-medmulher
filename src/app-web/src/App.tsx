@@ -1,11 +1,10 @@
 import "./App.css";
-import HomePage from "./HomePage";
-import './HomePage.css'
+import Doctor from "./screens/doctor";
 
 function App() {
   return (
     <>
-      <HomePage />
+      <Doctor />
     </>
   );
 }
