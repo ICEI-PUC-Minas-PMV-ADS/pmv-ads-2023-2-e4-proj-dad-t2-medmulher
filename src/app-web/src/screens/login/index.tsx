@@ -1,5 +1,5 @@
-import './Login.css';
-import Logo from "./assets/Logo-rosa.svg"
+import "../../styles/Login.css";
+import Logo from "../../assets/Logo-rosa.svg";
 
 const Login = () => {
   return (

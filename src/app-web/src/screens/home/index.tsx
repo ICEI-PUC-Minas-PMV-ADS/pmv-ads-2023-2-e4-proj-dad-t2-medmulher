@@ -1,10 +1,10 @@
-import "./HomePage.css";
-import Welcome from "./assets/calendar-img.svg"
+import "../../styles/Home.css";
+import Welcome from "../../assets/calendar-img.svg";
 import Header from "../../components/header";
 
-const HomePage = () => {
+const Home = () => {
   return (
-    <div className="HomePage">
+    <div className="Home">
       <Header />
 
       <div className="container">
@@ -29,4 +29,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;
