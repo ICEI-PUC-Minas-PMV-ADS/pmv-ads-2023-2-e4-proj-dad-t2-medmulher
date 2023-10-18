@@ -1,6 +1,7 @@
 import Header from "../../components/header";
 import "../../styles/Doctor.css";
 import { MdAdd, MdExpandMore } from "react-icons/md";
+import Vector from "../../assets/jam_medical.jpg";
 
 const Doctor = () => {
   return (
@@ -18,26 +19,25 @@ const Doctor = () => {
               background: "white",
               color: "black",
               border: "1px solid black",
-              marginRight: "30px",
             }}
-            type="submit"
+            type="submit" className="buttons-icons" 
             onClick={() => console.log("click")}
           >
             Especialidade{" "}
             <a href="#" className="navbar-icons3">
-              <MdExpandMore />
+              <MdExpandMore  />
             </a>
           </button>
           <button
             style={{
-              background: "8D4698",
+              background: "purple",
               color: "white",
               border: "1px solid black",
-              marginRight: "250px",
+              marginRight: "60px",
             }}
-            type="submit"
+            type="submit" className="buttons-icons" 
           >
-            Cadastrar médico{" "}
+           Cadastrar médico {" "}
             <a href="#" className="navbar-icons4">
               <MdAdd />
             </a>
@@ -48,7 +48,7 @@ const Doctor = () => {
 
           <div className="card">
             <header>
-              <img src="" alt="" />
+              <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
@@ -61,7 +61,7 @@ const Doctor = () => {
 
           <div className="card">
             <header>
-              <img src="" alt="" />
+             <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
@@ -74,7 +74,7 @@ const Doctor = () => {
 
           <div className="card">
             <header>
-              <img src="" alt="" />
+             <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
@@ -87,7 +87,7 @@ const Doctor = () => {
 
           <div className="card">
             <header>
-              <img src="" alt="" />
+             <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
@@ -100,7 +100,7 @@ const Doctor = () => {
           
           <div className="card">
             <header>
-              <img src="" alt="" />
+             <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
@@ -113,7 +113,7 @@ const Doctor = () => {
 
           <div className="card">
             <header>
-              <img src="" alt="" />
+             <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
@@ -126,20 +126,7 @@ const Doctor = () => {
 
           <div className="card">
             <header>
-              <img src="" alt="" />
-            </header>
-            <main>
-              <h2>Dr Beatriz Silva</h2>
-              <p>Ginecologista</p>
-            </main>
-            <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
-            </footer>
-          </div>
-
-          <div className="card">
-            <header>
-              <img src="" alt="" />
+             <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
