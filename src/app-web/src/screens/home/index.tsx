@@ -1,4 +1,4 @@
-import "./HomePage.css";
+import "../../styles/HomePage.css";
 import Welcome from "./assets/calendar-img.svg"
 import Header from "../../components/header";
 

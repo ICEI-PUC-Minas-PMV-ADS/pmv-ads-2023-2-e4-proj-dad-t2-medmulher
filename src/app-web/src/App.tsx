@@ -1,10 +1,10 @@
 import "./App.css";
-import Doctor from "./screens/doctor";
+import Login from "./screens/login";
 
 function App() {
   return (
     <>
-      <Doctor />
+      <Login />
     </>
   );
 }
