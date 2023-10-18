@@ -2,9 +2,12 @@ import './CadastroMed.css';
 import Logo from "./assets/Logo-rosa.svg"
 import { useState } from 'react';
 import { options } from 'yargs';
+import axios from 'axios';
 
 const CadastroMed = () => {
 
+    var URL = "http://localhost:3000/doctors";
+  
     const [selectedEspecialidade, setSelectedEspecialidade] = useState('');
     const [nameMedico, setNameMedico] = useState('');
     const [crm, setCrm] = useState('');
@@ -23,9 +26,35 @@ const CadastroMed = () => {
         {value: 'psicologa', label: 'Psicologa' }
     ];
 
+    var doctor = {
+      name: nameMedico,
+      specialty: selectedEspecialidade,
+      crm:crm
+    };
+
+    
+
+
+
     const handleSubmit = () => {
-        //falta adicionar fetch
-        console.log(`${nameMedico}    ${selectedEspecialidade}      ${crm}  `);
+
+      fetch(URL, {
+        method: 'POST',
+        body: JSON.stringify(doctor),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      })
+      .then(res => res.json())
+      .then((data) => {console.log(data)})
+      .catch((error) => {console.log(error)})
+
+        // axios.post(URL, doctor)
+        //   .then((res : any)  => console.log(res.data))
+        //   .catch((error: any) => {
+        //     console.log(error)
+        //   })
+        // console.log(`${nameMedico}    ${selectedEspecialidade}      ${crm}  `);
     };
 
     return (
@@ -40,7 +69,9 @@ const CadastroMed = () => {
               <h1>Cadastrar Médico</h1>
             </div>
             <br></br>
-  
+
+            <form onSubmit={handleSubmit}>
+
             <div className="input-box">
               <label htmlFor="nomeMedico">Nome</label>
               <input type="text" placeholder="Digite seu nome" value={nameMedico} onChange={e => setNameMedico(e.target.value)}/>
@@ -54,7 +85,7 @@ const CadastroMed = () => {
             <select id="dropdownEspecialidades" onChange={handleEspecialidadeChange}>
                 
                 {especialidadeOptions.map((option) => (
-                    <option  value={option.value}>{option.label}</option>
+                    <option key={option.value}  value={option.value}>{option.label}</option>
                 ))}
             </select>
             </div>
@@ -67,8 +98,10 @@ const CadastroMed = () => {
             <br></br>
             
   
-            <button type="submit" onClick={handleSubmit}>Finalizar Cadastro</button>
-  
+            <button type="submit" >Finalizar Cadastro</button>
+            
+            </form>
+
             </div>
           </div>
         </div>
