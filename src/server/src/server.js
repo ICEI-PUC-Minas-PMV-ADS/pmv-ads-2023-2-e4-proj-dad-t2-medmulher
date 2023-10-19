@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const jwt = require('jsonwebtoken');
@@ -13,6 +14,14 @@ app.use(
 );
 
 app.use(express.json());
+app.use(cors({
+
+  origin: "*", // Ou defina a origem permitida para um domínio específico
+  methods: ["GET", "POST", "PATCH", "PUT", "DELETE"], // Defina os métodos HTTP permitidos
+  allowedHeaders: ["Content-Type", "Authorization"], // Defina os cabeçalhos permitidos
+  credentials: true, // Permitir o envio de cookies ou credenciais
+}));
+
 app.use(routes);
 
 mongoose
