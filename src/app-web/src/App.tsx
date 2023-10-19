@@ -1,22 +1,13 @@
-// import Login from "./screens/login";
-
-// function App() {
-//   return (
-//     <>
-//       <Login />
-//     </>
-//   );
-// }
-
-// export default App;
-
-
-import Home from "./screens/home";
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./routes/app.routes";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <Home />
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     </>
   );
 }

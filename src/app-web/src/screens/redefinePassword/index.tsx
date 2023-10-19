@@ -1,5 +1,5 @@
-import './RedefinePassword.css';
-import Logo from "./assets/Logo-rosa.svg"
+import "../../styles/RedefinePassword.css";
+import Logo from "../../assets/Logo-rosa.svg";
 
 const RedefinePassword = () => {
   return (
