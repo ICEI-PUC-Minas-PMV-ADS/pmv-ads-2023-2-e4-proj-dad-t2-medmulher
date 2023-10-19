@@ -1,11 +1,10 @@
-import "./styles/Home.css";
-import Home from "./screens/home";
-
+import "./App.css";
+import Login from "./screens/login";
 
 function App() {
   return (
     <>
-      <Home />
+      <Login />
     </>
   );
 }
