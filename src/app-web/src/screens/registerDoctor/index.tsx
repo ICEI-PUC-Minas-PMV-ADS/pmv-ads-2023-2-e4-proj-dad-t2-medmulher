@@ -1,5 +1,5 @@
-import './CadastroMed.css';
-import Logo from "./assets/Logo-rosa.svg"
+import '../../styles/RegisterDoctor.css';
+import Logo from "../../assets/Logo-rosa.svg"
 import { useState } from 'react';
 import { options } from 'yargs';
 import axios from 'axios';
