@@ -1,5 +1,5 @@
-import "../../styles/HomePage.css";
-import Welcome from "./assets/calendar-img.svg";
+import "../../styles/Home.css";
+import Welcome from "../../assets/calendar-img.svg";
 import Header from "../../components/header";
 
 const Home = () => {
