@@ -6,14 +6,8 @@ const UserContext = createContext<IUserContext>({} as IUserContext);
 
 export const UserProvider: React.FC<IProvider> = ({ children }) => {
   const loginUser = useCallback(async (email: string, password: string) => {
-    const response: any = await loginUser(email, password);
 
-    if (response.status === 201) {
-      console.log(response);
-      return response.data;
-    }
-
-    return "";
+    return {} as any;
   }, []);
 
   const registerUser = async () => {

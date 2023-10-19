@@ -1,5 +1,5 @@
-import './Register.css';
-import Logo from "./assets/Logo-rosa.svg"
+import '../../styles/Register.css';
+import Logo from "../../assets/Logo-rosa.svg"
 
 const Register = () => {
   return (

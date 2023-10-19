@@ -1,12 +1,21 @@
 import "../../styles/Login.css";
 import Logo from "../../assets/Logo-rosa.svg";
+import { useState } from "react";
+import { loginUser } from "../../services/userAPI";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const log = async () => {
-    const auth = await getUsers();
+  const login = async () => {
+    const auth = await loginUser(email, password);
+
+    if (auth && auth.token) {
+      alert(auth)
+      return localStorage.setItem("token", auth.token);
+    }
+
+    return "Usuário não encontrado!";
   };
 
   return (
@@ -42,7 +51,7 @@ const Login = () => {
             </a>
           </div>
 
-          <button onClick={log} type="submit">
+          <button onClick={login} type="submit">
             Entrar
           </button>
 
