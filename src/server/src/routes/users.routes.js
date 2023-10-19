@@ -9,6 +9,6 @@ router.delete("/:id",  user.delete);
 router.get("/:id", user.getID);
 router.get("/email/:email", user.regainAccess);
 router.patch("/:id/new-password", user.updatePassword);
-router.get("/auth/login", user.auth);
+router.post("/auth/login", user.auth);
 
 module.exports = router;
