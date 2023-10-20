@@ -1,10 +1,10 @@
-.header {
+.header-home {
     padding: 2rem 0;
     background: #FFFDFF;
     box-shadow: -3px 1px 7px 1px rgba(141, 120, 144, 0.3);
 }
 
-.header-container {
+.header-container-home {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,35 +12,35 @@
     margin: auto;
 }
 
-.header-logo {
+.header-logo-home {
     width: 150px;
 }
 
-.header-menu {
+.header-menu-home {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header-menu-item {
+.header-menu-item-home {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header-menu-item > li {
+.header-menu-item-home > li {
     list-style: none;
     margin: 0 4rem;
 }
 
-.header-menu-item > li > a {
+.header-menu-item-home > li > a {
     color: #1E1E1E;
     font-size: 18px;
     font-weight: 500;
     list-style: none;
 }
 
-.nav-buttons {
+.nav-buttons-home {
     font-size: 2rem;
     height: 2rem;
 }
