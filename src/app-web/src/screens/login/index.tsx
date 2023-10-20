@@ -20,15 +20,17 @@ const Login = () => {
 
   return (
     <div className="Login">
-      <img className="logo" src={Logo} alt="Logo do MedMulher" />
+      <div className="header-login">
+        <img className="header-logo" src={Logo} alt="Logo do MedMulher" />
+      </div>
 
-      <div className="container">
-        <div className="input-group">
-          <div className="title">
+      <div className="container-login">
+        <div className="input-group-login">
+          <div className="title-login">
             <h1>Fazer Login</h1>
           </div>
 
-          <div className="input-box">
+          <div className="input-box-login">
             <label htmlFor="email">E-mail</label>
             <input
               onChange={(ev) => setEmail(ev.target.value)}
@@ -37,14 +39,14 @@ const Login = () => {
             />
           </div>
 
-          <div className="input-box">
+          <div className="input-box-login">
             <label htmlFor="password">Senha</label>
             <input
               onChange={(ev) => setPassword(ev.target.value)}
               type="password"
               placeholder="Digite sua senha"
             />
-            <a className="forgot-password" href="#">
+            <a className="forgot-password-login" href="#">
               Esqueceu sua senha?
             </a>
           </div>
@@ -53,13 +55,13 @@ const Login = () => {
             Entrar
           </button>
 
-          <div className="line-container">
+          <div className="line-container-login">
             <div className="line"></div>
             <div className="or-text">ou</div>
             <div className="line"></div>
           </div>
 
-          <div className="register">
+          <div className="register-login">
             <span>
               Ainda não tem conta? Faça o seu <a href="#">cadastro</a>
             </span>

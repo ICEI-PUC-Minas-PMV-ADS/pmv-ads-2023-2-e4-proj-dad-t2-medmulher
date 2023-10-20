@@ -17,7 +17,16 @@
     background-position: right, left;
 }
 
-.container {
+.header-login {
+    padding-top: 30px;
+    padding-left: 100px;
+}
+
+.header-logo {
+    width: 150px;
+}
+
+.container-login {
     width: 100%;
     display: flex;
     padding-top: 40px;
@@ -25,7 +34,7 @@
     justify-content: center;
 }
 
-.input-group {
+.input-group-login {
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -35,19 +44,19 @@
 }
 
 
-.input-box {
+.input-box-login {
     display: flex;
     flex-direction: column;
 }
 
-.input-box label {
+.input-box-login label {
     font-size: 14px;
     font-weight: 500;
     padding-bottom: 8px;
     cursor: text;
 }
 
-.input-box input {
+.input-box-login input {
     width: 324px;
     padding: 16px;
     display: flex;
@@ -59,32 +68,32 @@
     font-weight: 400;
 }
 
-.input-box input:focus {
+.input-box-login input:focus {
     outline: none;
 }
 
-.forgot-password {
+.forgot-password-login {
     font-size: 14px;
     color: #1E1E1E;
     font-weight: 600;
     padding-top: 8px;
 }
 
-.register {
+.register-login {
     font-size: 14px;
     color: #1E1E1E;
     font-weight: 500;
     padding-left: 20px;
 }
 
-.register a {
+.register-login a {
     font-size: 14px;
     color: #1E1E1E;
     font-weight: 600;
 }
 
 
-.title {
+.title-login {
     display: flex;
     justify-content: center;
     color: #1E1E1E;
@@ -108,7 +117,7 @@ button:hover {
     background: #6A2974;
 }
 
-.line-container {
+.line-container-login {
     display: flex;
     align-items: center;
 }
