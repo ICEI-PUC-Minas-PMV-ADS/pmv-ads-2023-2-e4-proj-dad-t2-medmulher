@@ -20,13 +20,12 @@ const Doctor = () => {
               color: "black",
               border: "1px solid black",
             }}
-            type="submit" className="buttons-icons" 
+            type="submit"
+            className="buttons-icons"
             onClick={() => console.log("click")}
           >
-            Especialidade{" "}
-            <a href="#" className="navbar-icons3">
-              <MdExpandMore  />
-            </a>
+            Especialidade
+            <MdExpandMore />
           </button>
           <button
             style={{
@@ -35,16 +34,29 @@ const Doctor = () => {
               border: "1px solid black",
               marginRight: "60px",
             }}
-            type="submit" className="buttons-icons" 
+            type="submit"
+            className="buttons-icons"
           >
-           Cadastrar médico {" "}
-            <a href="#" className="navbar-icons4">
-              <MdAdd />
-            </a>
+            Cadastrar médico
+            <MdAdd />
           </button>
         </div>
 
         <div className="cards">
+          <div className="card">
+            <header>
+              <img src={Vector} alt="Imagem de capa médicos" />
+            </header>
+            <main>
+              <h2>Dr Beatriz Silva</h2>
+              <p>Ginecologista</p>
+            </main>
+            <footer>
+              <button onClick={() => console.log("click")}>
+                Ir para agenda
+              </button>
+            </footer>
+          </div>
 
           <div className="card">
             <header>
@@ -55,85 +67,84 @@ const Doctor = () => {
               <p>Ginecologista</p>
             </main>
             <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
+              <button onClick={() => console.log("click")}>
+                Ir para agenda
+              </button>
             </footer>
           </div>
 
           <div className="card">
             <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
+              <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
               <p>Ginecologista</p>
             </main>
             <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
+              <button onClick={() => console.log("click")}>
+                Ir para agenda
+              </button>
             </footer>
           </div>
 
           <div className="card">
             <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
+              <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
               <p>Ginecologista</p>
             </main>
             <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
+              <button onClick={() => console.log("click")}>
+                Ir para agenda
+              </button>
             </footer>
           </div>
 
           <div className="card">
             <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
+              <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
               <p>Ginecologista</p>
             </main>
             <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
-            </footer>
-          </div>
-          
-          <div className="card">
-            <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
-            </header>
-            <main>
-              <h2>Dr Beatriz Silva</h2>
-              <p>Ginecologista</p>
-            </main>
-            <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
+              <button onClick={() => console.log("click")}>
+                Ir para agenda
+              </button>
             </footer>
           </div>
 
           <div className="card">
             <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
+              <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
               <p>Ginecologista</p>
             </main>
             <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
+              <button onClick={() => console.log("click")}>
+                Ir para agenda
+              </button>
             </footer>
           </div>
 
           <div className="card">
             <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
+              <img src={Vector} alt="Imagem de capa médicos" />
             </header>
             <main>
               <h2>Dr Beatriz Silva</h2>
               <p>Ginecologista</p>
             </main>
             <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
+              <button onClick={() => console.log("click")}>
+                Ir para agenda
+              </button>
             </footer>
           </div>
         </div>

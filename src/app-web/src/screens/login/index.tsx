@@ -11,7 +11,7 @@ const Login = () => {
     const auth = await loginUser(email, password);
 
     if (auth && auth.token) {
-      alert(auth)
+      alert(auth);
       return localStorage.setItem("token", auth.token);
     }
 
@@ -20,9 +20,7 @@ const Login = () => {
 
   return (
     <div className="Login">
-      <div className="header">
-        <img className="header-logo" src={Logo} alt="Logo do MedMulher" />
-      </div>
+      <img className="logo" src={Logo} alt="Logo do MedMulher" />
 
       <div className="container">
         <div className="input-group">
