@@ -32,10 +32,9 @@ const CadastroMed = () => {
       crm:crm
     };
 
+    console.log(JSON.stringify(doctor));
+
     
-
-
-
     const handleSubmit = () => {
 
       fetch(URL, {
