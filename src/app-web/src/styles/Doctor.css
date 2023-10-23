@@ -88,3 +88,10 @@
 .card > header > img {
     margin: 15px;
 }
+
+@media (max-width: 480px) {
+    .page {
+        max-width: 100%;
+        width: 90vw;
+    }
+}

@@ -1,3 +1,4 @@
 import Header from "./header";
+import ProfileSection from "./profileSection";
 
-export default { Header };
+export { Header, ProfileSection };

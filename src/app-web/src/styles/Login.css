@@ -101,7 +101,7 @@
     font-weight: 500;
 }
 
-button {
+.create {
     width: 324px;
     padding: 16px;
     border-radius: 10px;
@@ -113,7 +113,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.create:hover {
     background: #6A2974;
 }
 

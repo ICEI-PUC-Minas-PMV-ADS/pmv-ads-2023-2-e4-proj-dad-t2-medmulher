@@ -51,7 +51,7 @@ const Login = () => {
             </a>
           </div>
 
-          <button onClick={login} type="submit">
+          <button className="create" onClick={login} type="submit">
             Entrar
           </button>
 

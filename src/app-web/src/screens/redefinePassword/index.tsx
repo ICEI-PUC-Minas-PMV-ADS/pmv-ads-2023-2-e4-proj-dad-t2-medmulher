@@ -30,7 +30,7 @@ const RedefinePassword = () => {
             <input type="password" placeholder="Digite a nova senha novamente" />
           </div>
 
-          <button type="submit">Recuperar senha</button>
+          <button className="create" type="submit">Recuperar senha</button>
 
         </div>
       </div>

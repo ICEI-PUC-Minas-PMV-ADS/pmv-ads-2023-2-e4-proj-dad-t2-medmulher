@@ -1,0 +1,115 @@
+section.doctor-infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #8D4698;
+    border-radius: 8px;
+    padding-bottom: 2rem;
+}
+
+.doctor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5.8rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+hr.separator {
+    height: 46px;
+    border: 1px solid #C8C8C8;
+}
+
+h2.doctor-name {
+    margin-bottom: 1rem;
+    color: #1E1E1E;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+span.doctor-specialty {
+    color: #404040;
+    font-weight: 500;
+}
+
+p.crm {
+    color: #404040;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+span.crm-code {
+    color: #404040;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+
+}
+
+.doctor-options {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+button.doctor-delete,
+button.doctor-edit {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 2px solid #8D4698;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.doctor-delete {
+    background: #FFF;
+    color: #8D4698;
+}
+
+button.doctor-edit {
+    background: #8D4698;
+    color: #FFF;
+}
+
+button.doctor-delete:hover {
+    color: #fff;
+    background: #8D4698;
+}
+
+button.doctor-edit:hover {
+    color: #8D4698;
+    background: #fff;
+}
+
+button.doctor-delete:hover>svg>path {
+    fill: #FFF;
+}
+
+button.doctor-edit:hover>svg>path {
+    fill: #8D4698;
+}
+
+@media (max-width: 480px) {
+    section.doctor-infos {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .doctor {
+        gap: 1rem;
+    }
+
+    button.doctor-delete,
+    button.doctor-edit {
+        gap: .2rem;
+    }
+}

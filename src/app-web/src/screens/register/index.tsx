@@ -45,7 +45,7 @@ const Register = () => {
             <input type="password" placeholder="000.000.000-00" />
           </div>
 
-          <button type="submit">Cadastrar</button>
+          <button className='create' type="submit">Cadastrar</button>
 
           </div>
         </div>

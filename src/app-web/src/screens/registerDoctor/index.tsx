@@ -98,7 +98,7 @@ const CadastroMed = () => {
             <br></br>
             
   
-            <button type="submit" >Finalizar Cadastro</button>
+            <button className="create" type="submit" >Finalizar Cadastro</button>
             
             </form>
 
