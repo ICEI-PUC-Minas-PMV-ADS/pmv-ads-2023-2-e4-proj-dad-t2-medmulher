@@ -1,5 +1,5 @@
 import Logo from "../../assets/Logo-rosa.svg";
-import { MdAccountCircle, MdExpandMore } from "react-icons/md";
+import { MdLogout } from "react-icons/md";
 import "../../styles/components/Header.css";
 import { Link } from 'react-router-dom';
 
@@ -23,8 +23,7 @@ const Header = () => {
           </ul>
 
           <div className="nav-buttons-home">
-            <MdAccountCircle color={"#8D4698"} />
-            <Link to="/perfil"><MdExpandMore color={"#1E1E1E"} cursor="pointer"/></Link>
+            <MdLogout color={"8D4698"} cursor="pointer"/>
           </div>
         </nav>
       </div>
