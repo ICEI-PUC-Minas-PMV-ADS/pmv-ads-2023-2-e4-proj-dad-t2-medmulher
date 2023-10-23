@@ -2,6 +2,7 @@ import Logo from "../../assets/Logo-rosa.svg";
 import { MdAccountCircle, MdClose, MdExpandMore } from "react-icons/md";
 import "../../styles/components/Header.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menuItems, setMenuItems] = useState<boolean>(false);
@@ -15,13 +16,13 @@ const Header = () => {
           {!isMobile && (
             <ul className="header-menu-item-home">
               <li>
-                <a href="#">Início</a>
+                <Link to="/">Início</Link>
               </li>
               <li>
-                <a href="#">Agenda</a>
+                <Link to={"/perfil-medico"}>Agenda</Link>
               </li>
               <li>
-                <a href="#">Médicos</a>
+                <Link to={"/doutor"}> Médicos</Link>
               </li>
             </ul>
           )}
@@ -36,7 +37,10 @@ const Header = () => {
 
             {menuItems && isMobile ? (
               <aside className="drawer">
-                <MdClose className="close" onClick={() => setMenuItems(!menuItems)}/>
+                <MdClose
+                  className="close"
+                  onClick={() => setMenuItems(!menuItems)}
+                />
                 <img
                   className="header-logo-home"
                   src={Logo}
@@ -44,13 +48,13 @@ const Header = () => {
                 />
                 <ul>
                   <li>
-                    <a href="#">Início</a>
+                    <Link to="/">Início</Link>
                   </li>
                   <li>
-                    <a href="#">Agenda</a>
+                    <Link to={"/perfil-medico"}>Agenda</Link>
                   </li>
                   <li>
-                    <a href="#">Médicos</a>
+                    <Link to={"/doutor"}> Médicos</Link>
                   </li>
                 </ul>
                 <p className="reserve-text">@MedMulher direitos reservados</p>
