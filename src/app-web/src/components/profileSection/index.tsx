@@ -1,3 +1,4 @@
+import { MdDelete, MdEdit } from "react-icons/md";
 import "../../styles/components/ProfileSection.css"
 
 const ProfileSection = () => {
@@ -35,34 +36,12 @@ const ProfileSection = () => {
       </div>
 
       <div className="doctor-options">
-        <button className="doctor-delete">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="21"
-            viewBox="0 0 20 21"
-            fill="none"
-          >
-            <path
-              d="M15.8334 3.83333H12.9167L12.0834 3H7.91669L7.08335 3.83333H4.16669V5.5H15.8334M5.00002 16.3333C5.00002 16.7754 5.17562 17.1993 5.48818 17.5118C5.80074 17.8244 6.22466 18 6.66669 18H13.3334C13.7754 18 14.1993 17.8244 14.5119 17.5118C14.8244 17.1993 15 16.7754 15 16.3333V6.33333H5.00002V16.3333Z"
-              fill="#6C3375"
-            />
-          </svg>
+        <button className="primary">
+          <MdDelete/>
           Deletar médico
         </button>
-        <button className="doctor-edit">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="19"
-            viewBox="0 0 18 19"
-            fill="none"
-          >
-            <path
-              d="M15.5325 5.77992C15.825 5.48742 15.825 4.99992 15.5325 4.72242L13.7775 2.96742C13.5 2.67492 13.0125 2.67492 12.72 2.96742L11.34 4.33992L14.1525 7.15242M2.25 13.4374V16.2499H5.0625L13.3575 7.94742L10.545 5.13492L2.25 13.4374Z"
-              fill="white"
-            />
-          </svg>
+        <button className="secundary">
+          <MdEdit/>
           Editar médico
         </button>
       </div>

@@ -7,6 +7,11 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [menuItems, setMenuItems] = useState<boolean>(false);
   const isMobile = window.innerWidth < 480;
+
+  const handleMenu = () => {
+    setMenuItems(!menuItems);
+  };
+
   return (
     <header className="header-home">
       <div className="header-container-home">
@@ -32,14 +37,14 @@ const Header = () => {
             <MdExpandMore
               color={"#1E1E1E"}
               cursor="pointer"
-              onClick={() => setMenuItems(!menuItems)}
+              onClick={handleMenu}
             />
 
             {menuItems && isMobile ? (
               <aside className="drawer">
                 <MdClose
                   className="close"
-                  onClick={() => setMenuItems(!menuItems)}
+                  onClick={handleMenu}
                 />
                 <img
                   className="header-logo-home"

@@ -5,6 +5,7 @@ section.doctor-infos {
     border-bottom: 1px solid #8D4698;
     border-radius: 8px;
     padding-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .doctor {
@@ -57,47 +58,6 @@ span.crm-code {
     gap: 1.5rem;
 }
 
-button.doctor-delete,
-button.doctor-edit {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    padding: 12px 16px;
-    border-radius: 10px;
-    border: 2px solid #8D4698;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-button.doctor-delete {
-    background: #FFF;
-    color: #8D4698;
-}
-
-button.doctor-edit {
-    background: #8D4698;
-    color: #FFF;
-}
-
-button.doctor-delete:hover {
-    color: #fff;
-    background: #8D4698;
-}
-
-button.doctor-edit:hover {
-    color: #8D4698;
-    background: #fff;
-}
-
-button.doctor-delete:hover>svg>path {
-    fill: #FFF;
-}
-
-button.doctor-edit:hover>svg>path {
-    fill: #8D4698;
-}
-
 @media (max-width: 480px) {
     section.doctor-infos {
         flex-direction: column;
@@ -106,10 +66,5 @@ button.doctor-edit:hover>svg>path {
 
     .doctor {
         gap: 1rem;
-    }
-
-    button.doctor-delete,
-    button.doctor-edit {
-        gap: .2rem;
     }
 }

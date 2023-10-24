@@ -1,0 +1,40 @@
+button.primary,
+button.secundary {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 2px solid #8D4698;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.primary {
+    background: #FFF;
+    color: #8D4698;
+}
+
+button.secundary {
+    background: #8D4698;
+    color: #FFF;
+}
+
+button.primary:hover {
+    color: #fff;
+    background: #8D4698;
+}
+
+button.secundary:hover {
+    color: #8D4698;
+    background: #fff;
+}
+
+
+@media (max-width: 480px) {
+    button.primary,
+    button.secundary {
+        gap: .2rem;
+    }
+}
