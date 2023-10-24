@@ -17,6 +17,19 @@
     background-position: right, left;
 }
 
+.header{
+    display: flex;
+    
+    padding-top: 30px;
+    
+}
+
+.header-logo {
+    width: 150px;
+    margin: auto;
+    
+}
+
 .container {
     width: 100%;
     display: flex;

@@ -2,7 +2,7 @@ import '../../styles/RegisterDoctor.css';
 import Logo from "../../assets/Logo-rosa.svg"
 import { useState } from 'react';
 import { apiBase } from '../../services/api';
-import CadastroMedSucesso from '../registerDoctorSuccess/index';
+import CadastroMedSucesso from '../registerDoctorModal/index';
 
 const CadastroMed = () => {
 
