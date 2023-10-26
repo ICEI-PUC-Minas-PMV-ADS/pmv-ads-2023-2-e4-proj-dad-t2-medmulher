@@ -3,6 +3,13 @@ import { MdLogout } from "react-icons/md";
 import "../../styles/components/Header.css";
 import { Link } from 'react-router-dom';
 
+const Logout = () => {
+
+  localStorage.removeItem('token');
+
+  window.location.href = '/'; 
+};
+
 const Header = () => {
   return (
     <header className="header-home">
@@ -22,8 +29,8 @@ const Header = () => {
             </li>
           </ul>
 
-          <div className="nav-buttons-home">
-            <MdLogout color={"8D4698"} cursor="pointer"/>
+          <div className="logout-button-home">
+            <MdLogout color={"8D4698"} cursor="pointer" onClick={Logout}/>
           </div>
         </nav>
       </div>
