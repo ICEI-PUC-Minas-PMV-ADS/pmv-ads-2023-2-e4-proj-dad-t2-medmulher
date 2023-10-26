@@ -29,6 +29,7 @@ const Register = () => {
     return "Usuário não cadastrado!";
   };
 */
+
   const Register = () => {
   
 
@@ -43,7 +44,7 @@ const Register = () => {
   
   if(password==confirmacao){
     
-    alert(JSON.stringify(user));
+    //alert(JSON.stringify(user));
     fetch(URL, {
       method: 'POST',
       body: JSON.stringify(user),
@@ -52,9 +53,12 @@ const Register = () => {
       }
     })
     .then(res => res.json())
-    .then((data) => {alert(data)})
-    .catch((error) => {alert(error)})
+    .then((data) => {console.log(data); })
+    .catch((error) => {console.log(error); alert(error);})
+    .finally(()=>alert("Cadastrado"))
 
+
+  
   }
   else{
     alert("Senha e a confirmação não coincidem!");
@@ -67,6 +71,29 @@ const Register = () => {
       // console.log(`${nameMedico}    ${selectedEspecialidade}      ${crm}  `);
   };
   
+
+
+  const registro = async () => {
+
+    if(password==confirmacao){
+
+    const status = await registrar( email, password, name, cpf);
+     // alert(status);
+    if (status!=null) {
+        alert("Usuário cadastrado!");
+        //alert("Cadastrado!");
+        return true; //localStorage.setItem("token", auth.token);
+
+      }
+      
+   
+    }
+    else
+        alert("Senha e confirmação não coincidem!");
+
+    return "Usuário não encontrado!";
+  };
+
   return (
     <div className="Register">
       <div className="header">
@@ -110,7 +137,7 @@ const Register = () => {
             <input type="text" onChange={(ev) => setCpf(ev.target.value)} placeholder="000.000.000-00" />
           </div>
 
-          <button onClick={Register} type="submit">Cadastrar</button>
+          <button onClick={registro} type="submit">Cadastrar</button>
 
           </div>
         </div>
