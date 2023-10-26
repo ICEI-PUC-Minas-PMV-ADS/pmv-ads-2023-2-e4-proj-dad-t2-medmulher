@@ -12,7 +12,7 @@ const Login = () => {
     const auth = await loginUser(email, password);
 
     if (auth && auth.token) {
-      alert(auth)
+      window.location.href = '/inicio'; 
       return localStorage.setItem("token", auth.token);
     }
 
