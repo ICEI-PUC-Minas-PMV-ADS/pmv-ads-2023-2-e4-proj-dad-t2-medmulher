@@ -17,6 +17,28 @@
     background-position: right, left;
 }
 
+.header{
+    display: flex;
+    
+    padding-top: 30px;
+    
+}
+
+.header-logo {
+    width: 150px;
+    margin: auto;
+    
+}
+
+.checkmark-logo {
+    width: 72px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 24px;
+    
+}
+
 .container {
     width: 100%;
     display: flex;
@@ -32,6 +54,14 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(141, 70, 152, 0.40);
     padding: 110px;
+}
+
+.text-doctor {
+    font-size: small;
+    font-weight: 100;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    text-align: center;
 }
 
 
@@ -105,7 +135,7 @@
     font-weight: 500;
 }
 
-button {
+.button-form {
     width: 324px;
     padding: 16px;
     border-radius: 10px;
@@ -117,8 +147,24 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.button-form-inverse {
+    width: 324px;
+    padding: 16px;
+    border-radius: 10px;
+    background: #FFF;
+    color: #8D4698;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #8D4698;
+    cursor: pointer;
+}
+
+.button-form:hover {
     background: #6A2974;
+}
+
+.button-form-inverse:hover {
+    background: #6a29740c;
 }
 
 .line-container {
@@ -137,4 +183,57 @@ button:hover {
     font-weight: 400;
     font-size: 14px;
     margin: 0 5px;
+}
+
+
+.exit-button-div{
+    background: #8D4698;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    align-self: flex-end;
+    padding: 12px;
+    right: 0;
+    top: 0;
+    margin-top: -12px;
+    margin-right: -12px;
+    border-radius: 10px;
+}
+
+.exit-button-modal {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+    align-self: center;
+    margin-top: 3px;
+    
+
+}
+
+.exit-button-div:hover {
+    background: #6A2974;
+}
+
+.group-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(141, 70, 152, 0.40);
+    padding: 24px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.container-modal {
+    background-color: #FFF;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
