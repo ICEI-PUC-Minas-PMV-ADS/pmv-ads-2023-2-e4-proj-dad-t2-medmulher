@@ -1,6 +1,14 @@
 import Logo from "../../assets/Logo-rosa.svg";
-import { MdAccountCircle, MdExpandMore } from "react-icons/md";
+import { MdLogout } from "react-icons/md";
 import "../../styles/components/Header.css";
+import { Link } from 'react-router-dom';
+
+const Logout = () => {
+
+  localStorage.removeItem('token');
+
+  window.location.href = '/'; 
+};
 
 const Header = () => {
   return (
@@ -11,19 +19,18 @@ const Header = () => {
         <nav className="header-menu-home">
           <ul className="header-menu-item-home">
             <li>
-              <a href="#">Início</a>
+              <Link to="/inicio">Início</Link>
             </li>
             <li>
-              <a href="#">Agenda</a>
+              <Link to="/agenda">Agenda</Link>
             </li>
             <li>
-              <a href="#">Médicos</a>
+              <Link to="/doutor">Médicos</Link>
             </li>
           </ul>
 
-          <div className="nav-buttons-home">
-            <MdAccountCircle color={"#8D4698"} />
-            <MdExpandMore color={"#1E1E1E"} cursor="pointer"/>
+          <div className="logout-button-home">
+            <MdLogout color={"8D4698"} cursor="pointer" onClick={Logout}/>
           </div>
         </nav>
       </div>
