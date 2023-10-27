@@ -8,8 +8,8 @@ const Doctor = () => {
     <div className="Doctor">
       <Header />
 
-      <div className="page">
-        <div className="title">
+      <div className="page-doctor">
+        <div className="title-doctor">
           <h1>Central de Médicos</h1>
         </div>
 

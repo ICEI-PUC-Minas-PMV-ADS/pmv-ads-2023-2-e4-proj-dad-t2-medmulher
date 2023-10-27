@@ -2,6 +2,7 @@ import '../../styles/Register.css';
 import Logo from "../../assets/Logo-rosa.svg"
 import { useState } from "react";
 import { registrar } from "../../services/userAPI";
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -96,7 +97,7 @@ const Register = () => {
 
   return (
     <div className="Login">
-      <div className="header">
+      <div className="header-login">
         <img className="header-logo" src={Logo} alt="Logo do MedMulher" />
       </div>
 
@@ -136,8 +137,10 @@ const Register = () => {
             <label htmlFor="cpf">CPF</label>
             <input type="text" onChange={(ev) => setCpf(ev.target.value)} placeholder="000.000.000-00" />
           </div>
-
+              
+          <Link to="/">
           <button onClick={registro} type="submit">Cadastrar</button>
+          </Link>
 
           </div>
         </div>
