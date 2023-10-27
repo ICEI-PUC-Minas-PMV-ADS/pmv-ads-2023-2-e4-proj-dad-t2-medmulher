@@ -86,17 +86,17 @@ Os testes deverão ocorrer de maneira remota. E as tarefas a serem executadas se
   
 ## Dados a serem coletados: 
 
-	* Tempo para efetuar o agendamento (Quantidade de Clicks) 
+* Tempo para efetuar o agendamento (Quantidade de Clicks) 
 
-	* Avaliação da conclusão de tarefas (eficácia): 
+* Avaliação da conclusão de tarefas (eficácia): 
 
-  	* Tarefas sem erros; 
+* Tarefas sem erros; 
 
-  	* Tarefas com erros; 
+* Tarefas com erros; 
 
-  	* Tarefas com erros críticos;
+* Tarefas com erros críticos;
 
-	* Medir a satisfação do uso do aplicativo. (Questionário NPS)
+* Medir a satisfação do uso do aplicativo. (Questionário NPS)
 
   
 ## Referência: 
