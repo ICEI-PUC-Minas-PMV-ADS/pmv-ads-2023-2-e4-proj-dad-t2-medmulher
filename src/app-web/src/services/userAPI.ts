@@ -62,6 +62,7 @@ export const resetPassword = async (email: string, newPassword: string) => {
   } catch (error) {
     return { auth: false, message: "Erro ao redefinir a senha" };
   }
+}
  
 export const registrar = async (email: string, password: string, name: string, cpf: string) => {
   try {

@@ -95,7 +95,7 @@ const Register = () => {
   };
 
   return (
-    <div className="Register">
+    <div className="Login">
       <div className="header">
         <img className="header-logo" src={Logo} alt="Logo do MedMulher" />
       </div>
