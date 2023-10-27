@@ -1,10 +1,14 @@
 import React, {useState} from "react";
 import { RiCloseLine } from "react-icons/ri";
+import Header from "../../components/header/index";
 
 const CadastroMedSucesso = ({ setIsOpen, modalText }) => {
 
     return (
         <>
+
+        
+
          <div onClick={()=> setIsOpen(false)}>
             <div className="container-modal">
                 <div className="group-modal">

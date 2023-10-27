@@ -12,10 +12,20 @@
     min-height: 100vh;
     min-width: 100vw;
     position: relative;
-    background-image: url('./assets/Background-right.svg'), url('./assets/Background-letf.svg');
+    background-image: url('../assets/Background-right.svg'), url('../assets/Background-letf.svg');
     background-repeat: no-repeat, no-repeat;
     background-position: right, left;
 }
+
+.Login {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+    background-image: url('../assets/Background-right.svg'), url('../assets/Background-letf.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, left;
+}
+
 
 .container {
     width: 100%;
@@ -24,7 +34,13 @@
     align-items: center;
     justify-content: center;
 }
-
+.container-login {
+    width: 100%;
+    display: flex;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+}
 .input-group {
     display: flex;
     flex-direction: column;
@@ -75,6 +91,10 @@
     color: #1E1E1E;
     font-weight: 500;
     padding-left: 20px;
+}
+
+.header-logo {
+    width: 150px;
 }
 
 .register a {
