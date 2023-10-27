@@ -29,14 +29,14 @@ class UserController {
       name,
       password: hashedPassword,
       cpf,
-      address: {
+      /*address: {
         street: address.street,
         district: address.district,
         city: address.city,
         complement: address.complement,
         number: address.number,
         postal_code: address.postal_code,
-      },
+      },*/
       email,
       create_date,
       updated_user_date,

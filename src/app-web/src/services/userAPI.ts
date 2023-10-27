@@ -37,7 +37,6 @@ export const getUsers = async () => {
   }
 };
 
-
 export const resetPassword = async (email: string, newPassword: string) => {
   try {
     // Verifique se o email do usuário existe
@@ -63,4 +62,25 @@ export const resetPassword = async (email: string, newPassword: string) => {
   } catch (error) {
     return { auth: false, message: "Erro ao redefinir a senha" };
   }
+ 
+export const registrar = async (email: string, password: string, name: string, cpf: string) => {
+  try {
+    const response: AxiosResponse<IAuth> = await apiBase.post(
+      "users/",
+      {
+        name, 
+        email,
+        password,
+        cpf
+      }
+    );
+
+    if (response.status === 200) {
+      alert("Usuário cadastrado!");
+      console.log(response.data.message);
+      return response.data;
+    }
+  } catch (err) {
+    return {} as IAuth;
+  }
 };

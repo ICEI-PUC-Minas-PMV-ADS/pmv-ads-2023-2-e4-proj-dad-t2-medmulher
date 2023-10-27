@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
     min: 8,
     max: 20,
   },
-  address: {
+  /*address: {
     street: {
       type: String,
       required: true,
@@ -41,7 +41,7 @@ const userSchema = new mongoose.Schema({
       min: 8,
       max: 9,
     },
-  },
+  },*/
   email: {
     type: String,
     required: true,
