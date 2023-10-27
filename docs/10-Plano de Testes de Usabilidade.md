@@ -101,4 +101,4 @@ Os testes deverão ocorrer de maneira remota. E as tarefas a serem executadas se
   
 ## Referência: 
 
-ISO/IEC 9126. Wikipedia. Disponível em: https://pt.wikipedia.org/wiki/ISO/IEC_9126 Acesso em: 30 de setembro de 2022. 
+ISO/IEC 9126. Wikipedia. Disponível em: https://pt.wikipedia.org/wiki/ISO/IEC_9126 Acesso em: 26 de outubro de 2023. 
