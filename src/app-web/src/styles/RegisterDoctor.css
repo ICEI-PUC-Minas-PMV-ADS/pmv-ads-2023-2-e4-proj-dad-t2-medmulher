@@ -17,6 +17,19 @@
     background-position: right, left;
 }
 
+.header{
+    display: flex;
+    
+    padding-top: 30px;
+    
+}
+
+.header-logo {
+    width: 150px;
+    margin: auto;
+    
+}
+
 .container {
     width: 100%;
     display: flex;
@@ -105,7 +118,7 @@
     font-weight: 500;
 }
 
-button {
+.button-form {
     width: 324px;
     padding: 16px;
     border-radius: 10px;
@@ -137,4 +150,53 @@ button:hover {
     font-weight: 400;
     font-size: 14px;
     margin: 0 5px;
+}
+
+
+.exit-button-div{
+    background: #8D4698;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    align-self: flex-end;
+    padding: 12px;
+    right: 0;
+    top: 0;
+    margin-top: -12px;
+    margin-right: -12px;
+    border-radius: 10px;
+}
+
+.exit-button-modal {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+    align-self: center;
+    margin-top: 3px;
+    
+
+}
+
+.group-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(141, 70, 152, 0.40);
+    padding: 24px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.container-modal {
+    background-color: #FFF;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
