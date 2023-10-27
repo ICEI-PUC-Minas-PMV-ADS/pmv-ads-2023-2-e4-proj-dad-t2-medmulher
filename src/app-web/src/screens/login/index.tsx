@@ -2,6 +2,7 @@ import "../../styles/Login.css";
 import Logo from "../../assets/Logo-rosa.svg";
 import { useState } from "react";
 import { loginUser } from "../../services/userAPI";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -11,7 +12,7 @@ const Login = () => {
     const auth = await loginUser(email, password);
 
     if (auth && auth.token) {
-      alert(auth);
+      window.location.href = '/inicio'; 
       return localStorage.setItem("token", auth.token);
     }
 
@@ -46,9 +47,7 @@ const Login = () => {
               type="password"
               placeholder="Digite sua senha"
             />
-            <a className="forgot-password-login" href="#">
-              Esqueceu sua senha?
-            </a>
+            <Link className="forgot-password-login" to="/redefinicao-de-senha">Recuperar senha</Link>
           </div>
 
           <button className="create" onClick={login} type="submit">
@@ -61,11 +60,7 @@ const Login = () => {
             <div className="line"></div>
           </div>
 
-          <div className="register-login">
-            <span>
-              Ainda não tem conta? Faça o seu <a href="#">cadastro</a>
-            </span>
-          </div>
+          <Link className="register-login" to="/cadastro-paciente">Cadastrar novo administrador</Link>
         </div>
       </div>
     </div>

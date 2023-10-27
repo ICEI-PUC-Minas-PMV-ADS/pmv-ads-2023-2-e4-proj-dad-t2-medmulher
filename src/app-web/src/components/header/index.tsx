@@ -3,6 +3,14 @@ import { MdAccountCircle, MdClose, MdExpandMore } from "react-icons/md";
 import "../../styles/components/Header.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
+const Logout = () => {
+
+  localStorage.removeItem('token');
+
+  window.location.href = '/'; 
+};
 
 const Header = () => {
   const [menuItems, setMenuItems] = useState<boolean>(false);
