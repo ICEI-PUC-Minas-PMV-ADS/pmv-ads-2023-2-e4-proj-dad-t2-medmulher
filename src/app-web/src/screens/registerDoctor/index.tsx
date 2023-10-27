@@ -1,14 +1,9 @@
 import '../../styles/RegisterDoctor.css';
 import { useState } from 'react';
 import { apiBase } from '../../services/api';
-<<<<<<< HEAD
-import CadastroMedSucesso from '../registerDoctorModal/index';
-import Header from '../../components/header/index';
-=======
 import Header from '../../components/header/index';
 import RegisterDoctorModalFailure from '../registerDoctorModalFailure/index';
 import RegisterDoctorModalSuccess from '../registerDoctorModalSuccess/index';
->>>>>>> 12238db0abbb9c188ff1ee549d2a930d2f56e43e
 
 const RegisterDoctor = () => {
 
@@ -52,7 +47,9 @@ const RegisterDoctor = () => {
           setCrm("");
           setNameMedico("");
           setModalText(response.data.message)
-          setIsOpenSuccess(true);          
+          setIsOpenSuccess(true);
+          
+          return response;
         }       
 
       } catch(err: any){
@@ -74,12 +71,7 @@ const RegisterDoctor = () => {
     return (
 
       <>
-<<<<<<< HEAD
-
-      {/* <Header /> */}
-=======
       <Header />
->>>>>>> 12238db0abbb9c188ff1ee549d2a930d2f56e43e
 
       <div className="Register">
         {/* <div className="header">
