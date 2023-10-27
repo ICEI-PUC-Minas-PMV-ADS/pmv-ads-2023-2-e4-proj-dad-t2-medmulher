@@ -64,7 +64,7 @@ Os testes deverão ocorrer de maneira remota. E as tarefas a serem executadas se
 
 	* Testar o gerenciamento da consulta 
 
-5.	Efetuar cadastro de usuário 
+5.	Efetuar cadastro do médico
 
 	* Clicar no campo de cadastro 
 
