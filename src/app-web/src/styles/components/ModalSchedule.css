@@ -1,0 +1,148 @@
+.modalBg {
+    width: 100%;
+    height: 90%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000c0;
+}
+
+.btn-fecharModal{
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+}
+
+.cadastroMed-container {
+    height: 90%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+}
+
+
+.cadastroMed-container h1 {
+    margin-bottom: 4.56rem;
+    color: #1E1E1E;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.selectMed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.selectMed-container label {
+    margin-bottom: 0.5rem;
+}
+
+label {
+    color: #1E1E1E;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.select-medicos {
+    width: 20.25rem;
+    padding: 1rem;
+    border-radius: 0.625rem;
+    border: 1px solid #9D9D9D;
+    background: #FFF;
+    color: #4B4B4B;
+    font-size: 1rem;
+}
+
+.selectDias-container,
+.selectHoras-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+}
+
+.selectDias-container label,
+.selectHoras-container label {
+    margin-bottom: 1rem;
+}
+
+.select-dias input, .select-horas input{
+    display: none;
+}
+
+.select-dias input + label{
+    background-color: #FFF;
+    border: solid 2px #8D4698;
+    border-radius: 100%;
+    padding: 1rem 0.8rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.select-dias input:checked + label, .select-horas input:checked + label {
+    background-color: #8D4698;
+    cursor: pointer;
+    color: #fff;
+}
+
+.select-dias input,
+.select-horas span {
+    margin-right: 1rem;
+}
+
+.select-dias span label,
+.select-horas span label {
+    font-size: 1rem;
+}
+
+.select-horas {
+    width: 25rem;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 0.9rem;
+}
+
+.select-horas input + label {
+    border-radius: 0.3125rem;
+    border: 2px solid #8D4698;
+    background-color: #fff;
+    padding: 0.75rem 0.7rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.select-horas .btn-h + label {
+    padding: 0.75rem 0.9rem;
+}
+
+
+.btn-addAgenda {
+    width: 20rem;
+    margin-top: 2.5rem;
+    padding: 1rem 1.07rem;
+    border-radius: 0.625rem;
+    border: none;
+    background: #8D4698;
+    color: #FFF;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-addAgenda:active {
+    background: #6A2974;
+
+}

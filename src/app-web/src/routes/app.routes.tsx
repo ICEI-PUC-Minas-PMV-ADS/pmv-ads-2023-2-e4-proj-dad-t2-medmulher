@@ -5,11 +5,14 @@ import Home from "../screens/home";
 import RedefinePassword from "../screens/redefinePassword";
 import CadastroMed from "../screens/registerDoctor";
 import Doctor from "../screens/doctor";
+import RegisterSchedule from "../screens/registerSchedule"
+
 
 export default function Routes() {
   return (
     <Switch>
-      <Route path="/" element={<Login />} />
+      <Route path="//" element={<RegisterSchedule />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/cadastro-paciente" element={<Register />} />
       <Route path="/inicio" element={<Home />} />
       <Route path="/redefinicao-de-senha" element={<RedefinePassword />} />
