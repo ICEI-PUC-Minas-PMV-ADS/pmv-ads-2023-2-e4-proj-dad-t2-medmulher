@@ -47,7 +47,9 @@ const RegisterDoctor = () => {
           setCrm("");
           setNameMedico("");
           setModalText(response.data.message)
-          setIsOpenSuccess(true);          
+          setIsOpenSuccess(true);
+          
+          return response;
         }       
 
       } catch(err: any){
