@@ -12,7 +12,7 @@
     margin-bottom: 2rem;
 }
 
-.title-doctor > h1{
+.title-doctor > h1 {
     text-align: left;
     font-size: 1.5rem;
     font-weight: 600;
@@ -63,6 +63,7 @@
     text-align: center;
     margin: 15px;
 }
+
 .card > main > h2 {
     font-weight: 700;
     font-size: 18px;
@@ -89,7 +90,7 @@
     text-align: center;
     display: flex;
     justify-content: center;
-  }
+}
 
 .card > header > img {
     margin: 15px;

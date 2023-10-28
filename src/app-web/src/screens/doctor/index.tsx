@@ -1,9 +1,27 @@
+import '../../styles/Doctor.css';
+import { useEffect, useState } from 'react';
+import { MdAdd } from 'react-icons/md';
+import Vector from '../../assets/jam_medical.jpg';
+import { Link } from 'react-router-dom';
+import { getDoctors } from '../../services/doctorAPI';
 import Header from "../../components/header";
-import "../../styles/Doctor.css";
-import { MdAdd, MdExpandMore } from "react-icons/md";
-import Vector from "../../assets/jam_medical.jpg";
 
 const Doctor = () => {
+  const [doctors, setDoctors] = useState<Doctor[]>([]);
+
+  useEffect(() => {
+    const fetchDoctors = async () => {
+      try {
+        const doctorData = await getDoctors();
+        setDoctors(doctorData);
+      } catch (error) {
+        console.error('Erro ao buscar médicos:', error);
+      }
+    };
+
+    fetchDoctors();
+  }, []);
+
   return (
     <div className="Doctor">
       <Header />
@@ -14,128 +32,40 @@ const Doctor = () => {
         </div>
 
         <div className="button-search">
-          <button
-            style={{
-              background: "white",
-              color: "black",
-              border: "1px solid black",
-            }}
-            type="submit" className="buttons-icons" 
-            onClick={() => console.log("click")}
-          >
-            Especialidade{" "}
-            <a href="#" className="navbar-icons3">
-              <MdExpandMore  />
-            </a>
-          </button>
-          <button
-            style={{
-              background: "purple",
-              color: "white",
-              border: "1px solid black",
-              marginRight: "60px",
-            }}
-            type="submit" className="buttons-icons" 
-          >
-           Cadastrar médico {" "}
-            <a href="#" className="navbar-icons4">
-              <MdAdd />
-            </a>
-          </button>
+          <Link to="/cadastro-medico">
+            <button
+              style={{
+                background: 'purple',
+                color: 'white',
+                border: '1px solid black',
+                marginRight: '60px',
+              }}
+              type="submit"
+              className="buttons-icons"
+            >
+              Cadastrar médico{' '}
+              <a href="#" className="navbar-icons4">
+                <MdAdd />
+              </a>
+            </button>
+          </Link>
         </div>
 
         <div className="cards">
-
-          <div className="card">
-            <header>
-              <img src={Vector} alt="Imagem de capa médicos" />
-            </header>
-            <main>
-              <h2>Dr Beatriz Silva</h2>
-              <p>Ginecologista</p>
-            </main>
-            <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
-            </footer>
-          </div>
-
-          <div className="card">
-            <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
-            </header>
-            <main>
-              <h2>Dr Beatriz Silva</h2>
-              <p>Ginecologista</p>
-            </main>
-            <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
-            </footer>
-          </div>
-
-          <div className="card">
-            <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
-            </header>
-            <main>
-              <h2>Dr Beatriz Silva</h2>
-              <p>Ginecologista</p>
-            </main>
-            <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
-            </footer>
-          </div>
-
-          <div className="card">
-            <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
-            </header>
-            <main>
-              <h2>Dr Beatriz Silva</h2>
-              <p>Ginecologista</p>
-            </main>
-            <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
-            </footer>
-          </div>
-          
-          <div className="card">
-            <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
-            </header>
-            <main>
-              <h2>Dr Beatriz Silva</h2>
-              <p>Ginecologista</p>
-            </main>
-            <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
-            </footer>
-          </div>
-
-          <div className="card">
-            <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
-            </header>
-            <main>
-              <h2>Dr Beatriz Silva</h2>
-              <p>Ginecologista</p>
-            </main>
-            <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
-            </footer>
-          </div>
-
-          <div className="card">
-            <header>
-             <img src={Vector} alt="Imagem de capa médicos" />
-            </header>
-            <main>
-              <h2>Dr Beatriz Silva</h2>
-              <p>Ginecologista</p>
-            </main>
-            <footer>
-              <button onClick={() => console.log("click")}>Ir para agenda</button>
-            </footer>
-          </div>
+          {doctors.map((doctor) => (
+            <div className="card" key={doctor._id}>
+              <header>
+                <img src={Vector} alt="Imagem de capa médicos" />
+              </header>
+              <main>
+                <h2>{doctor.name}</h2>
+                <p>{doctor.specialty}</p>
+              </main>
+              <footer>
+                <button onClick={() => console.log('click')}>Ir para agenda</button>
+              </footer>
+            </div>
+          ))}
         </div>
       </div>
     </div>
