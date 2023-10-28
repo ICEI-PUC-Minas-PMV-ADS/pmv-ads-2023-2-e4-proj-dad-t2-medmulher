@@ -1,17 +1,19 @@
 import '../../styles/RegisterDoctor.css';
-import Logo from "../../assets/Logo-rosa.svg"
 import { useState } from 'react';
 import { apiBase } from '../../services/api';
-import CadastroMedSucesso from '../registerDoctorModal/index';
+import Header from '../../components/header/index';
+import RegisterDoctorModalFailure from '../registerDoctorModalFailure/index';
+import RegisterDoctorModalSuccess from '../registerDoctorModalSuccess/index';
 
-const CadastroMed = () => {
+const RegisterDoctor = () => {
 
      
     const [selectedEspecialidade, setSelectedEspecialidade] = useState('');
     const [nameMedico, setNameMedico] = useState('');
     const [crm, setCrm] = useState('');
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpenSuccess, setIsOpenSuccess] = useState(false);
+    const [isOpenFailure, setIsOpenFailure] = useState(false);
     const [modalText, setModalText] = useState('');
 
     const especialidadeOptions = [
@@ -45,7 +47,9 @@ const CadastroMed = () => {
           setCrm("");
           setNameMedico("");
           setModalText(response.data.message)
-          setIsOpen(true);          
+          setIsOpenSuccess(true);
+          
+          return response;
         }       
 
       } catch(err: any){
@@ -53,12 +57,12 @@ const CadastroMed = () => {
         if (err.response.status === 400){
           console.log(err.response)
           setModalText(err.response.data.message)
-          setIsOpen(true);
+          setIsOpenFailure(true);
         }
         if (err.response.status !==400){
           console.log(err.response.status);      
           setModalText("Ops! Ocorreu um erro ao processar sua requisição");
-          setIsOpen(true);
+          setIsOpenFailure(true);
         }        
         return err      
       }      
@@ -67,10 +71,12 @@ const CadastroMed = () => {
     return (
 
       <>
+      <Header />
+
       <div className="Register">
-        <div className="header">
+        {/* <div className="header">
           <img className="header-logo" src={Logo} alt="Logo do MedMulher" />
-        </div>
+        </div> */}
 
         <div className="container">
           <div className="input-group">
@@ -109,7 +115,8 @@ const CadastroMed = () => {
               <button class="button-form" type="submit">Finalizar Cadastro</button>
 
             </form>
-            {isOpen && <CadastroMedSucesso setIsOpen={setIsOpen} modalText={modalText} />}
+            {isOpenSuccess && <RegisterDoctorModalSuccess setIsOpen={setIsOpenSuccess} modalText={modalText} />}
+            {isOpenFailure && <RegisterDoctorModalFailure setIsOpen={setIsOpenFailure} modalText={modalText} />}
           </div>
         </div>
       </div>
@@ -117,4 +124,4 @@ const CadastroMed = () => {
     );
   };
 
-export default CadastroMed;
+export default RegisterDoctor;
