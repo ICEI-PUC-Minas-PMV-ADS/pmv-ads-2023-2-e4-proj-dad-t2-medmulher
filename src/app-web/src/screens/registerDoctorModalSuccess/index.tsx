@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { RiCloseLine } from "react-icons/ri";
-import { Link } from "../../../node_modules/react-router-dom/dist/index";
-import  Logo from "../../assets/checkmark-ppl-backgrund-white-mark.svg"
+import  Logo from "../../assets/checkmark-ppl-backgrund-white-mark.svg";
+import { Link } from 'react-router-dom';
 
 const RegisterDoctorModalSuccess = ({ setIsOpen, modalText }) => {
 
@@ -28,16 +28,16 @@ const RegisterDoctorModalSuccess = ({ setIsOpen, modalText }) => {
                     </div> 
                     <br />
                     <div>
-                        <a href="#">
+                        <Link to="#">
                             <button class="button-form">Adicionar agenda</button>
-                        </a>
+                        </Link>
                         
                     </div>
                     <br />
                     <div>
-                        <a href="">
+                        <Link to="#">
                             <button class="button-form-inverse">Ir para perfil</button>
-                        </a>
+                        </Link>
                         
                     </div>
 
