@@ -1,15 +1,13 @@
 import Logo from "../../assets/Logo-rosa.svg";
-import { MdAccountCircle, MdClose, MdExpandMore } from "react-icons/md";
+import { MdAccountCircle, MdClose, MdExpandMore, MdLogout } from "react-icons/md";
 import "../../styles/components/Header.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Link } from 'react-router-dom';
 
 const Logout = () => {
+  localStorage.removeItem("token");
 
-  localStorage.removeItem('token');
-
-  window.location.href = '/'; 
+  window.location.href = "/";
 };
 
 const Header = () => {
@@ -26,6 +24,7 @@ const Header = () => {
         <img className="header-logo-home" src={Logo} alt="Logo MedMulher" />
 
         <nav className="header-menu-home">
+          <MdLogout color={"8D4698"} cursor="pointer" onClick={Logout} />
           {!isMobile && (
             <ul className="header-menu-item-home">
               <li>
@@ -50,10 +49,7 @@ const Header = () => {
 
             {menuItems && isMobile ? (
               <aside className="drawer">
-                <MdClose
-                  className="close"
-                  onClick={handleMenu}
-                />
+                <MdClose className="close" onClick={handleMenu} />
                 <img
                   className="header-logo-home"
                   src={Logo}

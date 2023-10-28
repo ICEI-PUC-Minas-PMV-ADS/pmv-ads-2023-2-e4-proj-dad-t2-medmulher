@@ -1,10 +1,41 @@
+import { useEffect, useCallback } from "react";
 import { MdEdit } from "react-icons/md";
 import { FilterSection, Header, ProfileSection } from "../../components";
 import "../../styles/Profile.css";
-import { calendar } from "../../utils/calendary";
+import { getDoctorID } from "../../services/doctorAPI";
 
 const Profile = () => {
-  const teste = new Date().getDate();
+  const doctor = useCallback(async () => {
+    const response = await getDoctorID("651dff0a87078d5ab3ece1d7");
+
+    if (response) {
+      let sch = response.consultation_date.map((item: any) => item);
+      let schedulles: any = [];
+      for (let i = 0; i < sch.length; i++) {
+        const sch2 = sch.filter(
+          (item: any) => item.schedulle_date === sch[i].schedulle_date
+        );
+
+        schedulles.push({
+          day: sch[i].schedulle_date,
+          hours: sch2.map((item: any) => item.hours[0].hour),
+        });
+
+        sch = sch.filter(
+          (item: any) => item.schedulle_date !== sch[i].schedulle_date
+        );
+      }
+
+      console.log(schedulles);
+      return schedulles;
+    }
+
+    return [];
+  }, []);
+
+  useEffect(() => {
+    doctor();
+  }, []);
 
   return (
     <>
