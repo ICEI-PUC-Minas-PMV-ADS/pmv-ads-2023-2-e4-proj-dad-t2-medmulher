@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
-.page {
+.page-doctor {
     max-width: 1280px;
     padding: 4rem 0;
     margin: auto;
     overflow: hidden;
 }
 
-.title {
+.title-doctor {
     color: #1E1E1E;
     margin-bottom: 2rem;
 }
 
-.title > h1{
+.title-doctor > h1 {
     text-align: left;
     font-size: 1.5rem;
     font-weight: 600;
@@ -63,6 +63,7 @@
     text-align: center;
     margin: 15px;
 }
+
 .card > main > h2 {
     font-weight: 700;
     font-size: 18px;
@@ -85,6 +86,13 @@
     line-height: normal;
 }
 
+.card > header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
 .card > header > img {
     margin: 15px;
+    max-width: 100%;
 }
