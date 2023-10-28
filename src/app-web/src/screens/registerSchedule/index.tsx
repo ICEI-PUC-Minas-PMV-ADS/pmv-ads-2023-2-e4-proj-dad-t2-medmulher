@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import React from "react";
 import Header from "../../components/header"
 import '../../styles/RegisterSchedule.css'
 import '../../styles/components/ModalSchedule.css'
@@ -10,6 +11,8 @@ function RegisterSchedule() {
   return (
     <div className='ScheduleBody'>
       <Header />
+
+      {/*Adicionar Button e Modal à pagina onde será linkada*/}
       <button onClick={() => setOpenModal(!openModal)}>Adicionar Agenda</button>
       <Modal isOpen={openModal} setOpenModal={setOpenModal}/>
     </div>

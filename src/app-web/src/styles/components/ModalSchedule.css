@@ -146,3 +146,61 @@ label {
     background: #6A2974;
 
 }
+
+/*Responsividade*/
+@media screen and (max-width: 1200px){
+    .cadastroMed-container {
+        height: 90%;
+        width: 60%;
+    }    
+}
+
+@media screen and (max-width: 800px){
+    .cadastroMed-container {
+        height: 90%;
+        width: 80%;
+    }    
+}
+@media screen and (max-width: 550px){
+    .cadastroMed-container {
+        height: 90%;
+        width: 100%;
+    }    
+    .cadastroMed-container h1 {
+        font-size: 3rem;
+    }
+    
+    label {
+        font-size: 1.5rem;
+    }
+
+    .select-medicos {
+        width: 24rem;
+        height: 4rem;
+        font-size: 1.2rem;
+    }
+
+    .select-dias input + label {
+        padding: 1.5rem 1.2rem;
+        font-size: 1.2rem;
+    }
+    .select-horas input + label {
+        font-size: 1.4rem;
+    }
+
+    .btn-addAgenda {
+        width: 25rem;
+        height: 4rem;
+        font-size: 1.3rem;
+    }
+
+    .selectDias-container label, .selectHoras-container label {
+        margin-bottom: 2rem;
+    }
+
+    .btn-fechar {
+        width: 4rem;
+        height: 2rem;
+        font-size: 1.5rem;
+    }
+}

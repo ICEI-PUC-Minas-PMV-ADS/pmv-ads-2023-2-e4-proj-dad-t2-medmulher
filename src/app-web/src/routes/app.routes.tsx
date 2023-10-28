@@ -16,7 +16,7 @@ export default function Routes() {
       <Route path="/cadastro-paciente" element={<Register />} />
       <Route path="/inicio" element={<Home />} />
       <Route path="/redefinicao-de-senha" element={<RedefinePassword />} />
-      <Route path="/cadastro-medico" element={<CadastroMed />} />
+      <Route path="//cadastro-medico" element={<CadastroMed />} />
       <Route path="/doutor" element={<Doctor />} />
     </Switch>
   );
