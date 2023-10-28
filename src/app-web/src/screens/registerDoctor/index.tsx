@@ -1,20 +1,20 @@
 import '../../styles/RegisterDoctor.css';
-import Logo from "../../assets/Logo-rosa.svg"
 import { useState } from 'react';
-import { options } from 'yargs';
-import axios from 'axios';
+import { apiBase } from '../../services/api';
+import Header from '../../components/header/index';
+import RegisterDoctorModalFailure from '../registerDoctorModalFailure/index';
+import RegisterDoctorModalSuccess from '../registerDoctorModalSuccess/index';
 
-const CadastroMed = () => {
+const RegisterDoctor = () => {
 
-    var URL = "http://localhost:3000/doctors";
-  
+     
     const [selectedEspecialidade, setSelectedEspecialidade] = useState('');
     const [nameMedico, setNameMedico] = useState('');
     const [crm, setCrm] = useState('');
 
-    const handleEspecialidadeChange = (event: any) =>{
-        setSelectedEspecialidade(event.target.value);
-    };
+    const [isOpenSuccess, setIsOpenSuccess] = useState(false);
+    const [isOpenFailure, setIsOpenFailure] = useState(false);
+    const [modalText, setModalText] = useState('');
 
     const especialidadeOptions = [
         {value: '', label: 'Selecione uma especialidade' },
@@ -32,37 +32,52 @@ const CadastroMed = () => {
       crm:crm
     };
 
-    
+    const handleSubmit = async (e: any) => {
 
+      e.preventDefault();      
+      try{
+        
+        const response = await apiBase.post("doctors", JSON.stringify(doctor))
+        
+        if(response.status === 201){
+          
+          console.log(response)
+          console.log(response.data.message)
+          
+          setCrm("");
+          setNameMedico("");
+          setModalText(response.data.message)
+          setIsOpenSuccess(true);
+          
+          return response;
+        }       
 
-
-    const handleSubmit = () => {
-
-      fetch(URL, {
-        method: 'POST',
-        body: JSON.stringify(doctor),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8"
+      } catch(err: any){
+        
+        if (err.response.status === 400){
+          console.log(err.response)
+          setModalText(err.response.data.message)
+          setIsOpenFailure(true);
         }
-      })
-      .then(res => res.json())
-      .then((data) => {console.log(data)})
-      .catch((error) => {console.log(error)})
-
-        // axios.post(URL, doctor)
-        //   .then((res : any)  => console.log(res.data))
-        //   .catch((error: any) => {
-        //     console.log(error)
-        //   })
-        // console.log(`${nameMedico}    ${selectedEspecialidade}      ${crm}  `);
+        if (err.response.status !==400){
+          console.log(err.response.status);      
+          setModalText("Ops! Ocorreu um erro ao processar sua requisição");
+          setIsOpenFailure(true);
+        }        
+        return err      
+      }      
     };
 
     return (
+
+      <>
+      <Header />
+
       <div className="Register">
-        <div className="header">
+        {/* <div className="header">
           <img className="header-logo" src={Logo} alt="Logo do MedMulher" />
-        </div>
-  
+        </div> */}
+
         <div className="container">
           <div className="input-group">
             <div className="title">
@@ -72,40 +87,41 @@ const CadastroMed = () => {
 
             <form onSubmit={handleSubmit}>
 
-            <div className="input-box">
-              <label htmlFor="nomeMedico">Nome</label>
-              <input type="text" placeholder="Digite seu nome" value={nameMedico} onChange={e => setNameMedico(e.target.value)}/>
-            </div>
-            <br></br>
+              <div className="input-box">
+                <label htmlFor="nomeMedico">Nome</label>
+                <input type="text" placeholder="Digite seu nome" value={nameMedico} onChange={e => setNameMedico(e.target.value)} />
+              </div>
+              <br></br>
 
 
 
-            <div className="input-box">
-            <label htmlFor="dropdownEspecialidades">Especialidade</label>
-            <select id="dropdownEspecialidades" onChange={handleEspecialidadeChange}>
-                
-                {especialidadeOptions.map((option) => (
-                    <option key={option.value}  value={option.value}>{option.label}</option>
-                ))}
-            </select>
-            </div>
-            <br></br>
+              <div className="input-box">
+                <label htmlFor="dropdownEspecialidades">Especialidade</label>
+                <select id="dropdownEspecialidades" onChange={e => setSelectedEspecialidade(e.target.value)}>
 
-            <div className="input-box">
-              <label htmlFor="crm">CRM</label>
-              <input type="text" placeholder="1234-00" value={crm} onChange={e => setCrm(e.target.value)}/>        
-            </div>
-            <br></br>
-            
-  
-            <button className="create" type="submit" >Finalizar Cadastro</button>
-            
+                  {especialidadeOptions.map((option) => (
+                    <option key={option.value} value={option.value}>{option.label}</option>
+                  ))}
+                </select>
+              </div>
+              <br></br>
+
+              <div className="input-box">
+                <label htmlFor="crm">CRM</label>
+                <input type="text" placeholder="1234-00" value={crm} onChange={e => setCrm(e.target.value)} />
+              </div>
+              <br></br>
+
+              <button class="button-form" type="submit">Finalizar Cadastro</button>
+
             </form>
-
-            </div>
+            {isOpenSuccess && <RegisterDoctorModalSuccess setIsOpen={setIsOpenSuccess} modalText={modalText} />}
+            {isOpenFailure && <RegisterDoctorModalFailure setIsOpen={setIsOpenFailure} modalText={modalText} />}
           </div>
         </div>
+      </div>
+      </>
     );
   };
 
-export default CadastroMed;
+export default RegisterDoctor;
