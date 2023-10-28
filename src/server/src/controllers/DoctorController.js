@@ -35,7 +35,7 @@ class DoctorController {
   async update(req, res) {
     const id = req.params.id;
 
-    const { name, specialty, crm } = req.body;
+    const { name, specialty, crm, availability } = req.body;
     const updated_user_date = new Date();
 
     if (!crm) {
@@ -46,6 +46,7 @@ class DoctorController {
       name,
       specialty,
       crm,
+      availability,
       updated_user_date,
     };
 
