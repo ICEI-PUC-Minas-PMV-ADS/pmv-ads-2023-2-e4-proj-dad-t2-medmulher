@@ -26,6 +26,10 @@
     background-position: right, left;
 }
 
+.header-login {
+    padding-top: 30px;
+    padding-left: 100px;
+}
 
 .container {
     width: 100%;

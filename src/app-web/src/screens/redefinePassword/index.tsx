@@ -2,6 +2,7 @@ import "../../styles/RedefinePassword.css";
 import Logo from "../../assets/Logo-rosa.svg";
 import { resetPassword } from "../../services/userAPI";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 
 const RedefinePassword = () => {
@@ -31,17 +32,17 @@ const RedefinePassword = () => {
 
   return (
     <div className="RedefinePassword">
-      <div className="header">
+      <div className="header-redefinePassword">
         <img className="header-logo" src={Logo} alt="Logo do MedMulher" />
       </div>
   
-      <div className="container">
-        <div className="input-group">
-          <div className="title">
+      <div className="container-redefinePassword">
+        <div className="input-group-redefinePassword">
+          <div className="title-redefinePassword">
             <h1>Recuperar Senha</h1>
           </div>
   
-          <div className="input-box">
+          <div className="input-box-redefinePassword">
             <label htmlFor="email">E-mail</label>
             <input
               type="text"
@@ -51,7 +52,7 @@ const RedefinePassword = () => {
             />
           </div>
   
-          <div className="input-box">
+          <div className="input-box-redefinePassword">
             <label htmlFor="newPassword">Nova senha</label>
             <input
               type="password"
@@ -61,7 +62,7 @@ const RedefinePassword = () => {
             />
           </div>
   
-          <div className="input-box">
+          <div className="input-box-redefinePassword">
             <label htmlFor="confirmPassword">Confirmar senha</label>
             <input
               type="password"
@@ -71,9 +72,12 @@ const RedefinePassword = () => {
             />
           </div>
   
+          <Link to="/">
           <button type="button" onClick={handleResetPassword}>
             Recuperar senha
           </button>
+          </Link>
+
         </div>
       </div>
     </div>

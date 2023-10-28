@@ -50,9 +50,11 @@ const Login = () => {
             <Link className="forgot-password-login" to="/redefinicao-de-senha">Recuperar senha</Link>
           </div>
 
+          <Link to="/inicio">
           <button onClick={login} type="submit">
             Entrar
           </button>
+          </Link>
 
           <div className="line-container-login">
             <div className="line"></div>
