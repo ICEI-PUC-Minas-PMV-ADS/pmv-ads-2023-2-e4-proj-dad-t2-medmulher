@@ -1,5 +1,7 @@
 import { useState, useCallback, FormEvent } from 'react';
-import React from "react";
+import '../../styles/components/ModalSchedule.css'
+import { AxiosResponse } from "axios";
+import { apiBase } from "../../services/api";
 
 interface IModal {
     isOpen: boolean;
@@ -37,10 +39,24 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
 
 
 
-
     //MENSAGEM DE SUCESSO/ERRO
     const [addSucesso, setAddSucesso] = useState(false);
 
+
+    //REQUISIÇÃO POST
+    const postSchedulleDoctor = async (data: InfoShedulle) => {
+        try {
+            const response: AxiosResponse = await apiBase.post('/doctors/', data);
+
+            if (response.status === 200) {
+                setAddSucesso(true);
+                return response.data;
+            }
+
+        } catch (erro) {
+            console.error('Erro ao enviar dados:', erro);
+         }
+    };
 
 
     //DADOS DO FORMULÁRIO
@@ -58,17 +74,18 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
             const element = event.target as HTMLFormElement;
 
             const infoShedulle: InfoShedulle = {
-                nomeMedico: '',
+                nomeMedico: formState.nomeMedico || "",
                 availability: {
-                    daySchedulle: element.daySchedulle.value,
-                    hoursSchedulle: [element.hoursSchedulle.value],
+                    daySchedulle: formState.availability?.daySchedulle || "",
+                    hoursSchedulle: formState.availability?.hoursSchedulle || [],
                 },
             };
+            
+            try {
+                await postSchedulleDoctor(infoShedulle);
+            } catch (erro) {
 
-            if (!infoShedulle) {
-                window.alert("Preencha todos os campos!");
-                setAddSucesso(false);
-                return;
+                console.error('Erro ao enviar dados:', erro);
             }
 
             setAddSucesso(true);
@@ -119,26 +136,26 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                         </div>
 
                         <div className="selectDias-container">
-                                <label htmlFor="">Selecione os dias da semana</label>
-                                <select
-                                    name="selectDias"
-                                    id="selectDias"
-                                    className="select-dias"
-                                    required
-                                    value={formState.availability.daySchedulle}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        availability: {
-                                            ...formState.availability,
-                                            daySchedulle: event.currentTarget?.value || '',
-                                        },
-                                    })
-                                    }
-                                >
-                                    {selectDaySchedulle.map((option) => (
-                                        <option key={option.value} value={option.value}>{option.label}</option>
-                                    ))}
-                                </select>
+                            <label htmlFor="">Selecione os dias da semana</label>
+                            <select
+                                name="selectDias"
+                                id="selectDias"
+                                className="select-dias"
+                                required
+                                value={formState.availability.daySchedulle}
+                                onChange={(event) => setFormState({
+                                    ...formState,
+                                    availability: {
+                                        ...formState.availability,
+                                        daySchedulle: event.currentTarget?.value || '',
+                                    },
+                                })
+                                }
+                            >
+                                {selectDaySchedulle.map((option) => (
+                                    <option key={option.value} value={option.value}>{option.label}</option>
+                                ))}
+                            </select>
                         </div>
 
                         <div className="selectHoras-container">
