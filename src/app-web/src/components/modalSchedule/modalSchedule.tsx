@@ -1,64 +1,23 @@
-import { useState } from "react";
-import { useCallback } from 'react';
+import { useState, useCallback, FormEvent } from 'react';
 import React from "react";
-import { isInputElement } from "react-router-dom/dist/dom";
 
 interface IModal {
     isOpen: boolean;
     setOpenModal: (isOpen: boolean) => void
 }
 
-interface IFormState {
-    selectmedicos: string;
-
-    segunda: boolean;
-    terça: boolean;
-    quarta: boolean;
-    quinta: boolean;
-    sexta: boolean;
-
-    oitoHoras: boolean;
-    noveHoras: boolean;
-    dezHoras: boolean;
-    onzeHoras: boolean;
-    dozeHoras: boolean;
-    trezeHoras: boolean;
-    quatorzeHoras: boolean;
-    quinzeHoras: boolean;
-    dezesseisHoras: boolean;
-    dezesseteHoras: boolean;
-    dezoitoHoras: boolean;
-
+interface InfoShedulle {
+    nomeMedico: string;
+    availability: {
+        daySchedulle: string;
+        hoursSchedulle: string[];
+    };
 }
 
 
 export function Modal({ isOpen, setOpenModal }: IModal) {
 
-    //DADOS DO FORMULÁRIO
-    const [formState, setFormState] = useState<IFormState>({
-        selectmedicos: "",
-        segunda: false,
-        terça: false,
-        quarta: false,
-        quinta: false,
-        sexta: false,
-        oitoHoras: false,
-        noveHoras: false,
-        dezHoras: false,
-        onzeHoras: false,
-        dozeHoras: false,
-        trezeHoras: false,
-        quatorzeHoras: false,
-        quinzeHoras: false,
-        dezesseisHoras: false,
-        dezesseteHoras: false,
-        dezoitoHoras: false,
-    });
-
-    console.log({formState})
-
-    
-    //LISTA DE OPINIONS DO SELECT
+    //OPTION DO SELECT MÉDICOS
     const selectNomeMedico = [
         { value: '', label: 'Selecione o médico' },
         //PUXAR NOME DOS MÉDICOS DO BANCO DE DADOS
@@ -66,28 +25,60 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
         { value: 'Dra. Criatina', label: 'Dra. Criatina' }
     ];
 
+    //OPTION DO SELECT DIAS
+    const selectDaySchedulle = [
+        { value: '', label: 'Selecione o dia' },
+        { value: 'Segunda', label: 'Segunda' },
+        { value: 'Terça', label: 'Terça' },
+        { value: 'Quarta', label: 'Quarta' },
+        { value: 'Quinta', label: 'Quinta' },
+        { value: 'Sexta', label: 'Sexta' },
+    ];
 
-    //MODAL DE SUCESSO/ERRO
+
+
+
+    //MENSAGEM DE SUCESSO/ERRO
     const [addSucesso, setAddSucesso] = useState(false);
 
-    const handleSubmit = useCallback((event:React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
 
-        const selectmedicos = formState;
 
-        if (!selectmedicos) {
-            window.alert("Preencha todos os campos!");
+    //DADOS DO FORMULÁRIO
+    const [formState, setFormState] = useState<InfoShedulle>({
+        nomeMedico: "",
+        availability: {
+            daySchedulle: "",
+            hoursSchedulle: [],
+        },
+    });
 
-            setAddSucesso(false);
+    const handleSubmit = useCallback(
+        async (event: FormEvent<HTMLFormElement>) => {
+            event.preventDefault();
+            const element = event.target as HTMLFormElement;
 
-            return;
-        }
-        
-        setAddSucesso(true);
+            const infoShedulle: InfoShedulle = {
+                nomeMedico: '',
+                availability: {
+                    daySchedulle: element.daySchedulle.value,
+                    hoursSchedulle: [element.hoursSchedulle.value],
+                },
+            };
 
-    },[formState]);
+            if (!infoShedulle) {
+                window.alert("Preencha todos os campos!");
+                setAddSucesso(false);
+                return;
+            }
 
-    if(addSucesso){
+            setAddSucesso(true);
+        },
+        [formState]
+    );
+
+    console.log(formState)
+
+    if (addSucesso) {
         //add modal de sucesso
         return (
             <div>
@@ -114,10 +105,10 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                 id="selectmedicos"
                                 className="select-medicos"
                                 required
-                                value={formState.selectmedicos}
+                                value={formState.nomeMedico}
                                 onChange={(event) => setFormState({
                                     ...formState,
-                                    selectmedicos: event.currentTarget?.value || "",
+                                    nomeMedico: event.currentTarget?.value || "",
                                 })}
                             >
                                 {/*PUXAR NOME DOS MÉDICOS DO BANCO DE DADOS*/}
@@ -128,194 +119,270 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                         </div>
 
                         <div className="selectDias-container">
-                            <label htmlFor="">Selecione os dias da semana</label>
-                            <div className="select-dias">
-                                <input
-                                    type="checkbox"
-                                    name="segunda"
-                                    id="segunda"
-                                    checked={formState.segunda}
+                                <label htmlFor="">Selecione os dias da semana</label>
+                                <select
+                                    name="selectDias"
+                                    id="selectDias"
+                                    className="select-dias"
+                                    required
+                                    value={formState.availability.daySchedulle}
                                     onChange={(event) => setFormState({
                                         ...formState,
-                                        segunda: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="segunda">SEG</label>
-
-                                <input
-                                    type="checkbox"
-                                    name="terça"
-                                    id="terça"
-                                    checked={formState.terça}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        terça: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="terça">TER</label>
-
-                                <input
-                                    type="checkbox"
-                                    name="quarta"
-                                    id="quarta"
-                                    checked={formState.quarta}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        quarta: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="quarta">QUA</label>
-
-                                <input
-                                    type="checkbox"
-                                    name="quinta"
-                                    id="quinta"
-                                    checked={formState.quinta}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        quinta: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="quinta">QUI</label>
-
-                                <input
-                                    type="checkbox"
-                                    name="sexta"
-                                    id="sexta"
-                                    checked={formState.sexta}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        sexta: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="sexta">SEX</label>
-                            </div>
+                                        availability: {
+                                            ...formState.availability,
+                                            daySchedulle: event.currentTarget?.value || '',
+                                        },
+                                    })
+                                    }
+                                >
+                                    {selectDaySchedulle.map((option) => (
+                                        <option key={option.value} value={option.value}>{option.label}</option>
+                                    ))}
+                                </select>
                         </div>
 
                         <div className="selectHoras-container">
                             <label htmlFor="">Selecione os horários de atendimento</label>
                             <div className="select-horas">
-                                {/*FAZER INTERAÇÃO DE BOTÕES MULTISELECIONAVEIS*/}
-                                <input className="btn-h"
+                                <input
                                     type="checkbox"
-                                    name="oitoHoras"
+                                    name="hoursSchedulle"
                                     id="oitoHoras"
-                                    checked={formState.oitoHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        oitoHoras: !!event.currentTarget?.checked,
-                                    })}
+                                    value={"08:00"}
+                                    checked={formState.availability.hoursSchedulle.includes("08:00")}
+                                    onChange={(event) =>
+                                        setFormState((prevState) => ({
+                                            ...prevState,
+                                            availability: {
+                                                ...prevState.availability,
+                                                hoursSchedulle: event.target.checked
+                                                    ? [...prevState.availability.hoursSchedulle, "08:00"]
+                                                    : prevState.availability.hoursSchedulle.filter(
+                                                        (hour) => hour !== "08:00"
+                                                    ),
+                                            },
+                                        }))
+                                    }
                                 />
-                                <label htmlFor="oitoHoras">8:00</label>
+                                <label htmlFor="oitoHoras">08:00</label>
 
-                                <input className="btn-h"
+                                <input
                                     type="checkbox"
-                                    name="noveHoras"
+                                    name="hoursSchedulle"
                                     id="noveHoras"
-                                    checked={formState.noveHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        noveHoras: !!event.currentTarget?.checked,
-                                    })}
+                                    value={"09:00"}
+                                    checked={formState.availability.hoursSchedulle.includes("09:00")}
+                                    onChange={(event) =>
+                                        setFormState((prevState) => ({
+                                            ...prevState,
+                                            availability: {
+                                                ...prevState.availability,
+                                                hoursSchedulle: event.target.checked
+                                                    ? [...prevState.availability.hoursSchedulle, "09:00"]
+                                                    : prevState.availability.hoursSchedulle.filter(
+                                                        (hour) => hour !== "09:00"
+                                                    ),
+                                            },
+                                        }))
+                                    }
                                 />
-                                <label htmlFor="noveHoras">9:00</label>
+                                <label htmlFor="noveHoras">09:00</label>
 
-                                <input type="checkbox"
-                                    name="dezHoras"
+                                <input
+                                    type="checkbox"
+                                    name="hoursSchedulle"
                                     id="dezHoras"
-                                    checked={formState.dezHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        dezHoras: !!event.currentTarget?.checked,
-                                    })}
+                                    value={"10:00"}
+                                    checked={formState.availability.hoursSchedulle.includes("10:00")}
+                                    onChange={(event) =>
+                                        setFormState((prevState) => ({
+                                            ...prevState,
+                                            availability: {
+                                                ...prevState.availability,
+                                                hoursSchedulle: event.target.checked
+                                                    ? [...prevState.availability.hoursSchedulle, "10:00"]
+                                                    : prevState.availability.hoursSchedulle.filter(
+                                                        (hour) => hour !== "10:00"
+                                                    ),
+                                            },
+                                        }))
+                                    }
                                 />
                                 <label htmlFor="dezHoras">10:00</label>
 
-                                <input type="checkbox"
-                                    name="onzeHoras"
+                                <input
+                                    type="checkbox"
+                                    name="hoursSchedulle"
                                     id="onzeHoras"
-                                    checked={formState.onzeHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        onzeHoras: !!event.currentTarget?.checked,
-                                    })}
+                                    value={"11:00"}
+                                    checked={formState.availability.hoursSchedulle.includes("11:00")}
+                                    onChange={(event) =>
+                                        setFormState((prevState) => ({
+                                            ...prevState,
+                                            availability: {
+                                                ...prevState.availability,
+                                                hoursSchedulle: event.target.checked
+                                                    ? [...prevState.availability.hoursSchedulle, "11:00"]
+                                                    : prevState.availability.hoursSchedulle.filter(
+                                                        (hour) => hour !== "11:00"
+                                                    ),
+                                            },
+                                        }))
+                                    }
                                 />
                                 <label htmlFor="onzeHoras">11:00</label>
 
-                                <input type="checkbox"
-                                    name="dozeHoras"
+                                <input
+                                    type="checkbox"
+                                    name="hoursSchedulle"
                                     id="dozeHoras"
-                                    checked={formState.dozeHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        dozeHoras: !!event.currentTarget?.checked,
-                                    })}
+                                    value={"12:00"}
+                                    checked={formState.availability.hoursSchedulle.includes("12:00")}
+                                    onChange={(event) =>
+                                        setFormState((prevState) => ({
+                                            ...prevState,
+                                            availability: {
+                                                ...prevState.availability,
+                                                hoursSchedulle: event.target.checked
+                                                    ? [...prevState.availability.hoursSchedulle, "12:00"]
+                                                    : prevState.availability.hoursSchedulle.filter(
+                                                        (hour) => hour !== "12:00"
+                                                    ),
+                                            },
+                                        }))
+                                    }
                                 />
                                 <label htmlFor="dozeHoras">12:00</label>
 
-                                <input type="checkbox"
-                                    name="trezeHoras"
+                                <input
+                                    type="checkbox"
+                                    name="hoursSchedulle"
                                     id="trezeHoras"
-                                    checked={formState.trezeHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        trezeHoras: !!event.currentTarget?.checked,
-                                    })}
+                                    value={"13:00"}
+                                    checked={formState.availability.hoursSchedulle.includes("13:00")}
+                                    onChange={(event) =>
+                                        setFormState((prevState) => ({
+                                            ...prevState,
+                                            availability: {
+                                                ...prevState.availability,
+                                                hoursSchedulle: event.target.checked
+                                                    ? [...prevState.availability.hoursSchedulle, "13:00"]
+                                                    : prevState.availability.hoursSchedulle.filter(
+                                                        (hour) => hour !== "13:00"
+                                                    ),
+                                            },
+                                        }))
+                                    }
                                 />
                                 <label htmlFor="trezeHoras">13:00</label>
 
-                                <input type="checkbox"
-                                    name="quatorzeHoras"
+                                <input
+                                    type="checkbox"
+                                    name="hoursSchedulle"
                                     id="quatorzeHoras"
-                                    checked={formState.quatorzeHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        quatorzeHoras: !!event.currentTarget?.checked,
-                                    })}
+                                    value={"14:00"}
+                                    checked={formState.availability.hoursSchedulle.includes("14:00")}
+                                    onChange={(event) =>
+                                        setFormState((prevState) => ({
+                                            ...prevState,
+                                            availability: {
+                                                ...prevState.availability,
+                                                hoursSchedulle: event.target.checked
+                                                    ? [...prevState.availability.hoursSchedulle, "14:00"]
+                                                    : prevState.availability.hoursSchedulle.filter(
+                                                        (hour) => hour !== "14:00"
+                                                    ),
+                                            },
+                                        }))
+                                    }
                                 />
                                 <label htmlFor="quatorzeHoras">14:00</label>
 
-                                <input type="checkbox"
-                                    name="quinzeHoras"
+                                <input
+                                    type="checkbox"
+                                    name="hoursSchedulle"
                                     id="quinzeHoras"
-                                    checked={formState.quinzeHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        quinzeHoras: !!event.currentTarget?.checked,
-                                    })}
+                                    value={"15:00"}
+                                    checked={formState.availability.hoursSchedulle.includes("15:00")}
+                                    onChange={(event) =>
+                                        setFormState((prevState) => ({
+                                            ...prevState,
+                                            availability: {
+                                                ...prevState.availability,
+                                                hoursSchedulle: event.target.checked
+                                                    ? [...prevState.availability.hoursSchedulle, "15:00"]
+                                                    : prevState.availability.hoursSchedulle.filter(
+                                                        (hour) => hour !== "15:00"
+                                                    ),
+                                            },
+                                        }))
+                                    }
                                 />
                                 <label htmlFor="quinzeHoras">15:00</label>
 
-                                <input type="checkbox"
-                                    name="dezesseisHoras"
+                                <input
+                                    type="checkbox"
+                                    name="hoursSchedulle"
                                     id="dezesseisHoras"
-                                    checked={formState.dezesseisHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        dezesseisHoras: !!event.currentTarget?.checked,
-                                    })}
+                                    value={"16:00"}
+                                    checked={formState.availability.hoursSchedulle.includes("16:00")}
+                                    onChange={(event) =>
+                                        setFormState((prevState) => ({
+                                            ...prevState,
+                                            availability: {
+                                                ...prevState.availability,
+                                                hoursSchedulle: event.target.checked
+                                                    ? [...prevState.availability.hoursSchedulle, "16:00"]
+                                                    : prevState.availability.hoursSchedulle.filter(
+                                                        (hour) => hour !== "16:00"
+                                                    ),
+                                            },
+                                        }))
+                                    }
                                 />
                                 <label htmlFor="dezesseisHoras">16:00</label>
 
-                                <input type="checkbox"
-                                    name="dezesseteHoras"
+                                <input
+                                    type="checkbox"
+                                    name="hoursSchedulle"
                                     id="dezesseteHoras"
-                                    checked={formState.dezesseteHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        dezesseteHoras: !!event.currentTarget?.checked,
-                                    })}
+                                    value={"17:00"}
+                                    checked={formState.availability.hoursSchedulle.includes("17:00")}
+                                    onChange={(event) =>
+                                        setFormState((prevState) => ({
+                                            ...prevState,
+                                            availability: {
+                                                ...prevState.availability,
+                                                hoursSchedulle: event.target.checked
+                                                    ? [...prevState.availability.hoursSchedulle, "17:00"]
+                                                    : prevState.availability.hoursSchedulle.filter(
+                                                        (hour) => hour !== "17:00"
+                                                    ),
+                                            },
+                                        }))
+                                    }
                                 />
                                 <label htmlFor="dezesseteHoras">17:00</label>
 
-                                <input type="checkbox"
-                                    name="dezoitoHoras"
+                                <input
+                                    type="checkbox"
+                                    name="hoursSchedulle"
                                     id="dezoitoHoras"
-                                    checked={formState.dezoitoHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        dezoitoHoras: !!event.currentTarget?.checked,
-                                    })}
+                                    value={"18:00"}
+                                    checked={formState.availability.hoursSchedulle.includes("18:00")}
+                                    onChange={(event) =>
+                                        setFormState((prevState) => ({
+                                            ...prevState,
+                                            availability: {
+                                                ...prevState.availability,
+                                                hoursSchedulle: event.target.checked
+                                                    ? [...prevState.availability.hoursSchedulle, "18:00"]
+                                                    : prevState.availability.hoursSchedulle.filter(
+                                                        (hour) => hour !== "18:00"
+                                                    ),
+                                            },
+                                        }))
+                                    }
                                 />
                                 <label htmlFor="dezoitoHoras">18:00</label>
                             </div>
