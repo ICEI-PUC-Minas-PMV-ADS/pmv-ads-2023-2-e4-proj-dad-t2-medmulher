@@ -130,7 +130,7 @@ const Profile = () => {
 
       <main className="page-doctor">
         <ProfileSection />
-        {/* <FilterSection /> */}
+        <FilterSection />
 
         <section className="schedulles">
           {cards.length > 0 ? (

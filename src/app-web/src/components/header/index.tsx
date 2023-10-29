@@ -3,6 +3,7 @@ import { MdAccountCircle, MdClose, MdExpandMore, MdLogout } from "react-icons/md
 import "../../styles/components/Header.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import RegisterSchedule from "../../screens/registerSchedule";
 
 const Logout = () => {
   localStorage.removeItem("token");
@@ -12,6 +13,8 @@ const Logout = () => {
 
 const Header = () => {
   const [menuItems, setMenuItems] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
+
   const isMobile = window.innerWidth < 480;
 
   const handleMenu = () => {
@@ -31,7 +34,7 @@ const Header = () => {
                 <Link to="/">Início</Link>
               </li>
               <li>
-                <Link to={"/perfil-medico"}>Agenda</Link>
+                <Link to={"#"} onClick={() => setIsOpen(!isOpen)}>Agenda</Link>
               </li>
               <li>
                 <Link to={"/doutor"}> Médicos</Link>
@@ -74,6 +77,8 @@ const Header = () => {
           </div>
         </nav>
       </div>
+      
+      {isOpen && <RegisterSchedule open={true} />}
     </header>
   );
 };

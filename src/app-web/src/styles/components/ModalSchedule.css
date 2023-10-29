@@ -96,10 +96,9 @@ label {
 }
 
 .select-horas {
-    width: 25rem;
-    flex-wrap: wrap;
-    display: flex;
-    gap: 0.9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0 0.8rem;
 }
 
 .select-horas input + label {
@@ -183,4 +182,11 @@ label {
         height: 2rem;
         font-size: 1.5rem;
     }
+
+    .select-horas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 0.8rem;
+    }
+    
 }
