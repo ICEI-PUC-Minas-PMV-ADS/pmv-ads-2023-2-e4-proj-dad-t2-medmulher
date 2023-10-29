@@ -3,15 +3,15 @@ import { RiCloseLine } from "react-icons/ri";
 import  Logo from "../../assets/checkmark-ppl-backgrund-white-mark.svg";
 import { Link } from 'react-router-dom';
 
-const RegisterDoctorModalSuccess = ({ setIsOpen, modalText }) => {
+const RegisterDoctorModalSuccess = ({ setIsOpenSuccess, modalText }) => {
 
     return (
         <>
-         <div onClick={()=> setIsOpen(false)}>
+         <div onClick={()=> setIsOpenSuccess(false)}>
             <div className="container-modal">
-                <div className="group-modal">
+                <div className="group-modal"  >
                     <div class="exit-button-div">
-                        <RiCloseLine onClick = {()=> setIsOpen(false)} class="exit-button-modal" type="button" style={{ width: "24px", marginBottom: "0px", padding:"0px" }}/>
+                        <RiCloseLine onClick = {()=> setIsOpenSuccess(false)} class="exit-button-modal" type="button" style={{ width: "24px", marginBottom: "0px", padding:"0px" }}/>
                     </div>
                     <div >
                         <div><img className="checkmark-logo" src={Logo} alt="" /></div>
