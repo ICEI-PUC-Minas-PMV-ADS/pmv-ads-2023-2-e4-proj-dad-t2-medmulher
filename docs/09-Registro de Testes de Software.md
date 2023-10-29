@@ -9,6 +9,12 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | Passos |  1) Abrir a página de cadastro de usuário </br> 2) Preencher os campos obrigatórios: nome, e-mail, senha, endereço e CPF </br>  3) Clicar no botão "Cadastrar" </br>  4) Verificar se o usuário é redirecionado para a página de login |
 | Resultado Obtido | Cadastro realizado com sucesso. |
 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/d1735e65-ec66-4bc9-963f-c7285f610ff5)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/5350d94e-34d9-4b31-97fd-ee08e71088e2)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/63db187d-b560-48ac-96e4-0710cdf12754)
+
+
+
 #
 
 | CT-02 | Login |
