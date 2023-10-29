@@ -73,7 +73,7 @@ const RedefinePassword = () => {
           </div>
   
           <Link to="/">
-          <button type="button" onClick={handleResetPassword}>
+          <button className="create" type="button" onClick={handleResetPassword}>
             Recuperar senha
           </button>
           </Link>
