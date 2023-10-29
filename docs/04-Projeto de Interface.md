@@ -8,10 +8,12 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 ## Diagrama de Fluxo
 
 O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
+#### Administrador - WEB
+![FluxogramaAdm](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t2-sebo-e3/assets/89920953/27446523-cf11-4b74-bda8-4f40d10f103c)
 
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
+### Wireframes
+Para ver todos os wireframes no figma, <a href="https://www.figma.com/file/T6T3GDcaRh5hKlcHXE5F9y/Projeto-de-interface---MedMulher?type=design&node-id=0%3A1&mode=design&t=kuy3jH00eXbJR405-1">clique aqui</a>
 
-## Wireframes
 ### Wireframes web - Aplicação do Administrador
 #### Fluxo de Login
 A seguir, estão os wireframes de baixa e alta fidelidade referentes ao fluxo de login.
