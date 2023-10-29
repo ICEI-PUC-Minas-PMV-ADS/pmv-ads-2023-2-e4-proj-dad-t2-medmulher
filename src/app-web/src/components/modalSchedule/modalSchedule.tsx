@@ -9,10 +9,10 @@ interface IModal {
 }
 
 interface InfoShedulle {
-    nomeMedico: string;
+    name: string;
     availability: {
-        daySchedulle: string;
-        hoursSchedulle: string[];
+        day: string;
+        hours: string[];
     };
 }
 
@@ -30,11 +30,11 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
     //OPTION DO SELECT DIAS
     const selectDaySchedulle = [
         { value: '', label: 'Selecione o dia' },
-        { value: 'Segunda', label: 'Segunda' },
-        { value: 'Terça', label: 'Terça' },
-        { value: 'Quarta', label: 'Quarta' },
-        { value: 'Quinta', label: 'Quinta' },
-        { value: 'Sexta', label: 'Sexta' },
+        { value: 'Monday', label: 'Segunda' },
+        { value: 'Tuesday', label: 'Terça' },
+        { value: 'Wednesday', label: 'Quarta' },
+        { value: 'Thursday', label: 'Quinta' },
+        { value: 'Friday', label: 'Sexta' },
     ];
 
 
@@ -61,23 +61,23 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
 
     //DADOS DO FORMULÁRIO
     const [formState, setFormState] = useState<InfoShedulle>({
-        nomeMedico: "",
+        name: "",
         availability: {
-            daySchedulle: "",
-            hoursSchedulle: [],
+            day: "",
+            hours: [],
         },
     });
 
     const handleSubmit = useCallback(
         async (event: FormEvent<HTMLFormElement>) => {
             event.preventDefault();
-            const element = event.target as HTMLFormElement;
+            //const element = event.target as HTMLFormElement;
 
             const infoShedulle: InfoShedulle = {
-                nomeMedico: formState.nomeMedico || "",
+                name: formState.name || "",
                 availability: {
-                    daySchedulle: formState.availability?.daySchedulle || "",
-                    hoursSchedulle: formState.availability?.hoursSchedulle || [],
+                    day: formState.availability?.day || "",
+                    hours: formState.availability?.hours || [],
                 },
             };
             
@@ -122,10 +122,10 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                 id="selectmedicos"
                                 className="select-medicos"
                                 required
-                                value={formState.nomeMedico}
+                                value={formState.name}
                                 onChange={(event) => setFormState({
                                     ...formState,
-                                    nomeMedico: event.currentTarget?.value || "",
+                                    name: event.currentTarget?.value || "",
                                 })}
                             >
                                 {/*PUXAR NOME DOS MÉDICOS DO BANCO DE DADOS*/}
@@ -142,12 +142,12 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                 id="selectDias"
                                 className="select-dias"
                                 required
-                                value={formState.availability.daySchedulle}
+                                value={formState.availability.day}
                                 onChange={(event) => setFormState({
                                     ...formState,
                                     availability: {
                                         ...formState.availability,
-                                        daySchedulle: event.currentTarget?.value || '',
+                                        day: event.currentTarget?.value || '',
                                     },
                                 })
                                 }
@@ -166,15 +166,15 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                     name="hoursSchedulle"
                                     id="oitoHoras"
                                     value={"08:00"}
-                                    checked={formState.availability.hoursSchedulle.includes("08:00")}
+                                    checked={formState.availability.hours.includes("08:00")}
                                     onChange={(event) =>
                                         setFormState((prevState) => ({
                                             ...prevState,
                                             availability: {
                                                 ...prevState.availability,
-                                                hoursSchedulle: event.target.checked
-                                                    ? [...prevState.availability.hoursSchedulle, "08:00"]
-                                                    : prevState.availability.hoursSchedulle.filter(
+                                                hours: event.target.checked
+                                                    ? [...prevState.availability.hours, "08:00"]
+                                                    : prevState.availability.hours.filter(
                                                         (hour) => hour !== "08:00"
                                                     ),
                                             },
@@ -188,15 +188,15 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                     name="hoursSchedulle"
                                     id="noveHoras"
                                     value={"09:00"}
-                                    checked={formState.availability.hoursSchedulle.includes("09:00")}
+                                    checked={formState.availability.hours.includes("09:00")}
                                     onChange={(event) =>
                                         setFormState((prevState) => ({
                                             ...prevState,
                                             availability: {
                                                 ...prevState.availability,
-                                                hoursSchedulle: event.target.checked
-                                                    ? [...prevState.availability.hoursSchedulle, "09:00"]
-                                                    : prevState.availability.hoursSchedulle.filter(
+                                                hours: event.target.checked
+                                                    ? [...prevState.availability.hours, "09:00"]
+                                                    : prevState.availability.hours.filter(
                                                         (hour) => hour !== "09:00"
                                                     ),
                                             },
@@ -210,15 +210,15 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                     name="hoursSchedulle"
                                     id="dezHoras"
                                     value={"10:00"}
-                                    checked={formState.availability.hoursSchedulle.includes("10:00")}
+                                    checked={formState.availability.hours.includes("10:00")}
                                     onChange={(event) =>
                                         setFormState((prevState) => ({
                                             ...prevState,
                                             availability: {
                                                 ...prevState.availability,
-                                                hoursSchedulle: event.target.checked
-                                                    ? [...prevState.availability.hoursSchedulle, "10:00"]
-                                                    : prevState.availability.hoursSchedulle.filter(
+                                                hours: event.target.checked
+                                                    ? [...prevState.availability.hours, "10:00"]
+                                                    : prevState.availability.hours.filter(
                                                         (hour) => hour !== "10:00"
                                                     ),
                                             },
@@ -232,15 +232,15 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                     name="hoursSchedulle"
                                     id="onzeHoras"
                                     value={"11:00"}
-                                    checked={formState.availability.hoursSchedulle.includes("11:00")}
+                                    checked={formState.availability.hours.includes("11:00")}
                                     onChange={(event) =>
                                         setFormState((prevState) => ({
                                             ...prevState,
                                             availability: {
                                                 ...prevState.availability,
-                                                hoursSchedulle: event.target.checked
-                                                    ? [...prevState.availability.hoursSchedulle, "11:00"]
-                                                    : prevState.availability.hoursSchedulle.filter(
+                                                hours: event.target.checked
+                                                    ? [...prevState.availability.hours, "11:00"]
+                                                    : prevState.availability.hours.filter(
                                                         (hour) => hour !== "11:00"
                                                     ),
                                             },
@@ -254,15 +254,15 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                     name="hoursSchedulle"
                                     id="dozeHoras"
                                     value={"12:00"}
-                                    checked={formState.availability.hoursSchedulle.includes("12:00")}
+                                    checked={formState.availability.hours.includes("12:00")}
                                     onChange={(event) =>
                                         setFormState((prevState) => ({
                                             ...prevState,
                                             availability: {
                                                 ...prevState.availability,
-                                                hoursSchedulle: event.target.checked
-                                                    ? [...prevState.availability.hoursSchedulle, "12:00"]
-                                                    : prevState.availability.hoursSchedulle.filter(
+                                                hours: event.target.checked
+                                                    ? [...prevState.availability.hours, "12:00"]
+                                                    : prevState.availability.hours.filter(
                                                         (hour) => hour !== "12:00"
                                                     ),
                                             },
@@ -276,15 +276,15 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                     name="hoursSchedulle"
                                     id="trezeHoras"
                                     value={"13:00"}
-                                    checked={formState.availability.hoursSchedulle.includes("13:00")}
+                                    checked={formState.availability.hours.includes("13:00")}
                                     onChange={(event) =>
                                         setFormState((prevState) => ({
                                             ...prevState,
                                             availability: {
                                                 ...prevState.availability,
-                                                hoursSchedulle: event.target.checked
-                                                    ? [...prevState.availability.hoursSchedulle, "13:00"]
-                                                    : prevState.availability.hoursSchedulle.filter(
+                                                hours: event.target.checked
+                                                    ? [...prevState.availability.hours, "13:00"]
+                                                    : prevState.availability.hours.filter(
                                                         (hour) => hour !== "13:00"
                                                     ),
                                             },
@@ -298,15 +298,15 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                     name="hoursSchedulle"
                                     id="quatorzeHoras"
                                     value={"14:00"}
-                                    checked={formState.availability.hoursSchedulle.includes("14:00")}
+                                    checked={formState.availability.hours.includes("14:00")}
                                     onChange={(event) =>
                                         setFormState((prevState) => ({
                                             ...prevState,
                                             availability: {
                                                 ...prevState.availability,
-                                                hoursSchedulle: event.target.checked
-                                                    ? [...prevState.availability.hoursSchedulle, "14:00"]
-                                                    : prevState.availability.hoursSchedulle.filter(
+                                                hours: event.target.checked
+                                                    ? [...prevState.availability.hours, "14:00"]
+                                                    : prevState.availability.hours.filter(
                                                         (hour) => hour !== "14:00"
                                                     ),
                                             },
@@ -320,15 +320,15 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                     name="hoursSchedulle"
                                     id="quinzeHoras"
                                     value={"15:00"}
-                                    checked={formState.availability.hoursSchedulle.includes("15:00")}
+                                    checked={formState.availability.hours.includes("15:00")}
                                     onChange={(event) =>
                                         setFormState((prevState) => ({
                                             ...prevState,
                                             availability: {
                                                 ...prevState.availability,
-                                                hoursSchedulle: event.target.checked
-                                                    ? [...prevState.availability.hoursSchedulle, "15:00"]
-                                                    : prevState.availability.hoursSchedulle.filter(
+                                                hours: event.target.checked
+                                                    ? [...prevState.availability.hours, "15:00"]
+                                                    : prevState.availability.hours.filter(
                                                         (hour) => hour !== "15:00"
                                                     ),
                                             },
@@ -342,15 +342,15 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                     name="hoursSchedulle"
                                     id="dezesseisHoras"
                                     value={"16:00"}
-                                    checked={formState.availability.hoursSchedulle.includes("16:00")}
+                                    checked={formState.availability.hours.includes("16:00")}
                                     onChange={(event) =>
                                         setFormState((prevState) => ({
                                             ...prevState,
                                             availability: {
                                                 ...prevState.availability,
-                                                hoursSchedulle: event.target.checked
-                                                    ? [...prevState.availability.hoursSchedulle, "16:00"]
-                                                    : prevState.availability.hoursSchedulle.filter(
+                                                hours: event.target.checked
+                                                    ? [...prevState.availability.hours, "16:00"]
+                                                    : prevState.availability.hours.filter(
                                                         (hour) => hour !== "16:00"
                                                     ),
                                             },
@@ -364,15 +364,15 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                     name="hoursSchedulle"
                                     id="dezesseteHoras"
                                     value={"17:00"}
-                                    checked={formState.availability.hoursSchedulle.includes("17:00")}
+                                    checked={formState.availability.hours.includes("17:00")}
                                     onChange={(event) =>
                                         setFormState((prevState) => ({
                                             ...prevState,
                                             availability: {
                                                 ...prevState.availability,
-                                                hoursSchedulle: event.target.checked
-                                                    ? [...prevState.availability.hoursSchedulle, "17:00"]
-                                                    : prevState.availability.hoursSchedulle.filter(
+                                                hours: event.target.checked
+                                                    ? [...prevState.availability.hours, "17:00"]
+                                                    : prevState.availability.hours.filter(
                                                         (hour) => hour !== "17:00"
                                                     ),
                                             },
@@ -386,15 +386,15 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                                     name="hoursSchedulle"
                                     id="dezoitoHoras"
                                     value={"18:00"}
-                                    checked={formState.availability.hoursSchedulle.includes("18:00")}
+                                    checked={formState.availability.hours.includes("18:00")}
                                     onChange={(event) =>
                                         setFormState((prevState) => ({
                                             ...prevState,
                                             availability: {
                                                 ...prevState.availability,
-                                                hoursSchedulle: event.target.checked
-                                                    ? [...prevState.availability.hoursSchedulle, "18:00"]
-                                                    : prevState.availability.hoursSchedulle.filter(
+                                                hours: event.target.checked
+                                                    ? [...prevState.availability.hours, "18:00"]
+                                                    : prevState.availability.hours.filter(
                                                         (hour) => hour !== "18:00"
                                                     ),
                                             },
