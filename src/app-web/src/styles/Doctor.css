@@ -45,14 +45,12 @@
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
 }
 
 .card {
-    width: 278px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 0px 10px 0px rgba(141, 70, 152, 0.40);
@@ -69,11 +67,12 @@
     font-size: 18px;
 }
 
-.card > footer > button {
-    width: 280px;
+.card > footer > a > button {
+    width: 100%;
     padding: 16px;
     align-items: center;
     align-self: stretch;
+    border: none;
     border-radius: 0px 0px 5px 5px;
     background: #8D4698;
     color: #FFF;
@@ -95,4 +94,21 @@
 .card > header > img {
     margin: 15px;
     max-width: 100%;
+}
+
+@media (max-width: 480px) {
+    .page {
+        max-width: 100%;
+        width: 90vw;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 90vw;
+        margin: auto;
+    }
 }

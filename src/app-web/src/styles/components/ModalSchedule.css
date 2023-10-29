@@ -1,6 +1,6 @@
 .modalBg {
     width: 100%;
-    height: 90%;
+    height: 100%;
     position: fixed;
     left: 0;
     right: 0;
@@ -12,10 +12,11 @@
     position: absolute;
     right: 3rem;
     top: 2rem;
+    width: 3rem;
 }
 
 .cadastroMed-container {
-    height: 90%;
+    height: 100%;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -35,14 +36,14 @@
     font-weight: 600;
 }
 
-.selectMed-container {
+.selectMed-container, .selectDias-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 2.5rem;
 }
 
-.selectMed-container label {
+.selectMed-container label, .selectDias-container label {
     margin-bottom: 0.5rem;
 }
 
@@ -52,7 +53,7 @@ label {
     font-weight: 500;
 }
 
-.select-medicos {
+.select-medicos, .select-dias {
     width: 20.25rem;
     padding: 1rem;
     border-radius: 0.625rem;
@@ -74,24 +75,11 @@ label {
     margin-bottom: 1rem;
 }
 
-.select-dias input, .select-horas input{
+.select-horas input{
     display: none;
 }
 
-.select-dias input + label{
-    background-color: #FFF;
-    border: solid 2px #8D4698;
-    border-radius: 100%;
-    padding: 1rem 0.8rem;
-    font-weight: 500;
-    font-size: 0.8rem;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 1rem;
-    cursor: pointer;
-}
-
-.select-dias input:checked + label, .select-horas input:checked + label {
+.select-horasinput:checked + label, .select-horas input:checked + label {
     background-color: #8D4698;
     cursor: pointer;
     color: #fff;
@@ -108,10 +96,9 @@ label {
 }
 
 .select-horas {
-    width: 25rem;
-    flex-wrap: wrap;
-    display: flex;
-    gap: 0.9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0 0.8rem;
 }
 
 .select-horas input + label {
@@ -150,20 +137,20 @@ label {
 /*Responsividade*/
 @media screen and (max-width: 1200px){
     .cadastroMed-container {
-        height: 90%;
+        height: 100%;
         width: 60%;
     }    
 }
 
 @media screen and (max-width: 800px){
     .cadastroMed-container {
-        height: 90%;
+        height: 100%;
         width: 80%;
     }    
 }
 @media screen and (max-width: 550px){
     .cadastroMed-container {
-        height: 90%;
+        height: 100%;
         width: 100%;
     }    
     .cadastroMed-container h1 {
@@ -174,18 +161,10 @@ label {
         font-size: 1.5rem;
     }
 
-    .select-medicos {
+    .select-medicos, .select-dias {
         width: 24rem;
         height: 4rem;
         font-size: 1.2rem;
-    }
-
-    .select-dias input + label {
-        padding: 1.5rem 1.2rem;
-        font-size: 1.2rem;
-    }
-    .select-horas input + label {
-        font-size: 1.4rem;
     }
 
     .btn-addAgenda {
@@ -203,4 +182,11 @@ label {
         height: 2rem;
         font-size: 1.5rem;
     }
+
+    .select-horas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 0.8rem;
+    }
+    
 }

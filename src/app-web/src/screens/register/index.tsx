@@ -139,7 +139,7 @@ const Register = () => {
           </div>
               
           <Link to="/">
-          <button onClick={registro} type="submit">Cadastrar</button>
+          <button className='create' onClick={registro} type="submit">Cadastrar</button>
           </Link>
 
           </div>

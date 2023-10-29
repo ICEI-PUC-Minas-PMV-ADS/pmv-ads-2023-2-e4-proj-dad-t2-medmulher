@@ -112,11 +112,16 @@ const RegisterDoctor = () => {
               </div>
               <br></br>
 
-              <button class="button-form" type="submit">Finalizar Cadastro</button>
+              <button className="button-form" type="submit">Finalizar Cadastro</button>
 
             </form>
+<<<<<<< HEAD
             {isOpenSuccess && <RegisterDoctorModalSuccess setIsOpenSuccess={setIsOpenSuccess} modalText={modalText} />}
             {isOpenFailure && <RegisterDoctorModalFailure setIsOpenFailure={setIsOpenFailure} modalText={modalText} />}
+=======
+            {isOpenSuccess && <RegisterDoctorModalSuccess setIsOpen={setIsOpenSuccess} modalText={modalText} crm={crm}/>}
+            {isOpenFailure && <RegisterDoctorModalFailure setIsOpen={setIsOpenFailure} modalText={modalText} />}
+>>>>>>> 4139cadec427316c13c084920c0690a202bf9620
           </div>
         </div>
       </div>

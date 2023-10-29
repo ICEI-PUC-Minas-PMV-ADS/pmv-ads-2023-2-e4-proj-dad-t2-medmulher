@@ -1,0 +1,59 @@
+section.schedulles {
+    overflow-y: scroll;
+    max-height: 50vh;
+}
+
+.schedulle-day {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #9D9D9D;
+}
+
+.schedulle-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+    gap: 1rem 1.5rem;
+}
+
+.schedulle-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #757575;
+    gap: 1rem;
+}
+
+.schedulle-card.active {
+    border: 1px solid #6C3375;
+}
+
+p.hour {
+    cursor: pointer;
+    padding: 1rem 1rem 1rem 0;
+    border-right: 2px solid #757575;
+    color: #757575;
+}
+
+.ellipsis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: .3rem;
+    cursor: pointer;
+    border: none;
+    padding: .5rem;
+    background-color: transparent;
+}
+
+.ellipsis>span {
+    width: 4px;
+    height: 4px;
+    border-radius: 8px;
+    background: #000;
+}

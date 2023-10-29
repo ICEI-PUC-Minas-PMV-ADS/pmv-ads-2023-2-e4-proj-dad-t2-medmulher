@@ -2,7 +2,7 @@ import "../../styles/Login.css";
 import Logo from "../../assets/Logo-rosa.svg";
 import { useState } from "react";
 import { loginUser } from "../../services/userAPI";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,11 +12,11 @@ const Login = () => {
     const auth = await loginUser(email, password);
 
     if (auth && auth.token) {
-      window.location.href = '/inicio'; 
+      window.location.href = "/inicio";
       return localStorage.setItem("token", auth.token);
     }
 
-    return "Usuário não encontrado!";
+    return  alert("Usuário não encontrado!");
   };
 
   return (
@@ -47,14 +47,14 @@ const Login = () => {
               type="password"
               placeholder="Digite sua senha"
             />
-            <Link className="forgot-password-login" to="/redefinicao-de-senha">Recuperar senha</Link>
+            <Link className="forgot-password-login" to="/redefinicao-de-senha">
+              Recuperar senha
+            </Link>
           </div>
 
-          <Link to="/inicio">
-          <button onClick={login} type="submit">
+          <button className="create" onClick={login} type="submit">
             Entrar
           </button>
-          </Link>
 
           <div className="line-container-login">
             <div className="line"></div>
@@ -62,7 +62,9 @@ const Login = () => {
             <div className="line"></div>
           </div>
 
-          <Link className="register-login" to="/cadastro-paciente">Cadastrar novo administrador</Link>
+          <Link className="register-login" to="/cadastro-paciente">
+            Cadastrar novo administrador
+          </Link>
         </div>
       </div>
     </div>

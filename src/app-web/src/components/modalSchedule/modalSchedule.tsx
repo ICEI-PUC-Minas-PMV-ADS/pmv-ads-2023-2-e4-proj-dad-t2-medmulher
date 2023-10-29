@@ -1,334 +1,246 @@
-import { useState } from "react";
-import { useCallback } from 'react';
-import React from "react";
-import { isInputElement } from "react-router-dom/dist/dom";
+import { useState, useCallback, FormEvent, useEffect } from "react";
+import "../../styles/components/ModalSchedule.css";
+import { AxiosResponse } from "axios";
+import { apiBase } from "../../services/api";
+import { hoursConst } from "../../utils/constants";
+import { useDoctorContext } from "../../contexts/doctorContext";
+import { getDoctors } from "../../services/doctorAPI";
 
 interface IModal {
-    isOpen: boolean;
-    setOpenModal: (isOpen: boolean) => void
+  isOpen: boolean;
+  setOpenModal: (isOpen: boolean) => void;
 }
 
-interface IFormState {
-    selectmedicos: string;
-
-    segunda: boolean;
-    terça: boolean;
-    quarta: boolean;
-    quinta: boolean;
-    sexta: boolean;
-
-    oitoHoras: boolean;
-    noveHoras: boolean;
-    dezHoras: boolean;
-    onzeHoras: boolean;
-    dozeHoras: boolean;
-    trezeHoras: boolean;
-    quatorzeHoras: boolean;
-    quinzeHoras: boolean;
-    dezesseisHoras: boolean;
-    dezesseteHoras: boolean;
-    dezoitoHoras: boolean;
-
+interface InfoShedulle {
+  crm: string;
+  name: string;
+  availability: {
+    day: string;
+    hours: string[];
+  };
 }
-
 
 export function Modal({ isOpen, setOpenModal }: IModal) {
+  const { dr } = useDoctorContext();
+  const [selectMedicos, setSelectMedicos] = useState<any>([]);
 
-    //DADOS DO FORMULÁRIO
-    const [formState, setFormState] = useState<IFormState>({
-        selectmedicos: "",
-        segunda: false,
-        terça: false,
-        quarta: false,
-        quinta: false,
-        sexta: false,
-        oitoHoras: false,
-        noveHoras: false,
-        dezHoras: false,
-        onzeHoras: false,
-        dozeHoras: false,
-        trezeHoras: false,
-        quatorzeHoras: false,
-        quinzeHoras: false,
-        dezesseisHoras: false,
-        dezesseteHoras: false,
-        dezoitoHoras: false,
-    });
+  //OPTION DO SELECT DIAS
+  const selectDaySchedulle = [
+    { value: "", label: "Selecione o dia" },
+    { value: "Monday", label: "Segunda" },
+    { value: "Tuesday", label: "Terça" },
+    { value: "Wednesday", label: "Quarta" },
+    { value: "Thursday", label: "Quinta" },
+    { value: "Friday", label: "Sexta" },
+  ];
 
-    console.log({formState})
+  //MENSAGEM DE SUCESSO/ERRO
+  const [addSucesso, setAddSucesso] = useState(false);
 
-    
-    //LISTA DE OPINIONS DO SELECT
-    const selectNomeMedico = [
-        { value: '', label: 'Selecione o médico' },
-        //PUXAR NOME DOS MÉDICOS DO BANCO DE DADOS
-        { value: 'Dra. Beatriz', label: 'Dra. Beatriz' },
-        { value: 'Dra. Criatina', label: 'Dra. Criatina' }
-    ];
+  //REQUISIÇÃO POST
+  const postSchedulleDoctor = async (id: string, data: InfoShedulle) => {
+    try {
+      const response: AxiosResponse = await apiBase.patch(
+        `/doctors/${id}`,
+        data
+      );
 
-
-    //MODAL DE SUCESSO/ERRO
-    const [addSucesso, setAddSucesso] = useState(false);
-
-    const handleSubmit = useCallback((event:React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-
-        const selectmedicos = formState;
-
-        if (!selectmedicos) {
-            window.alert("Preencha todos os campos!");
-
-            setAddSucesso(false);
-
-            return;
-        }
-        
+      if (response.status === 200) {
         setAddSucesso(true);
+        return response.data;
+      }
+    } catch (erro) {
+      console.error("Erro ao enviar dados:", erro);
+      return erro;
+    }
+  };
 
-    },[formState]);
+  //DADOS DO FORMULÁRIO
+  const [formState, setFormState] = useState<InfoShedulle>({
+    crm: "",
+    name: "",
+    availability: {
+      day: "",
+      hours: [],
+    },
+  });
 
-    if(addSucesso){
-        //add modal de sucesso
-        return (
-            <div>
-                <p>Cadatrado com sucesso!</p>
-            </div>
-        )
+  const handleSubmit = useCallback(
+    async (event: FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      //const element = event.target as HTMLFormElement;
+      const value = JSON.parse(event.target.selectmedicos.value);
+
+      const newCrm = dr.length > 0 && dr._id ? dr.crm : value.crm;
+      const newName = dr.length > 0 && dr._id ? dr.name : value.name;
+      const infoShedulle: InfoShedulle = {
+        crm: newCrm,
+        name: newName,
+        availability: {
+          day: formState.availability?.day || "",
+          hours: formState.availability?.hours || [],
+        },
+      };
+
+      const id = dr && dr._id ? dr._id : value.id;
+
+      try {
+        await postSchedulleDoctor(id, infoShedulle);
+      } catch (erro) {
+        console.error("Erro ao enviar dados:", erro);
+      }
+    },
+    [formState]
+  );
+
+  if (addSucesso) {
+    //add modal de sucesso
+    return (
+      <div>
+        <p>Cadatrado com sucesso!</p>
+      </div>
+    );
+  }
+
+  const getDct = async () => {
+    const response = await getDoctors();
+
+    if (response) {
+      return setSelectMedicos(response);
     }
 
+    return [];
+  };
 
-
-    //ESTRUTURA DO MODAL CADASTRO DE AGENDA
-    if (isOpen) {
-        return (
-            <div className="modalBg">
-                <div className="cadastroMed-container">
-                    <button className="btn-fecharModal" onClick={() => setOpenModal(!isOpen)}>X</button>
-                    <h1>Editar agenda</h1>
-                    <form action="" method="post" onSubmit={handleSubmit}>
-
-                        <div className="selectMed-container">
-                            <label htmlFor="Selectmedicos">Médicos</label>
-                            <select
-                                name="selectmedicos"
-                                id="selectmedicos"
-                                className="select-medicos"
-                                required
-                                value={formState.selectmedicos}
-                                onChange={(event) => setFormState({
-                                    ...formState,
-                                    selectmedicos: event.currentTarget?.value || "",
-                                })}
-                            >
-                                {/*PUXAR NOME DOS MÉDICOS DO BANCO DE DADOS*/}
-                                {selectNomeMedico.map((option) => (
-                                    <option key={option.value} value={option.value}>{option.label}</option>
-                                ))}
-                            </select>
-                        </div>
-
-                        <div className="selectDias-container">
-                            <label htmlFor="">Selecione os dias da semana</label>
-                            <div className="select-dias">
-                                <input
-                                    type="checkbox"
-                                    name="segunda"
-                                    id="segunda"
-                                    checked={formState.segunda}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        segunda: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="segunda">SEG</label>
-
-                                <input
-                                    type="checkbox"
-                                    name="terça"
-                                    id="terça"
-                                    checked={formState.terça}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        terça: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="terça">TER</label>
-
-                                <input
-                                    type="checkbox"
-                                    name="quarta"
-                                    id="quarta"
-                                    checked={formState.quarta}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        quarta: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="quarta">QUA</label>
-
-                                <input
-                                    type="checkbox"
-                                    name="quinta"
-                                    id="quinta"
-                                    checked={formState.quinta}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        quinta: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="quinta">QUI</label>
-
-                                <input
-                                    type="checkbox"
-                                    name="sexta"
-                                    id="sexta"
-                                    checked={formState.sexta}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        sexta: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="sexta">SEX</label>
-                            </div>
-                        </div>
-
-                        <div className="selectHoras-container">
-                            <label htmlFor="">Selecione os horários de atendimento</label>
-                            <div className="select-horas">
-                                {/*FAZER INTERAÇÃO DE BOTÕES MULTISELECIONAVEIS*/}
-                                <input className="btn-h"
-                                    type="checkbox"
-                                    name="oitoHoras"
-                                    id="oitoHoras"
-                                    checked={formState.oitoHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        oitoHoras: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="oitoHoras">8:00</label>
-
-                                <input className="btn-h"
-                                    type="checkbox"
-                                    name="noveHoras"
-                                    id="noveHoras"
-                                    checked={formState.noveHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        noveHoras: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="noveHoras">9:00</label>
-
-                                <input type="checkbox"
-                                    name="dezHoras"
-                                    id="dezHoras"
-                                    checked={formState.dezHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        dezHoras: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="dezHoras">10:00</label>
-
-                                <input type="checkbox"
-                                    name="onzeHoras"
-                                    id="onzeHoras"
-                                    checked={formState.onzeHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        onzeHoras: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="onzeHoras">11:00</label>
-
-                                <input type="checkbox"
-                                    name="dozeHoras"
-                                    id="dozeHoras"
-                                    checked={formState.dozeHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        dozeHoras: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="dozeHoras">12:00</label>
-
-                                <input type="checkbox"
-                                    name="trezeHoras"
-                                    id="trezeHoras"
-                                    checked={formState.trezeHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        trezeHoras: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="trezeHoras">13:00</label>
-
-                                <input type="checkbox"
-                                    name="quatorzeHoras"
-                                    id="quatorzeHoras"
-                                    checked={formState.quatorzeHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        quatorzeHoras: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="quatorzeHoras">14:00</label>
-
-                                <input type="checkbox"
-                                    name="quinzeHoras"
-                                    id="quinzeHoras"
-                                    checked={formState.quinzeHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        quinzeHoras: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="quinzeHoras">15:00</label>
-
-                                <input type="checkbox"
-                                    name="dezesseisHoras"
-                                    id="dezesseisHoras"
-                                    checked={formState.dezesseisHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        dezesseisHoras: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="dezesseisHoras">16:00</label>
-
-                                <input type="checkbox"
-                                    name="dezesseteHoras"
-                                    id="dezesseteHoras"
-                                    checked={formState.dezesseteHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        dezesseteHoras: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="dezesseteHoras">17:00</label>
-
-                                <input type="checkbox"
-                                    name="dezoitoHoras"
-                                    id="dezoitoHoras"
-                                    checked={formState.dezoitoHoras}
-                                    onChange={(event) => setFormState({
-                                        ...formState,
-                                        dezoitoHoras: !!event.currentTarget?.checked,
-                                    })}
-                                />
-                                <label htmlFor="dezoitoHoras">18:00</label>
-                            </div>
-                        </div>
-
-                        <button type="submit" className="btn-addAgenda">Adicionar agenda</button>
-                    </form>
-                </div>
-            </div>
-        )
-    } else {
-        return <></>;
+  useEffect(() => {
+    if (dr.length === 0) {
+      getDct();
     }
+  }, []);
+
+  //ESTRUTURA DO MODAL CADASTRO DE AGENDA
+  if (isOpen) {
+    return (
+      <div className="modalBg">
+        <div className="cadastroMed-container">
+          <button
+            className="btn-fecharModal secundary"
+            onClick={() => setOpenModal(!isOpen)}
+          >
+            X
+          </button>
+          <h1>Editar agenda</h1>
+          <form action="" method="post" onSubmit={handleSubmit}>
+            <div className="selectMed-container">
+              <label htmlFor="Selectmedicos">
+                Médico{dr.length === 0 ? "" : `s`}
+              </label>
+              <select
+                name="selectmedicos"
+                id="selectmedicos"
+                className="select-medicos"
+                required
+                value={formState.name}
+                onChange={(event) => {
+                  setFormState({
+                    ...formState,
+                    name: event.currentTarget?.value || "",
+                  });
+                }}
+              >
+                {dr.length !== 0 ? (
+                  <option
+                    key={dr.crm}
+                    value={JSON.stringify({
+                      id: dr._id,
+                      crm: dr.crm,
+                      name: dr.name,
+                    })}
+                  >
+                    {dr.name}
+                  </option>
+                ) : (
+                  selectMedicos.map((option, index) => (
+                    <option
+                      key={index}
+                      value={JSON.stringify({
+                        id: option._id,
+                        crm: option.crm,
+                        name: option.name,
+                      })}
+                    >
+                      {option.name}
+                    </option>
+                  ))
+                )}
+              </select>
+            </div>
+
+            <div className="selectDias-container">
+              <label htmlFor="">Selecione os dias da semana</label>
+              <select
+                name="selectDias"
+                id="selectDias"
+                className="select-dias"
+                required
+                value={formState.availability.day}
+                onChange={(event) =>
+                  setFormState({
+                    ...formState,
+                    availability: {
+                      ...formState.availability,
+                      day: event.currentTarget?.value || "",
+                    },
+                  })
+                }
+              >
+                {selectDaySchedulle.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="selectHoras-container">
+              <label htmlFor="">Selecione os horários de atendimento</label>
+              <div className="select-horas">
+                {hoursConst.map((hr, index) => (
+                  <>
+                    <input
+                      type="checkbox"
+                      name="hoursSchedulle"
+                      id={hr.name}
+                      value={hr.value}
+                      checked={formState.availability.hours.includes(hr.value)}
+                      onChange={(event) =>
+                        setFormState((prevState) => ({
+                          ...prevState,
+                          availability: {
+                            ...prevState.availability,
+                            hours: event.target.checked
+                              ? [...prevState.availability.hours, hr.value]
+                              : prevState.availability.hours.filter(
+                                  (hour) => hour !== hr.value
+                                ),
+                          },
+                        }))
+                      }
+                    />
+                    <label htmlFor={hr.name}>{hr.value}</label>
+                  </>
+                ))}
+              </div>
+            </div>
+
+            <button type="submit" className="btn-addAgenda">
+              Adicionar agenda
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  } else {
+    return <></>;
+  }
 }
-
-
