@@ -1,19 +1,17 @@
 import { useState } from 'react'
-import React from "react";
-import Header from "../../components/header"
 import '../../styles/RegisterSchedule.css'
 import '../../styles/components/ModalSchedule.css'
 import { Modal } from '../../components/modalSchedule/modalSchedule'
 
-function RegisterSchedule() {
-  const [openModal, setOpenModal] = useState<boolean>(false)
+interface IProps {
+  open: boolean
+}
+
+function RegisterSchedule({open}:IProps) {
+  const [openModal, setOpenModal] = useState<boolean>(open)
 
   return (
     <div className='ScheduleBody'>
-      <Header />
-
-      {/*Adicionar Button e Modal à pagina onde será linkada*/}
-      <button onClick={() => setOpenModal(!openModal)}>Adicionar Agenda</button>
       <Modal isOpen={openModal} setOpenModal={setOpenModal}/>
     </div>
   )
