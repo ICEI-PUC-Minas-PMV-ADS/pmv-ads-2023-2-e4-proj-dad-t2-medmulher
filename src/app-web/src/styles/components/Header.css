@@ -16,6 +16,12 @@
     width: 150px;
 }
 
+.nav-buttons-home>svg,
+.loggout {
+    width: 2rem;
+    height: 2rem;
+}
+
 .header-menu-home {
     display: flex;
     justify-content: space-between;

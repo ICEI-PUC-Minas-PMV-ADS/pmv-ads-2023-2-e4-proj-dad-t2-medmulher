@@ -36,3 +36,19 @@ p {
     font-size: 16px;
     font-weight: 400;
 }
+
+@media (max-width: 480px) {
+    .container {
+        padding: 4rem 0;
+    }
+    .main-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .welcome-text{
+        width: 90vw;
+        height: auto;
+        margin: auto;
+    }
+
+}
