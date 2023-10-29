@@ -58,6 +58,66 @@ span.crm-code {
     gap: 1.5rem;
 }
 
+.modal {
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+
+.modal-content {
+    text-align: center;
+    width: 540px;
+    height: 506px;
+    padding: 6.75rem;
+    border-radius: 8px;
+    background: #FFF;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.modal-content>h1 {
+    font-size: 1.25rem;
+}
+
+.modal-content>span {
+    margin: 1rem 0;
+    font-size: .8rem;
+    color: #000;
+}
+
+.actions {
+    display: flex;
+    margin: 2rem 0 0;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.actions>button {
+    justify-content: center;
+}
+
+
 @media (max-width: 480px) {
     section.doctor-infos {
         flex-direction: column;

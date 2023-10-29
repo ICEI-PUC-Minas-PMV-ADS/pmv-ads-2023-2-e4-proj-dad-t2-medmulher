@@ -1,5 +1,8 @@
 import { MdDelete, MdEdit } from "react-icons/md";
-import "../../styles/components/ProfileSection.css"
+import "../../styles/components/ProfileSection.css";
+import { useDoctorContext } from "../../contexts/doctorContext";
+import { useState } from "react";
+import { deleteDoctor } from "../../services/doctorAPI";
 
 const ProfileSection = () => {
   const medicalIcon = (
@@ -17,6 +20,19 @@ const ProfileSection = () => {
       />
     </svg>
   );
+  const { dr } = useDoctorContext();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const removeDoctor = async () => {
+    const response = await deleteDoctor(dr._id);
+
+    if(response.status === 200){
+      alert("Médico deletado com sucesso!")
+      return window.location.href = "/doutor"
+    }
+
+    alert("Ocorreu um erro, tente novamente mais tarde!")
+  };
 
   return (
     <section className="doctor-infos">
@@ -24,27 +40,42 @@ const ProfileSection = () => {
         <div className="info">
           {medicalIcon}
           <div className="personal">
-            <h2 className="doctor-name">Dr Fulano de tal</h2>
-            <span className="doctor-specialty">Astrologista</span>
+            <h2 className="doctor-name">Dr {dr.name}</h2>
+            <span className="doctor-specialty">{dr.specialty}</span>
           </div>
         </div>
         <hr className="separator"></hr>
         <div className="credentials">
           <p className="crm">CRM:</p>
-          <span className="crm-code">123546</span>
+          <span className="crm-code">{dr.crm}</span>
         </div>
       </div>
 
       <div className="doctor-options">
-        <button className="primary">
-          <MdDelete/>
+        <button className="primary" onClick={() => setIsOpen(!isOpen)}>
+          <MdDelete />
           Deletar médico
         </button>
         <button className="secundary">
-          <MdEdit/>
+          <MdEdit />
           Editar médico
         </button>
       </div>
+
+      {isOpen && (
+        <div className="modal">
+          <div className="modal-container">
+            <div className="modal-content">
+              <h1>Deletar esse médico?</h1>
+              <span>Se você deletar esse médico, todas as informações de cadastro e agenda dele serão apagadas</span>
+              <div className="actions">
+                <button className="secundary"  onClick={removeDoctor}>Deletar</button>
+                <button className="primary"  onClick={() => setIsOpen(!isOpen)}>Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

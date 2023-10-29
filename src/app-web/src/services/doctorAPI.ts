@@ -28,3 +28,12 @@ export const getDoctorID = async (id: string) => {
         return { message: "Doutor não encontrado!" };
     }
 }
+
+export const deleteDoctor = async (id: string) => {
+  try {
+    const response = await apiBase.delete(`/doctors/${id}`);
+    return response;
+  } catch (error) {
+    return { message: 'Erro ao deletar médico:', error};
+  }
+};
