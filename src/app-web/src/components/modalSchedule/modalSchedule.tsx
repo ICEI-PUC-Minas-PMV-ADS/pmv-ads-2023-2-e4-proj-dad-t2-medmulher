@@ -72,10 +72,10 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
       const value = JSON.parse(event.target.selectmedicos.value);
 
       const newCrm = dr.length > 0 && dr._id ? dr.crm : value.crm;
-
+      const newName = dr.length > 0 && dr._id ? dr.name : value.name;
       const infoShedulle: InfoShedulle = {
         crm: newCrm,
-        name: value.name,
+        name: newName,
         availability: {
           day: formState.availability?.day || "",
           hours: formState.availability?.hours || [],
@@ -149,7 +149,14 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                 }}
               >
                 {dr.length !== 0 ? (
-                  <option key={dr.crm} value={dr.name}>
+                  <option
+                    key={dr.crm}
+                    value={JSON.stringify({
+                      id: dr._id,
+                      crm: dr.crm,
+                      name: dr.name,
+                    })}
+                  >
                     {dr.name}
                   </option>
                 ) : (
@@ -159,7 +166,7 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
                       value={JSON.stringify({
                         id: option._id,
                         crm: option.crm,
-                        name: option.name
+                        name: option.name,
                       })}
                     >
                       {option.name}

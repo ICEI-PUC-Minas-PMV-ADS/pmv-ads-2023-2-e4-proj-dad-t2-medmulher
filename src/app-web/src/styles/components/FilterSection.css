@@ -3,6 +3,7 @@ section.filter-schedulle {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 3rem;
+    padding: 1rem;
 }
 
 .filter>span {
