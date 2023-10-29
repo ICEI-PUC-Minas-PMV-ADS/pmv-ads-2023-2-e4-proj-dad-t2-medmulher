@@ -70,7 +70,7 @@ const Profile = () => {
     if (response) {
       alert("Agendamento deletado com sucesso!");
       setIsOpen(!isOpen);
-      return doctor(); 
+      return doctor();
     }
 
     alert("Ocorreu um erro, tente novamente mais tarde!");
@@ -91,8 +91,8 @@ const Profile = () => {
 
     if (response) {
       alert("Agendamento alterado com sucesso!");
-      setIsOpenMark(!isOpenMark)
-      return doctor(); 
+      setIsOpenMark(!isOpenMark);
+      return doctor();
     }
 
     alert("Ocorreu um erro, tente novamente mais tarde!");
@@ -118,6 +118,9 @@ const Profile = () => {
   };
 
   useEffect(() => {
+    if (dr.length === 0) {
+      window.location.href = "/doutor";
+    }
     doctor();
   }, [dr]);
 
@@ -142,11 +145,13 @@ const Profile = () => {
                 <div className="schedulle-cards">
                   {item.hours.map((hour: any, i: number) => (
                     <>
-                      <div
-                        key={i}
-                        className="schedulle-card"
-                      >
-                        <p className="hour" onClick={() => setIsOpenMark(!isOpenMark)}>{hour.hour}</p>
+                      <div key={i} className="schedulle-card">
+                        <p
+                          className="hour"
+                          onClick={() => setIsOpenMark(!isOpenMark)}
+                        >
+                          {hour.hour}
+                        </p>
                         <div className="patient">
                           <h4 className="dr-name">Dr. {dr.name}</h4>
                           <p className="patient-name">

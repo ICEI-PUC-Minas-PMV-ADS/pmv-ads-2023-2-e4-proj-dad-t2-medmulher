@@ -14,15 +14,17 @@ export default function Routes() {
     <Switch>
       {window.localStorage.getItem("token") ? (
         <>
-          <Route path="/cadastro-paciente" element={<Register />} />
           <Route path="/inicio" element={<Home />} />
-          <Route path="/redefinicao-de-senha" element={<RedefinePassword />} />
           <Route path="/cadastro-medico" element={<RegisterDoctor />} />
           <Route path="/doutor" element={<Doctor />} />
           <Route path="/perfil-medico" element={<Profile />} />
         </>
       ) : (
-        <Route path="/" element={<Login />} />
+        <>
+          <Route path="/redefinicao-de-senha" element={<RedefinePassword />} />
+          <Route path="/cadastro-paciente" element={<Register />} />
+          <Route path="/" element={<Login />} />
+        </>
       )}
     </Switch>
   );
