@@ -21,7 +21,7 @@ export const loginUser = async (email: string, password: string) => {
       return response.data;
     }
   } catch (err) {
-    return {} as IAuth;
+    return false;
   }
 };
 
