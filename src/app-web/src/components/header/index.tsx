@@ -38,7 +38,7 @@ const Header = () => {
               <MdLogout className="loggout" color={"8D4698"} cursor="pointer" onClick={Logout} />
               <ul className="header-menu-item-home">
                 <li>
-                  <Link to="/">Início</Link>
+                  <Link to="/inicio">Início</Link>
                 </li>
                 <li>
                   <Link to={"#"} onClick={() => setIsOpen(!isOpen)}>

@@ -13,10 +13,6 @@ const FilterSection = () => {
       >
         <MdAdd /> Adicionar agenda
       </button>
-      <div className="filter">
-        <span>Filtrar por data:</span>
-        <input type="date" />
-      </div>
       {isOpen && <RegisterSchedule open={true} />}
     </section>
     
