@@ -17,6 +17,7 @@ const Profile = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenMark, setIsOpenMark] = useState(false);
   const [newHour, setNewHour] = useState("");
+  const [actual, setActual] = useState("");
 
   const doctor = async () => {
     const response = await getDoctorID(dr._id);
@@ -64,8 +65,8 @@ const Profile = () => {
     return [];
   };
 
-  const removeSchedulle = async (id: string) => {
-    const response = await deleteSchedulle(id);
+  const removeSchedulle = async () => {
+    const response = await deleteSchedulle(actual);
 
     if (response) {
       alert("Agendamento deletado com sucesso!");
@@ -117,6 +118,11 @@ const Profile = () => {
     return `${day} de ${month}`;
   };
 
+  const handleActual = (id: string) => {
+    setActual(id);
+    setIsOpen(!isOpen);
+  };
+
   useEffect(() => {
     if (dr.length === 0) {
       window.location.href = "/doutor";
@@ -130,7 +136,7 @@ const Profile = () => {
 
       <main className="page-doctor">
         <ProfileSection />
-        <FilterSection />
+        {/* <FilterSection /> */}
 
         <section className="schedulles">
           {cards.length > 0 ? (
@@ -160,36 +166,15 @@ const Profile = () => {
                         </div>
                         <button
                           className="ellipsis"
-                          onClick={() => setIsOpen(!isOpen)}
+                          onClick={() => {
+                            handleActual(hour.id);
+                          }}
                         >
                           <span>.</span>
                           <span>.</span>
                           <span>.</span>
                         </button>
                       </div>
-                      {isOpen && (
-                        <div className="modal">
-                          <div className="modal-container">
-                            <div className="modal-content">
-                              <h1>Desmarcar essa consulta?</h1>
-                              <div className="actions">
-                                <button
-                                  className="secundary"
-                                  onClick={() => removeSchedulle(hour.id)}
-                                >
-                                  Desmarcar
-                                </button>
-                                <button
-                                  className="primary"
-                                  onClick={() => setIsOpen(!isOpen)}
-                                >
-                                  Cancelar
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      )}
                       {isOpenMark && (
                         <div className="modal">
                           <div className="modal-container">
@@ -241,6 +226,26 @@ const Profile = () => {
             <h1>Médico não possui agendamento marcado!</h1>
           )}
         </section>
+        {isOpen && (
+          <div className="modal">
+            <div className="modal-container">
+              <div className="modal-content">
+                <h1>Desmarcar essa consulta?</h1>
+                <div className="actions">
+                  <button className="secundary" onClick={removeSchedulle}>
+                    Desmarcar
+                  </button>
+                  <button
+                    className="primary"
+                    onClick={() => setIsOpen(!isOpen)}
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     </>
   );
