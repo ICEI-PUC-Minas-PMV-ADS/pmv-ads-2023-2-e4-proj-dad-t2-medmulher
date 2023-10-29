@@ -1,0 +1,19 @@
+section.filter-schedulle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.filter>span {
+    margin-right: 1rem;
+    color: #1E1E1E;
+    font-size: 14px;
+}
+
+.filter>input {
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #515151;
+    color: #1E1E1E;
+}
