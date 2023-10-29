@@ -1,0 +1,130 @@
+section.doctor-infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #8D4698;
+    border-radius: 8px;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.doctor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5.8rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+hr.separator {
+    height: 46px;
+    border: 1px solid #C8C8C8;
+}
+
+h2.doctor-name {
+    margin-bottom: 1rem;
+    color: #1E1E1E;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+span.doctor-specialty {
+    color: #404040;
+    font-weight: 500;
+}
+
+p.crm {
+    color: #404040;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+span.crm-code {
+    color: #404040;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+
+}
+
+.doctor-options {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.modal {
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+
+.modal-content {
+    text-align: center;
+    width: 540px;
+    height: 506px;
+    padding: 6.75rem;
+    border-radius: 8px;
+    background: #FFF;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.modal-content>h1 {
+    font-size: 1.25rem;
+}
+
+.modal-content>span {
+    margin: 1rem 0;
+    font-size: .8rem;
+    color: #000;
+}
+
+.actions {
+    display: flex;
+    margin: 2rem 0 0;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.actions>button {
+    justify-content: center;
+}
+
+
+@media (max-width: 480px) {
+    section.doctor-infos {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .doctor {
+        gap: 1rem;
+    }
+}

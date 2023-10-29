@@ -66,15 +66,12 @@ export const resetPassword = async (email: string, newPassword: string) => {
  
 export const registrar = async (email: string, password: string, name: string, cpf: string) => {
   try {
-    const response: AxiosResponse<IAuth> = await apiBase.post(
-      "users/",
-      {
-        name, 
-        email,
-        password,
-        cpf
-      }
-    );
+    const response: AxiosResponse<IAuth> = await apiBase.post("users/", {
+      name,
+      email,
+      password,
+      cpf,
+    });
 
     if (response.status === 200) {
       alert("Usuário cadastrado!");
@@ -82,6 +79,6 @@ export const registrar = async (email: string, password: string, name: string, c
       return response.data;
     }
   } catch (err) {
-    return {} as IAuth;
-  }
+    return {} as IAuth;
+  }
 };
