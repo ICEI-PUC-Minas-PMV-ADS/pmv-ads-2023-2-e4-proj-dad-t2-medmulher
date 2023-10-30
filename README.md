@@ -48,6 +48,12 @@ MedMulher é uma aplicação focada em mulheres de baixa renda, que facilita e a
 Segue abaixo o link do Postman: <br>
 <a href="https://web.postman.co/workspace/My-Workspace~39ee1a3c-ed65-44b3-8678-8fbe9e20cd6b/collection/29943307-41b07825-321e-4702-8b80-47bf2f78f874"> Postman </a>
 
+- Vite JS (WEB)
+  
+        cd src/app-web
+        npm install
+        npm run dev
+
 ## Kanban e Gantt
 
 - <a href="https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/510/views/3"> Kanban</a>
