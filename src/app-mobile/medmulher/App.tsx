@@ -4,7 +4,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import AppRoutes from "../medmulher/routes/app.routes";
 import theme from "../medmulher/ui/style/theme";
 import * as Font from "expo-font";
-import BookContext, { BookProvider } from "../medmulher/context/bookContext";
 import { UserProvider } from "../medmulher/context/userContext";
 
 let customFonts = {
@@ -32,13 +31,11 @@ export default class App extends React.Component {
 
     return (
       <ThemeProvider theme={theme}>
-        <BookProvider>
           <UserProvider>
             <NavigationContainer>
               <AppRoutes />
             </NavigationContainer>
           </UserProvider>
-        </BookProvider>
       </ThemeProvider>
     );
   }
