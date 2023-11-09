@@ -16,16 +16,12 @@ function ButtonNavBar(props) {
         <Label title="Home" />
       </TouchableOpacity>
       <TouchableOpacity  style={{alignItems:"center"}}>
-        <Icon name="search" size={30} color="#767676" />
-        <Label title="Buscar" />
+        <Icon name="calendar" size={30} color="#767676" />
+        <Label title="Agendar" />
       </TouchableOpacity>
       <TouchableOpacity  style={{alignItems:"center"}} onPress={() => props.navigation.navigate("Perfil")}>
         <Icon name="person" size={30} color="#767676" />
         <Label title="Perfil" />
-      </TouchableOpacity>
-      <TouchableOpacity  style={{alignItems:"center"}} onPress={() => props.navigation.navigate("Carrinho")}>
-        <Icon name="cart" size={30} color="#767676" />
-        <Label title="Carrinho" />
       </TouchableOpacity>
     </NavBar>
   );

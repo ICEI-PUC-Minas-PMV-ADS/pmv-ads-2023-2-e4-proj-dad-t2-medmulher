@@ -4,6 +4,7 @@ import  Register  from "../screens/Register";
 import ButtonReturnLeft from "../components/Forms/ButtonReturnLeft";
 import ButtonNavBar from "../components/Forms/ButtonNavBar";
 import { Page } from "../ui/style/style";
+import Profile from "../screens/Profile";
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +14,7 @@ function AppRoutes() {
     <Stack.Navigator initialRouteName="Inicial">
       <Stack.Screen
         name="Inicial"
-        component={Register}
+        component={Profile}
         options={{
           headerShown: false,
         }}
