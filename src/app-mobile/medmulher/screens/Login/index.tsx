@@ -28,28 +28,24 @@ function Login({ navigation }) {
 
   const loginUser = async () => {
     const users = await getUsers();
-
+  
     for (let i = 0; i < users.length; i++) {
       if (
-        users[i].email == login.email &&
+        users[i].email === login.email &&
         users[i].password === login.password
       ) {
         setUser(users[i]);
-        users[i].sale ?
-          navigation.reset({
-            index: 0,
-            routes: [{ name: 'Estoque' }],
-          })
-          : navigation.reset({
-            index: 0,
-            routes: [{ name: 'Home' }],
-          });
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'Home' }],
+        });
         return;
       }
     }
-
+  
     alert("Usuário ou senha incorretos!");
   };
+  
 
   return (
     <SafeAreaView style={{ flex: 1, paddingTop: StatusBar.currentHeight }}>
