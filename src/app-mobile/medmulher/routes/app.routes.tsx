@@ -15,7 +15,7 @@ function AppRoutes() {
     <Stack.Navigator initialRouteName="Inicial">
       <Stack.Screen
         name="Inicial"
-        component={Home}
+        component={Login}
         options={{
           headerShown: false,
         }}
