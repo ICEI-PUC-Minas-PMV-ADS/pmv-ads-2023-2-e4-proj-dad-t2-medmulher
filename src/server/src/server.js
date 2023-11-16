@@ -3,8 +3,9 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const jwt = require('jsonwebtoken');
+const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
 require('dotenv').config();
-
 const app = express();
 
 app.use(
@@ -33,3 +34,35 @@ mongoose
     app.listen(3000);
   })
   .catch((err) => console.log(err));
+
+  
+  // Login
+  app.use(bodyParser.json());
+  
+  // Modelo de usuário
+  const User = mongoose.model('User', {
+    email: String,
+    password: String,
+  });
+  
+  // Rota de login
+  app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+  
+    const user = await User.findOne({ email });
+  
+    if (!user) {
+      return res.status(404).json({ message: 'Usuário não encontrado' });
+    }
+  
+    const passwordMatch = await bcrypt.compare(password, user.password);
+  
+    if (!passwordMatch) {
+      return res.status(401).json({ message: 'Credenciais inválidas' });
+    }
+  
+    const token = jwt.sign({ email }, 'seuSegredo', { expiresIn: '1h' });
+  
+    res.json({ token });
+  });
+  

@@ -14,38 +14,24 @@ import {
   OrLine,
   OrTitle
 } from "./style";
-import { getUsers } from "../../services/api";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "react-native";
-import { useUserContext } from "../../context/userContext";
+import axios from 'axios';
 
 function Login({ navigation }) {
-  const { setUser } = useUserContext();
-  const [login, setLogin] = useState({
-    email: "",
-    password: "",
-  });
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const loginUser = async () => {
-    const users = await getUsers();
-  
-    for (let i = 0; i < users.length; i++) {
-      if (
-        users[i].email === login.email &&
-        users[i].password === login.password
-      ) {
-        setUser(users[i]);
-        navigation.reset({
-          index: 0,
-          routes: [{ name: 'Home' }],
-        });
-        return;
-      }
+    try {
+      const response = await axios.post('http://localhost:3000/login', { email, password });
+      const token = response.data.token;
+      console.log('Token:', token);
+      navigation.navigate('Home');
+    } catch (error) {
+      console.error('Erro de login:', error.response ? error.response.data.message : error.message);
     }
-  
-    alert("Usuário ou senha incorretos!");
   };
-  
 
   return (
     <SafeAreaView style={{ flex: 1, paddingTop: StatusBar.currentHeight }}>
@@ -64,23 +50,18 @@ function Login({ navigation }) {
         <Form>
           <Label title="E-mail" />
           <Input
+            value={email}
             placeholder="E-mail"
-            onChangeText={(ev) =>
-              setLogin((old) => {
-                return { ...old, email: ev };
-              })
-            }
+            onChangeText={setEmail}
           />
           <Spacer margin="xx" />
 
           <Label title="Senha" />
           <Input
+            value={password}
             placeholder="Senha"
-            onChangeText={(ev) =>
-              setLogin((old) => {
-                return { ...old, password: ev };
-              })
-            }
+            onChangeText={setPassword}
+            secureTextEntry
           />
 
           <ForgotPassword

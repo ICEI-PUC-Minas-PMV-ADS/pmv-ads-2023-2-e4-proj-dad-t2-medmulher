@@ -3,7 +3,7 @@ import { IAddress, IBooks, IUser } from "../ui/interfaces";
 
 export const apiBase = axios.create({
     // baseURL: " http:// 192.168.0.104:3000/"
-    baseURL: " http://192.168.15.103:3000/"
+    baseURL: " http://localhost:3000//"
     // baseURL: " http://192.168.1.2:3000/"
 })
 
