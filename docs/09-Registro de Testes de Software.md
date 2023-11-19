@@ -9,6 +9,10 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | Passos |  1) Abrir a página de cadastro de usuário </br> 2) Preencher os campos obrigatórios: nome, e-mail, senha, endereço e CPF </br>  3) Clicar no botão "Cadastrar" </br>  4) Verificar se o usuário é redirecionado para a página de login |
 | Resultado Obtido | Cadastro realizado com sucesso. |
 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/d1735e65-ec66-4bc9-963f-c7285f610ff5)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/5350d94e-34d9-4b31-97fd-ee08e71088e2)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/63db187d-b560-48ac-96e4-0710cdf12754)
+
 #
 
 | CT-02 | Login |
@@ -18,6 +22,10 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | Passos |  1) Acessar a aplicação “Med Mulher” </br> 2) Visualizar a área de login </br> 3) Preencher as informações de Login e senha cadastrados previamente </br> 4) Fazer login no sistema </br> 5) Ser redirecionado para a home do paciente </br> |
 | Resultado Obtido | Login e Logout realizados com sucesso com sucesso |
 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/1eb1b655-3b92-49ce-92d1-fed9e497d8f2)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/d642bddf-9f84-429e-a904-b146bdf00d14)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/a1727acb-bd0e-4c33-8176-e60bc2e6dac7)
+
 #
 
 | CT-03	| Cadastro de médicos e agenda |
@@ -26,6 +34,15 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | Objetivo do Teste	| Verificar se o administrador conseguirá cadastrar e salvar na aplicação, as informações do médico e de sua agenda (data e horários de atendendo). |
 | Passos | 1) Acessar a área de administrador da aplicação “Med Mulher”; </br> 2) Clicar em "Cadastrar médico"; </br> 3) Preencher as informações pessoais do médico e sua especialidade médica; </br> 4) Preencher os dias e horários em que o médico estará atendendo; </br> 5) Confirmar que os dados foram devidamente salvos no banco de dados. |
 | Resultado Obtido | Cadastro de médico e da agenda realizados com sucesso. |
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/82ba8ee9-8bf0-4702-ae2a-069c7c0c2154)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/00314c59-d03e-4a78-9804-a9076f118dda)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/6f0f2fae-f75e-4862-ad8f-809c886b48e5)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/97e4f1f1-d000-40f5-8404-cf1a03a2aee9)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/a32ef061-7aa2-4e28-92a1-f645a3497137)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/0dfe7377-4274-4044-867a-f7832c21b019)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/9b3d7b7b-28b7-473b-803c-1ba14577a2cb)
+
 
 #
 
