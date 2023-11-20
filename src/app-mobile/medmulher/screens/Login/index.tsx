@@ -19,19 +19,22 @@ import { StatusBar } from "react-native";
 import axios from 'axios';
 
 function Login({ navigation }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const loginUser = async () => {
-    try {
-      const response = await axios.post('http://localhost:3000/login', { email, password });
-      const token = response.data.token;
-      console.log('Token:', token);
-      navigation.navigate('Home');
-    } catch (error) {
-      console.error('Erro de login:', error.response ? error.response.data.message : error.message);
-    }
-  };
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    
+      const loginUser = async () => {
+        try {
+          const response = await axios.post('http://localhost:3000/login', { email, password });
+    
+          if (response.status === 200) {
+            navigation.navigate('Home');
+          } else {
+            console.error('Erro no login');
+          }
+        } catch (error) {
+          console.error('Erro no login', error);
+        }
+      };
 
   return (
     <SafeAreaView style={{ flex: 1, paddingTop: StatusBar.currentHeight }}>
@@ -52,7 +55,7 @@ function Login({ navigation }) {
           <Input
             value={email}
             placeholder="E-mail"
-            onChangeText={setEmail}
+            onChangeText={(text) => setEmail(text)}
           />
           <Spacer margin="xx" />
 
@@ -60,7 +63,7 @@ function Login({ navigation }) {
           <Input
             value={password}
             placeholder="Senha"
-            onChangeText={setPassword}
+            onChangeText={(text) => setPassword(text)}
             secureTextEntry
           />
 

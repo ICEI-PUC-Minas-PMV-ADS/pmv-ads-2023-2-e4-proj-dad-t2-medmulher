@@ -35,34 +35,21 @@ mongoose
   })
   .catch((err) => console.log(err));
 
-  
   // Login
-  app.use(bodyParser.json());
-  
-  // Modelo de usuário
+
   const User = mongoose.model('User', {
     email: String,
     password: String,
   });
   
-  // Rota de login
   app.post('/login', async (req, res) => {
     const { email, password } = req.body;
   
     const user = await User.findOne({ email });
   
-    if (!user) {
-      return res.status(404).json({ message: 'Usuário não encontrado' });
-    }
-  
-    const passwordMatch = await bcrypt.compare(password, user.password);
-  
-    if (!passwordMatch) {
+    if (!user || !(await bcrypt.compare(password, user.password))) {
       return res.status(401).json({ message: 'Credenciais inválidas' });
     }
   
-    const token = jwt.sign({ email }, 'seuSegredo', { expiresIn: '1h' });
-  
-    res.json({ token });
+    return res.status(200).json({ message: 'Login bem-sucedido' });
   });
-  
