@@ -4,6 +4,8 @@ import Input from "../../components/Forms/Input";
 import Label from "../../components/Forms/Label";
 import Spacer from "../../components/Spacer";
 import { LogoContainer, ViewContainer } from "../../ui/style/style";
+import { getUsers } from "../../services/api";
+import { useUserContext } from "../../context/userContext";
 
 import {
   Header,
@@ -16,25 +18,33 @@ import {
 } from "./style";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "react-native";
-import axios from 'axios';
 
 function Login({ navigation }) {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    
-      const loginUser = async () => {
-        try {
-          const response = await axios.post('http://localhost:3000/login', { email, password });
-    
-          if (response.status === 200) {
-            navigation.navigate('Home');
-          } else {
-            console.error('Erro no login');
-          }
-        } catch (error) {
-          console.error('Erro no login', error);
-        }
-      };
+  const { setUser } = useUserContext();
+  const [login, setLogin] = useState({
+    email: "",
+    password: "",
+  });
+
+  const loginUser = async () => {
+    const users = await getUsers();
+
+    for (let i = 0; i < users.length; i++) {
+      if (
+        users[i].email === login.email &&
+        users[i].password === login.password
+      ) {
+        setUser(users[i]);
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'Home' }],
+        });
+        return;
+      }
+    }
+
+    alert("Usuário ou senha incorretos!");
+  };
 
   return (
     <SafeAreaView style={{ flex: 1, paddingTop: StatusBar.currentHeight }}>
@@ -53,18 +63,23 @@ function Login({ navigation }) {
         <Form>
           <Label title="E-mail" />
           <Input
-            value={email}
             placeholder="E-mail"
-            onChangeText={(text) => setEmail(text)}
+            onChangeText={(ev) =>
+              setLogin((old) => {
+                return { ...old, email: ev };
+              })
+            }
           />
           <Spacer margin="xx" />
 
           <Label title="Senha" />
           <Input
-            value={password}
             placeholder="Senha"
-            onChangeText={(text) => setPassword(text)}
-            secureTextEntry
+            onChangeText={(ev) =>
+              setLogin((old) => {
+                return { ...old, password: ev };
+              })
+            }
           />
 
           <ForgotPassword
