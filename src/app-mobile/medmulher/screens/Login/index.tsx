@@ -75,6 +75,7 @@ function Login({ navigation }) {
           <Label title="Senha" />
           <Input
             placeholder="Senha"
+            secureTextEntry={true}
             onChangeText={(ev) =>
               setLogin((old) => {
                 return { ...old, password: ev };
