@@ -34,22 +34,3 @@ mongoose
     app.listen(3000);
   })
   .catch((err) => console.log(err));
-
-  // Login
-
-  const User = mongoose.model('User', {
-    email: String,
-    password: String,
-  });
-  
-  app.post('/login', async (req, res) => {
-    const { email, password } = req.body;
-  
-    const user = await User.findOne({ email });
-  
-    if (!user || !(await bcrypt.compare(password, user.password))) {
-      return res.status(401).json({ message: 'Credenciais inválidas' });
-    }
-  
-    return res.status(200).json({ message: 'Login bem-sucedido' });
-  });
