@@ -5,7 +5,7 @@ import Input from "../../components/Forms/Input";
 import Label from "../../components/Forms/Label";
 import Spacer from "../../components/Spacer";
 import { ViewContainer } from "../../ui/style/style";
-import { getUsers, resetPassword } from "../../services/api";
+import { resetPassword } from "../../services/api";
 import { Form, SubTitle } from "./style";
 import { IAuth } from "../../ui/interfaces";
 import { checkEmail, checkPass } from "../../utils/validators";
