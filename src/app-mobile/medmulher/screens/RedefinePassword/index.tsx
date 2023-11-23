@@ -1,58 +1,54 @@
-import React, { useState } from 'react';
-import { Alert } from 'react-native';
-import ButtonPrimary from '../../components/Forms/ButtonPrimary';
-import Input from '../../components/Forms/Input';
-import Label from '../../components/Forms/Label';
-import Spacer from '../../components/Spacer';
-import { ViewContainer } from '../../ui/style/style';
-import { getUsers, resetPassword } from '../../services/api';
-import { Form, SubTitle } from './style';
-import { IAuth } from '../../ui/interfaces';
-import { checkEmail, checkPass } from '../../utils/validators';
+import React, { useState } from "react";
+import { Alert } from "react-native";
+import ButtonPrimary from "../../components/Forms/ButtonPrimary";
+import Input from "../../components/Forms/Input";
+import Label from "../../components/Forms/Label";
+import Spacer from "../../components/Spacer";
+import { ViewContainer } from "../../ui/style/style";
+import { getUsers, resetPassword } from "../../services/api";
+import { Form, SubTitle } from "./style";
+import { IAuth } from "../../ui/interfaces";
+import { checkEmail, checkPass } from "../../utils/validators";
 
 function RedefinePassword({ navigation }) {
-  const [confirmPass, setConfirmPass] = useState<string>('');
+  const [confirmPass, setConfirmPass] = useState<string>("");
   const [user, setUser] = useState<IAuth>({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
 
   async function submitForm() {
     try {
       if (!user.email || !user.password || !confirmPass) {
-        Alert.alert('Error', 'Por favor, preencha todos os campos.');
+        Alert.alert("Error", "Por favor, preencha todos os campos.");
         return;
       }
 
       if (checkEmail(user.email) && checkPass(user.password, confirmPass)) {
-        const response = await getUsers();
+        const resetResponse = await resetPassword(user.email, user.password);
 
-        if (response.length > 0) {
-          const existingUser = response.find((u) => u.email === user.email);
-
-          if (existingUser) {
-            const resetResponse = await resetPassword(user.email, user.password);
-
-            if (resetResponse.auth) {
-              Alert.alert('Success', 'Senha redefinida com sucesso!');
-              navigation.navigate('Login');
-            } else {
-              Alert.alert('Error', 'Erro ao redefinir a senha: ' + resetResponse.message);
-            }
-          } else {
-            Alert.alert('Error', 'Email não cadastrado!');
-          }
+        if (resetResponse.auth) {
+          Alert.alert("Success", "Senha redefinida com sucesso!");
+          return navigation.navigate("Inicial");
+        } else {
+          Alert.alert(
+            "Error",
+            "Erro ao redefinir a senha: " + resetResponse.message
+          );
         }
       }
     } catch (error) {
-      console.error('Error getting users:', error);
-      Alert.alert('Error', 'Erro ao obter usuários. Por favor, tente novamente.');
+      console.error("Error getting users:", error);
+      Alert.alert(
+        "Error",
+        "Erro ao obter usuários. Por favor, tente novamente."
+      );
     }
   }
 
   return (
     <ViewContainer>
-      <Spacer margin={'sx'} />
+      <Spacer margin={"sx"} />
 
       <Form>
         <Spacer margin="xx" />
@@ -83,7 +79,7 @@ function RedefinePassword({ navigation }) {
         <Spacer margin="xx" />
         <ButtonPrimary title="Recuperar Senha" onPress={submitForm} />
       </Form>
-      <Spacer margin={'xx'} />
+      <Spacer margin={"xx"} />
     </ViewContainer>
   );
 }

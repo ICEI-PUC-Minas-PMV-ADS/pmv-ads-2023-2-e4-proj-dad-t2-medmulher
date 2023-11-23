@@ -13,7 +13,7 @@ function AppRoutes() {
     <Stack.Navigator initialRouteName="Inicial">
       <Stack.Screen
         name="Inicial"
-        component={RedefinePassword}
+        component={Login}
         options={{
           headerShown: false,
         }}
@@ -21,6 +21,10 @@ function AppRoutes() {
       <Stack.Screen
         name="Home"
         component={Home}
+      />
+      <Stack.Screen
+        name="Recuperar senha"
+        component={RedefinePassword}
       />
       <Stack.Screen name="sidebar" component={ButtonNavBar} />
     </Stack.Navigator>
