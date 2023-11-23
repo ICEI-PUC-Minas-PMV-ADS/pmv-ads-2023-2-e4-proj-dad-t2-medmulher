@@ -5,6 +5,7 @@ import Login from "../screens/Login";
 import Home from "../screens/Home";
 import RedefinePassword from "../screens/RedefinePassword";
 
+
 const Stack = createNativeStackNavigator();
 
 function AppRoutes() {
@@ -12,7 +13,7 @@ function AppRoutes() {
     <Stack.Navigator initialRouteName="Inicial">
       <Stack.Screen
         name="Inicial"
-        component={RedefinePassword}
+        component={Login}
         options={{
           headerShown: false,
         }}
@@ -20,6 +21,10 @@ function AppRoutes() {
       <Stack.Screen
         name="Home"
         component={Home}
+      />
+      <Stack.Screen
+        name="Recuperar senha"
+        component={RedefinePassword}
       />
       <Stack.Screen name="sidebar" component={ButtonNavBar} />
     </Stack.Navigator>
