@@ -3,8 +3,9 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const jwt = require('jsonwebtoken');
+const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
 require('dotenv').config();
-
 const app = express();
 
 app.use(
