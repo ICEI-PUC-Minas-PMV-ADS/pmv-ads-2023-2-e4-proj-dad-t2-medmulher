@@ -53,18 +53,16 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | Passos |  1) Acessar a aplicação “Med Mulher” </br> 2) Visualizar a área de login </br> 3) Fazer cadastro caso ainda não tenha se cadastrado </br> 4) Fazer login no sistema </br> 5) Ir para a página de agendamento de consultas </br> 6) Agendar consulta |
 | Resultado Obtido | Agendamento realizado com sucesso. |
 
-- Cadastro do paciente:
+
+- **Cadastro do paciente**:
+  
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/35d664a8-2fd6-4614-bddd-50297915c4ab)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/58892de8-8c7f-488e-9fcb-fe13520a73b3)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/0f821032-f5d2-455c-b94f-1ecc4616ac43)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/90c0a683-a2fb-4f2f-ad9e-e74b724047eb)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/df38cbcc-ec57-46d3-b292-59905fac037f)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/cfd1b1a8-3b04-40f0-a4e3-776eda89e2fa)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/228ae32d-f64e-4748-9a19-aa66eb68337c)
-
-
-
-
-
 
 
 
