@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Alert } from 'react-native';
 import ButtonPrimary from '../../components/Forms/ButtonPrimary';
 import Input from '../../components/Forms/Input';
 import Label from '../../components/Forms/Label';
@@ -6,40 +7,46 @@ import Spacer from '../../components/Spacer';
 import { ViewContainer } from '../../ui/style/style';
 import { getUsers, resetPassword } from '../../services/api';
 import { Form, SubTitle } from './style';
-import { IUser } from '../../ui/interfaces';
+import { IAuth } from '../../ui/interfaces';
 import { checkEmail, checkPass } from '../../utils/validators';
-import { TouchableOpacity, Text } from 'react-native';
 
 function RedefinePassword({ navigation }) {
   const [confirmPass, setConfirmPass] = useState<string>('');
-  const [user, setUser] = useState<IUser>({
+  const [user, setUser] = useState<IAuth>({
     email: '',
     password: '',
   });
 
   async function submitForm() {
     try {
-      const response = await getUsers();
+      if (!user.email || !user.password || !confirmPass) {
+        Alert.alert('Error', 'Por favor, preencha todos os campos.');
+        return;
+      }
 
-      if (response.length > 0) {
-        const existingUser = response.find((u) => u.email === user.email);
+      if (checkEmail(user.email) && checkPass(user.password, confirmPass)) {
+        const response = await getUsers();
 
-        if (existingUser) {
-          const resetResponse = await resetPassword(user.email, user.password);
+        if (response.length > 0) {
+          const existingUser = response.find((u) => u.email === user.email);
 
-          if (resetResponse.auth) {
-            alert('Senha redefinida com sucesso!');
-            navigation.navigate('Login');
+          if (existingUser) {
+            const resetResponse = await resetPassword(user.email, user.password);
+
+            if (resetResponse.auth) {
+              Alert.alert('Success', 'Senha redefinida com sucesso!');
+              navigation.navigate('Login');
+            } else {
+              Alert.alert('Error', 'Erro ao redefinir a senha: ' + resetResponse.message);
+            }
           } else {
-            alert('Erro ao redefinir a senha: ' + resetResponse.message);
+            Alert.alert('Error', 'Email não cadastrado!');
           }
-        } else {
-          alert('Email não cadastrado!');
         }
       }
     } catch (error) {
       console.error('Error getting users:', error);
-      alert('Erro ao obter usuários. Por favor, tente novamente.');
+      Alert.alert('Error', 'Erro ao obter usuários. Por favor, tente novamente.');
     }
   }
 

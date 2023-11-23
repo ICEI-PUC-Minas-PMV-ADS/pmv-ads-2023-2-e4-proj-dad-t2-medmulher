@@ -1,8 +1,9 @@
 import axios, { Axios, AxiosResponse } from "axios"
 import { IAddress, IAuth, IBooks, IUser } from "../ui/interfaces";
+import { Alert } from 'react-native';
 
 export const apiBase = axios.create({
-    baseURL: " http://10.0.2.2:3000/",
+    baseURL: " http://192.168.0.8:3000/",
     headers: {
         "Content-Type": "application/json",
     },
@@ -19,7 +20,7 @@ export const getUsers = async () => {
         console.error(error);
         return [];
     }
-}
+};
 
 export const deleteUsers = async (id: number) => {
     try {
@@ -31,7 +32,7 @@ export const deleteUsers = async (id: number) => {
     } catch (error) {
         return "failed request";
     }
-}
+};
 
 export const postUsers = async (data: IUser) => {
     try {
@@ -49,7 +50,7 @@ export const postUsers = async (data: IUser) => {
     } catch (error) {
         return "failed request";
     }
-}
+};
 
 export const patchUsers = async (id: number, data: {}) => {
     try {
@@ -61,7 +62,7 @@ export const patchUsers = async (id: number, data: {}) => {
     } catch (error) {
         return "failed request";
     }
-}
+};
 
 export const postLogin = async (data: IAuth) => {
     try {
@@ -73,4 +74,35 @@ export const postLogin = async (data: IAuth) => {
     } catch (error) {
         return error;
     }
-}
+};
+
+export const resetPassword = async (email: string, newPassword: string) => {
+    try {
+      // Verifique se o email do usuário existe
+      const checkUserResponse: AxiosResponse = await apiBase.get(`
+      users/email/${email}`
+      );
+  
+      if (checkUserResponse.status === 200) {
+        // Se o email existir, faça uma solicitação para redefinir a senha
+        const updatePasswordResponse: AxiosResponse = await apiBase.patch(
+          `users/${checkUserResponse.data.userID}/new-password`,
+          { password: newPassword }
+        );
+  
+        if (updatePasswordResponse.status === 200) {
+          Alert.alert('Success', 'Senha redefinida com sucesso!');
+          return { auth: true, message: 'Senha redefinida com sucesso!' };
+        } else {
+          Alert.alert('Error', 'Erro ao redefinir a senha');
+          return { auth: false, message: 'Erro ao redefinir a senha' };
+        }
+      } else {
+        Alert.alert('Error', 'Usuário não cadastrado!');
+        return { auth: false, message: 'Usuário não cadastrado!' };
+      }
+    } catch (error) {
+      Alert.alert('Error', 'Erro ao redefinir a senha');
+      return { auth: false, message: 'Erro ao redefinir a senha' };
+    }
+  };
