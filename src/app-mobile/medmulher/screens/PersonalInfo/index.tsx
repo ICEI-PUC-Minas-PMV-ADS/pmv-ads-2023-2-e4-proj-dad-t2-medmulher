@@ -16,7 +16,6 @@ import Spacer from "../../components/Spacer";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { IUser } from "../../ui/interfaces";
 import { ViewContainer } from "../../ui/style/style";
-import ButtonPrimary from "../../components/Forms/ButtonPrimary";
 import Label from "../../components/Forms/Label";
 import Input from "../../components/Forms/Input";
 import { Form } from "./style";
@@ -51,26 +50,22 @@ const PersonalInfo = ({navigation}) => {
     async function submitForm() {
         try{
             const response = await patchUsers(user.id, user)
+            if (response) {
+                alert('Dados alterados com sucesso');
+                return navigation.reset({
+                    index: 0, //Em dúvida quanto a qual índice utilizar nesta rota
+                    routes: [{name: "Profile"}]
+                })
+            }
         } catch (error){
             return error.message;
         }
-        
-
-        // user.sale = option;
-        // const response = await getUsers();
-        // if (response.length > 0) {
-        //   for (let i = 0; i < response.length; i++) {
-        //     if (user.email === response[i].email) {
-        //       alert("email já cadastrado!");
-        //       return false;
-        //     }
-        //   }
-        // }
     }
     
 
 
 return (
+    <SafeAreaView style={{ flex: 1, paddingTop: StatusBar.currentHeight }}>
     <ViewContainer>
         <Spacer margin={"sx"} />
 
@@ -130,13 +125,15 @@ return (
         <Spacer margin="xx" />
         <View style = {{flexDirection: 'row', justifyContent: 'space-between' }}>
             
-            <ButtonSecundary50 title="Cancelar" onPress={submitForm} />
+            <ButtonSecundary50 title="Cancelar" onPress={() => navigation.navigate("Profile")} />
             <ButtonPrimary50 title="Cadastrar" onPress={submitForm} />
         </View>
         
       </Form>
 
     </ViewContainer>
+    <ButtonNavBar navigation={navigation} />
+    </SafeAreaView>
     
 );
 
