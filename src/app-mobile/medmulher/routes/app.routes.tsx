@@ -4,6 +4,8 @@ import ButtonReturnLeft from "../components/Forms/ButtonReturnLeft";
 import ButtonNavBar from "../components/Forms/ButtonNavBar";
 import { Page } from "../ui/style/style";
 import RedefinePassword from "../screens/RedefinePassword";
+import PersonalInfo from "../screens/PersonalInfo";
+import Login from "../screens/Login";
 
 const Stack = createNativeStackNavigator();
 
@@ -12,7 +14,7 @@ function AppRoutes() {
     <Stack.Navigator initialRouteName="Inicial">
       <Stack.Screen
         name="Inicial"
-        component={RedefinePassword}
+        component={Login}
         options={{
           headerShown: false,
         }}
