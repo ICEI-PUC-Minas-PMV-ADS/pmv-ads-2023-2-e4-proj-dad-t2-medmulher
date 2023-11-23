@@ -7,7 +7,6 @@ import RedefinePassword from "../screens/RedefinePassword";
 
 const Stack = createNativeStackNavigator();
 
-
 function AppRoutes() {
   return (
     <Stack.Navigator initialRouteName="Inicial">
@@ -18,7 +17,7 @@ function AppRoutes() {
           headerShown: false,
         }}
       />
-            <Stack.Screen name="sidebar" component={ButtonNavBar} />
+      <Stack.Screen name="sidebar" component={ButtonNavBar} />
     </Stack.Navigator>
   );
 }

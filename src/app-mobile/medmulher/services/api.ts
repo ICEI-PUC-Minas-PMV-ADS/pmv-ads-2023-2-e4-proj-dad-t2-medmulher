@@ -2,14 +2,16 @@ import axios, { Axios, AxiosResponse } from "axios"
 import { IAddress, IBooks, IUser } from "../ui/interfaces";
 
 export const apiBase = axios.create({
-    // baseURL: " http:// 192.168.0.104:3000/"
-    baseURL: " http://192.168.0.179:3000/"
-    // baseURL: " http://192.168.1.2:3000/"
-})
+
+    baseURL: " http://192.168.15.103:3000/",
+    headers: {
+        "Content-Type": "application/json",
+    },
+});
 
 export const getUsers = async () => {
     try {
-        const response = await apiBase.get(`Users`);
+        const response = await apiBase.get(`users`);
         
         if(response.status === 200){
             return response.data;
