@@ -32,3 +32,8 @@ export interface IAddress {
     estado: string,
     cep: string
 }
+
+export interface IAuth {
+    email: string,
+    password: string
+}

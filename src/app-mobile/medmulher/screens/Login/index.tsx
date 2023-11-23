@@ -4,7 +4,7 @@ import Input from "../../components/Forms/Input";
 import Label from "../../components/Forms/Label";
 import Spacer from "../../components/Spacer";
 import { LogoContainer, ViewContainer } from "../../ui/style/style";
-import { getUsers } from "../../services/api";
+import { getUsers, postLogin } from "../../services/api";
 import { useUserContext } from "../../context/userContext";
 
 import {
@@ -14,33 +14,32 @@ import {
   Register,
   OrContainer,
   OrLine,
-  OrTitle
+  OrTitle,
 } from "./style";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "react-native";
+import { IAuth } from "../../ui/interfaces";
 
 function Login({ navigation }) {
   const { setUser } = useUserContext();
-  const [login, setLogin] = useState({
+  const [login, setLogin] = useState<IAuth>({
     email: "",
     password: "",
   });
 
   const loginUser = async () => {
-    const users = await getUsers();
+    if (!login.email || !login.password) {
+      return alert("Por favor, preencha todos os campos.");
+    }
 
-    for (let i = 0; i < users.length; i++) {
-      if (
-        users[i].email === login.email &&
-        users[i].password === login.password
-      ) {
-        setUser(users[i]);
-        navigation.reset({
-          index: 0,
-          routes: [{ name: 'Home' }],
-        });
-        return;
-      }
+    const auth = await postLogin(login);
+
+    if (auth.status === 200) {
+      const users = await getUsers();
+      const user = users.filter((el) => el.email === login.email);
+      setUser(user);
+
+      return navigation.navigate("Home");
     }
 
     alert("Usuário ou senha incorretos!");
@@ -53,7 +52,7 @@ function Login({ navigation }) {
         <Spacer margin="xx" />
         <Header>
           <LogoContainer
-            source={require('../../assets/Logo-rosa.png')}
+            source={require("../../assets/Logo-rosa.png")}
             style={{ width: 150, height: 150 }}
             resizeMode="contain"
           />
@@ -83,9 +82,7 @@ function Login({ navigation }) {
             }
           />
 
-          <ForgotPassword
-            onPress={() => navigation.navigate("Esqueceu Senha")}
-          >
+          <ForgotPassword onPress={() => navigation.navigate("Esqueceu Senha")}>
             Esqueci minha senha
           </ForgotPassword>
 
@@ -101,9 +98,7 @@ function Login({ navigation }) {
         </OrContainer>
         <Spacer margin="ms" />
 
-        <Register
-          onPress={() => navigation.navigate("Register")}
-        >
+        <Register onPress={() => navigation.navigate("Register")}>
           Ainda não tem conta? Cadastre-se
         </Register>
       </ViewContainer>
