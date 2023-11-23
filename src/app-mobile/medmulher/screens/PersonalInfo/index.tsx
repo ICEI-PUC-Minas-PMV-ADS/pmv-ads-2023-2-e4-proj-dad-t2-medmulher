@@ -19,15 +19,15 @@ import ButtonPrimary50 from "../../components/Forms/ButtonPrimary50";
 import { patchUsers } from "../../services/api";
 
 const PersonalInfo = ({ navigation }) => {
-  const {user, setUser} = useUserContext()
+  const { user, setUser } = useUserContext();
   const [userActual, setUserActual] = useState<IUser>({
-    id: user.id || 0,
-    name: user.name || "",
-    email: user.email || "",
-    password: user.password || "",
-    fullName: user.fullName || "",
-    cpf: user.cpf || "",
-    dateOfBirth: user.dateOfBirth || "",
+    id: user[0]._id,
+    name: user[0].name,
+    email: user[0].email,
+    password: "**********",
+    fullName: user[0].fullName,
+    cpf: user[0].cpf,
+    dateOfBirth: user[0].dateOfBirth,
     address: {
       logradouro: "",
       numero: "",
