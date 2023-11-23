@@ -7,12 +7,12 @@ import { useDoctorContext } from "../../contexts/doctorContext";
 import { Link } from "react-router-dom";
 
 interface IProps {
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsOpenSuccess: React.Dispatch<React.SetStateAction<boolean>>;
   modalText: string;
   crm: string;
 }
 
-const RegisterDoctorModalSuccess = ({ setIsOpen, modalText, crm }: IProps) => {
+const RegisterDoctorModalSuccess = ({ setIsOpenSuccess, modalText, crm }: IProps) => {
   const { setDr } = useDoctorContext();
   const [isOpenSchedulling, setIsOpenSchedulling] = useState(false);
 
@@ -32,7 +32,7 @@ const RegisterDoctorModalSuccess = ({ setIsOpen, modalText, crm }: IProps) => {
           <div className="group-modal">
             <div className="exit-button-div">
               <RiCloseLine
-                onClick={() => setIsOpen(false)}
+                onClick={() => setIsOpenSuccess(false)}
                 class="exit-button-modal"
                 type="button"
                 style={{ width: "24px", marginBottom: "0px", padding: "0px" }}
