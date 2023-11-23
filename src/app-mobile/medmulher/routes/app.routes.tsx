@@ -1,8 +1,8 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import ButtonReturnLeft from "../components/Forms/ButtonReturnLeft";
 import ButtonNavBar from "../components/Forms/ButtonNavBar";
-import { Page } from "../ui/style/style";
+import Login from "../screens/Login";
+import Home from "../screens/Home";
 import RedefinePassword from "../screens/RedefinePassword";
 import PersonalInfo from "../screens/PersonalInfo";
 import Login from "../screens/Login";
@@ -18,6 +18,10 @@ function AppRoutes() {
         options={{
           headerShown: false,
         }}
+      />
+      <Stack.Screen
+        name="Home"
+        component={Home}
       />
       <Stack.Screen name="sidebar" component={ButtonNavBar} />
     </Stack.Navigator>
