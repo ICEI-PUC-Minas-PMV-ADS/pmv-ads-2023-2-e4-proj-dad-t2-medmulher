@@ -4,6 +4,7 @@ import ButtonNavBar from "../components/Forms/ButtonNavBar";
 import Login from "../screens/Login";
 import Home from "../screens/Home";
 import RedefinePassword from "../screens/RedefinePassword";
+import Schedulling from "../screens/Schedulling";
 
 
 const Stack = createNativeStackNavigator();
@@ -13,10 +14,10 @@ function AppRoutes() {
     <Stack.Navigator initialRouteName="Inicial">
       <Stack.Screen
         name="Inicial"
-        component={Login}
-        options={{
-          headerShown: false,
-        }}
+        component={Schedulling}
+        // options={{
+        //   headerShown: false,
+        // }}
       />
       <Stack.Screen
         name="Home"
