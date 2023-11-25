@@ -4,6 +4,8 @@ import ButtonNavBar from "../components/Forms/ButtonNavBar";
 import Login from "../screens/Login";
 import Home from "../screens/Home";
 import RedefinePassword from "../screens/RedefinePassword";
+import { Register } from "../screens";
+import Profile from "../screens/Profile";
 
 
 const Stack = createNativeStackNavigator();
@@ -26,7 +28,12 @@ function AppRoutes() {
         name="Recuperar senha"
         component={RedefinePassword}
       />
+      <Stack.Screen
+        name="Register"
+        component={Register}
+      />
       <Stack.Screen name="sidebar" component={ButtonNavBar} />
+      <Stack.Screen name="Profile" component={Profile} />
     </Stack.Navigator>
   );
 }

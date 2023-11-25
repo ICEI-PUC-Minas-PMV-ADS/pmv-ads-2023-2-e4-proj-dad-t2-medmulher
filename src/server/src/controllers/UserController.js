@@ -189,7 +189,8 @@ class UserController {
     const checkPassword = await compare(password, user.password);
     if (checkPassword) {
       const id = user._id;
-      const token = jwt.sign({ id }, process.env.SECRET);
+      const token = jwt.sign({id}, 'chavemedmulher');
+      //const token = jwt.sign({ id }, process.env.SECRET);
       return res
         .status(200)
         .json({ message: `Login efetuado com sucesso!`, auth: true, token });

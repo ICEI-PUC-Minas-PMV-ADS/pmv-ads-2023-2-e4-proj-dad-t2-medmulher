@@ -24,7 +24,9 @@ import { useUserContext } from "../../context/userContext";
 import { deleteUsers } from "../../services/api";
 
 function Profile({ navigation }) {
-  const {user} = useUserContext()
+  const {user} = useUserContext();
+  //const usr = useUserContext();
+  //alert(usr.user.id);
   
   async function removeUser() {
     const response = await deleteUsers(user.id);
@@ -48,6 +50,7 @@ function Profile({ navigation }) {
         <Header>
           <Text>{"\n"}</Text>
           <Icon name="person" size={100} color="#8D4698" />
+          <Text>{user.name} </Text>
         </Header>
 
         <Spacer margin="xx" />
