@@ -82,7 +82,7 @@ function Login({ navigation }) {
             }
           />
 
-          <ForgotPassword onPress={() => navigation.navigate("Esqueceu Senha")}>
+          <ForgotPassword onPress={() => navigation.navigate("Recuperar senha")}>
             Esqueci minha senha
           </ForgotPassword>
 
