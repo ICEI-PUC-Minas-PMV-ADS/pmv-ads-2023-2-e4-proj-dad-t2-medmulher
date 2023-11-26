@@ -81,7 +81,7 @@ return (
           }
         />
         <Spacer margin="xx" />
-        <Text>Pessoal</Text>
+        <Title>Pessoal</Title>
         <Spacer margin="ms" />
         <Label title="Nome completo" />
         <Input
