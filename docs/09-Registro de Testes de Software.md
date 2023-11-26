@@ -85,7 +85,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 - **Agendamento do paciente**:
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/4b5633fb-9015-4cc2-add5-0603a461024e)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/4051534b-c250-4f5a-8579-09efd6ccbb82)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/c8559f64-39a3-4982-9c35-9f2d53e12787)
 
 - **Consultas do paciente**:
