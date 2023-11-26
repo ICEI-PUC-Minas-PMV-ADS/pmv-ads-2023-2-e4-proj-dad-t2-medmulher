@@ -85,20 +85,10 @@ return (
         <Spacer margin="ms" />
         <Label title="Nome completo" />
         <Input
-          placeholder={userActual.fullName}
+          placeholder={userActual.name}
           onChangeText={(ev) =>
             setUserActual((old) => {
-              return { ...old, fullName: ev };
-            })
-          }
-        />
-        <Spacer margin="xx" />
-        <Label title="Data de nascimento" />
-        <Input
-          placeholder={userActual.dateOfBirth}
-          onChangeText={(ev) =>
-            setUserActual((old) => {
-              return { ...old, dateOfBirth: ev };
+              return { ...old, name: ev };
             })
           }
         />
