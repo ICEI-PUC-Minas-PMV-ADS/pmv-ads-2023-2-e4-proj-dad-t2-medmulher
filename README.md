@@ -54,6 +54,11 @@ Segue abaixo o link do Postman: <br>
         npm install
         npm run dev
 
+- Expo Go (Mobile)
+  
+        cd src/app-mobile/medmulher
+        npx expo start
+
 ## Kanban e Gantt
 
 - <a href="https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/510/views/3"> Kanban</a>

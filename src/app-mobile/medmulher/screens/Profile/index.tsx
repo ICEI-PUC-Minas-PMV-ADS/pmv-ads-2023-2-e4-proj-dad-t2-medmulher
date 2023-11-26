@@ -63,7 +63,7 @@ function Profile({ navigation }) {
           <SubTitle>Conta {"\n"} </SubTitle>
 
           <TouchableOpacity
-            onPress={() => navigation.navigate("Informacoes Pessoais")}
+            onPress={() => navigation.navigate("PersonalInfo")}
           >
             <Text>Informações Pessoais</Text>
           </TouchableOpacity>

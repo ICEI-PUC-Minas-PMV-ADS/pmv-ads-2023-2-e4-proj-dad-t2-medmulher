@@ -39,13 +39,6 @@ function Home({ navigation }) {
                         <SubTitle>Agende uma nova consulta com nossos especialistas.</SubTitle>
                     </Card>
                 </TouchableOpacity>
-
-                <TouchableOpacity>
-                    <Card onPress={() => navigation.navigate("Medicos")}>
-                        <Title>Ver especialistas</Title>
-                        <SubTitle>Conheça nossos especialistas e suas áreas de atuação.</SubTitle>
-                    </Card>
-                </TouchableOpacity>
             </ViewContainer>
             <ButtonNavBar navigation={navigation} />
         </SafeAreaView>

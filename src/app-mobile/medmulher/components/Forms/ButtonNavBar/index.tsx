@@ -19,7 +19,7 @@ function ButtonNavBar(props) {
         <Icon name="calendar" size={30} color="#767676" />
         <Label title="Agendar" />
       </TouchableOpacity>
-      <TouchableOpacity  style={{alignItems:"center"}} onPress={() => props.navigation.navigate("Perfil")}>
+      <TouchableOpacity  style={{alignItems:"center"}} onPress={() => props.navigation.navigate("Profile")}>
         <Icon name="person" size={30} color="#767676" />
         <Label title="Perfil" />
       </TouchableOpacity>
