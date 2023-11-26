@@ -42,7 +42,7 @@ A seguir, estão os wireframes referentes ao fluxo de agendamento de consulta.
 
 ![FluxoAgendamento](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/blob/main/docs/img/fluxoagendamento.jpg)
 
-#### Fluxo perfil
+#### Fluxo de perfil
 A seguir, estão os wireframes referentes ao fluxo de perfil.
 
 ![FluxoPerfil](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/blob/main/docs/img/perfilmobile.jpg)
