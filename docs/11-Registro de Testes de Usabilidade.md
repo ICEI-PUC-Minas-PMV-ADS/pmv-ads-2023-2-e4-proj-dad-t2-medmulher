@@ -70,8 +70,43 @@ Fluxo de páginas: Home -> Médicos -> Perfil do médico -> Adicionar agenda
 
 ![TesteCadAgenda](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t2-sebo-e3/assets/89920953/f8124549-f167-4905-ac4f-3796d388b836)
 
-##Avaliação dos Usuários
+
+
+
+
+## Testes de Usabilidade - Paciente Aplicativo Mobile
+
+### CT 01 - Cadastro e login de Usuário
+Fluxo de páginas: Login -> Cadastro -> Login -> Home
+
+| Pontos Avaliados | Resultado                                  |
+| -----------------|--------------------------------------------|
+| Usabilidade      | 71 pontos                                  |
+| Duração média    | 16s                                        |
+| Sucesso direto   | 66,7%                                      |
+| Taxa de cliques incorretos  | 35%                             |
+
+![TesteLogin](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/89920953/db8e3ad3-eb51-4178-865e-6c891f9ba254)
+
+
+### CT 02 - Agendamento de consulta
+Fluxo de páginas: Home -> Agendamento
+
+| Pontos Avaliados | Resultado                                  |
+| -----------------|--------------------------------------------|
+| Usabilidade      | 97 pontos                                  |
+| Duração média    | 11.2s                                      |
+| Sucesso direto   | 100%                                       |
+| Taxa de cliques incorretos  | 28,6%                           |
+
+![TesteAgendamento](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/89920953/7c3a895c-2d74-42d3-bab6-9e9d9b23010c)
+
+
+## Avaliação dos Usuários
 #### Administrador WEB
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/89920953/704eeba4-c66c-4d40-a3ec-4b5e1b90280b)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/89920953/651d20bc-350e-43e4-b7a2-a82efb1a12c4)
 
+#### Paciente Aplicativo Mobile
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/89920953/ef95cdaf-d51e-4ee1-abc1-5c5885bb5c23)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/89920953/8b99c1e9-991b-4b3f-b870-973fb2ecb339)
