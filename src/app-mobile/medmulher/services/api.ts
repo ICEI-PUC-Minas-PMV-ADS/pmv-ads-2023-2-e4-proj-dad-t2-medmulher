@@ -9,6 +9,19 @@ export const apiBase = axios.create({
   },
 });
 
+export const getConsultation = async () => {
+  try {
+    const response = await apiBase.get(`/consultations/`);
+
+    if (response.status === 200) {
+      return response.data;
+    }
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
+
 export const getUsers = async () => {
   try {
     const response = await apiBase.get(`users`);
