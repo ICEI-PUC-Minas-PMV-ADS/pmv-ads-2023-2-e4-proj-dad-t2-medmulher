@@ -3,7 +3,7 @@ import { IAddress, IAuth, IBooks, IUser } from "../ui/interfaces";
 import { Alert } from "react-native";
 
 export const apiBase = axios.create({
-  baseURL: "http://192.168.0.8:3000/",
+  baseURL: "http://10.0.2.2:3000/",
   headers: {
     "Content-Type": "application/json",
   },
@@ -117,5 +117,17 @@ export const resetPassword = async (email: string, password: string) => {
   } catch (error) {
     Alert.alert("Error", "Erro ao redefinir a senha");
     return { auth: false, message: "Erro ao redefinir a senha" };
+  }
+};
+
+export const getDoctors = async () => {
+  try {
+    const response = await apiBase.get("doctors/");
+
+    if (response.status === 200) {
+      return response.data;
+    }
+  } catch (error) {
+    return error;
   }
 };
