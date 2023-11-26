@@ -18,7 +18,7 @@ import ButtonPrimary50 from "../../components/Forms/ButtonPrimary50";
 import { patchUsers } from "../../services/api";
 
 const PersonalInfo = ({ navigation }) => {
-  const { user, setUser } = useUserContext();
+  const { user } = useUserContext();
   const [userActual, setUserActual] = useState<IUser>({
     id: user[0]._id,
     name: user[0].name,
@@ -64,7 +64,7 @@ return (
                 <Input
                 placeholder={userActual.email}
                 onChangeText={(ev) =>
-                    setUser((old) => {
+                  setUserActual((old) => {
                     return { ...old, email: ev };
                     })
                 }
@@ -75,7 +75,7 @@ return (
         <Input
           placeholder={userActual.password}
           onChangeText={(ev) =>
-            setUser((old) => {
+            setUserActual((old) => {
               return { ...old, password: ev };
             })
           }
@@ -87,7 +87,7 @@ return (
         <Input
           placeholder={userActual.fullName}
           onChangeText={(ev) =>
-            setUser((old) => {
+            setUserActual((old) => {
               return { ...old, fullName: ev };
             })
           }
@@ -97,7 +97,7 @@ return (
         <Input
           placeholder={userActual.dateOfBirth}
           onChangeText={(ev) =>
-            setUser((old) => {
+            setUserActual((old) => {
               return { ...old, dateOfBirth: ev };
             })
           }
@@ -107,7 +107,7 @@ return (
         <Input
           placeholder={userActual.cpf}
           onChangeText={(ev) =>
-            setUser((old) => {
+            setUserActual((old) => {
               return { ...old, cpf: ev };
             })
           }
