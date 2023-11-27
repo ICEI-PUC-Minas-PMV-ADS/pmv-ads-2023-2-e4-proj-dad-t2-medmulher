@@ -1,13 +1,30 @@
 import { useState } from "react";
-import { Button, FlatList, Text, View, TouchableOpacity } from "react-native";
+import {
+  Button,
+  FlatList,
+  Text,
+  View,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 import Label from "../../components/Forms/Label";
 import Spacer from "../../components/Spacer";
-import { DATA, dates, day, hours, listDays } from "./data.mock";
+import {
+  DATA,
+  dates,
+  day,
+  dayConvert,
+  hours,
+  listDays,
+  monthConvert,
+} from "./data.mock";
 import { useUserContext } from "../../context/userContext";
 import { ViewContainer } from "../../ui/style/style";
+import ButtonPrimary from "../../components/Forms/ButtonPrimary";
+import { createConsult } from "../../services/api";
 
 function Schedulling({ navigation }) {
-  const { doctorList, doctorSpecialty } = useUserContext();
+  const { doctorList, doctorSpecialty, user } = useUserContext();
   const [open, setOpen] = useState(false);
   const [openDc, setOpenDc] = useState(false);
   const [openMt, setOpenMt] = useState(false);
@@ -21,11 +38,10 @@ function Schedulling({ navigation }) {
   const [valueDt, setValueDt] = useState("");
 
   const [docs, setDocs] = useState<any>();
-  const [month, setMonth] = useState<any>();
   const [doctor, setDoctor] = useState<any>();
   const [convertDay, setConvertDay] = useState("");
   const [mDays, setMDays] = useState<any>();
-  const [hour, setHour] = useState<any>([]);
+  const [hour, setHour] = useState<string>("");
 
   const months = async () => {
     const mt = DATA.map((el) => {
@@ -37,6 +53,31 @@ function Schedulling({ navigation }) {
     });
     setDocs(mt);
     return;
+  };
+
+  const submitForm = async () => {
+    const data = {
+      name: doctor.name,
+      specialty: doctor.specialty,
+      health_status: "Convencional",
+      symptoms: "Normal",
+      observation: "",
+      doctor_id: doctor._id,
+      schedulle_date: `2023-${monthConvert(valueMt)}-${valueDay}`,
+      day: `${dayConvert(valueDt)}`,
+      patient_id: user[0]._id,
+      patient_name: user[0].name,
+      hour: hour,
+      open: false,
+    };
+
+    const response = await createConsult(data);
+
+    if(response.status === 201){
+      return alert("Agendamento efetudo com sucesso!")
+    }
+    
+    return alert("Agendamento não efetudo! Este horário não está disponível!")
   };
 
   return (
@@ -53,7 +94,7 @@ function Schedulling({ navigation }) {
         onPress={() => setOpen(!open)}
         color="#7a4183"
       />
-      <View>
+      <ScrollView>
         {open && (
           <FlatList
             data={doctorSpecialty}
@@ -70,7 +111,7 @@ function Schedulling({ navigation }) {
             keyExtractor={(item) => item.label}
           />
         )}
-      </View>
+      </ScrollView>
       <Spacer margin="xs" />
       <Label title="Médico" />
       <Button
@@ -78,7 +119,7 @@ function Schedulling({ navigation }) {
         onPress={() => setOpenDc(!openDc)}
         color="#7a4183"
       />
-      <View>
+      <ScrollView>
         {openDc && (
           <FlatList
             data={doctorList.filter(
@@ -103,7 +144,7 @@ function Schedulling({ navigation }) {
             keyExtractor={(item) => item._id}
           />
         )}
-      </View>
+      </ScrollView>
       <Text>
         {convertDay
           ? `O Dr. ${doctor.name} só atende nos seguintes dias da semana: ${convertDay}`
@@ -122,7 +163,7 @@ function Schedulling({ navigation }) {
         onPress={() => setOpenMt(!openMt)}
         color="#7a4183"
       />
-      <View>
+      <ScrollView>
         {openMt && (
           <FlatList
             data={DATA}
@@ -140,7 +181,7 @@ function Schedulling({ navigation }) {
             keyExtractor={(item) => item.mounth}
           />
         )}
-      </View>
+      </ScrollView>
       <Spacer margin="lx" />
 
       <Label title="Data da consulta" />
@@ -149,7 +190,7 @@ function Schedulling({ navigation }) {
         onPress={() => setOpenDy(!openDy)}
         color="#7a4183"
       />
-      <View>
+      <ScrollView>
         {openDy && (
           <FlatList
             data={mDays}
@@ -166,16 +207,16 @@ function Schedulling({ navigation }) {
             keyExtractor={(item) => item}
           />
         )}
-      </View>
+      </ScrollView>
       <Spacer margin="lx" />
 
       <Label title="Dia da consulta" />
       <Button
         title={valueDt || "Selecione o dia"}
-        onPress={() => setOpenDt(!openMt)}
+        onPress={() => setOpenDt(!openDt)}
         color="#7a4183"
       />
-      <View>
+      <ScrollView>
         {openDt && (
           <FlatList
             data={listDays}
@@ -192,23 +233,49 @@ function Schedulling({ navigation }) {
             keyExtractor={(item) => item}
           />
         )}
-      </View>
+      </ScrollView>
       <Spacer margin="xs" />
       <Label title="Horário da consulta" />
-      <View style={{flexDirection: "row", flexWrap: "wrap", gap: 16, justifyContent: "space-between", paddingVertical: 20}}>
+      <View
+        style={{
+          flexDirection: "row",
+          flexWrap: "wrap",
+          gap: 16,
+          justifyContent: "space-between",
+          paddingVertical: 20,
+        }}
+      >
         {hours.map((hr) => (
           <TouchableOpacity
-          style={{paddingHorizontal:10, paddingVertical: 10, borderWidth: 2, borderRadius: 8, borderColor: "#8D4698", width: 66}}
-          onPress={() => { 
-            setHour((old) => ({ ...old, hr}))
-            }}>
-            <Text style={{ color: "#8D4698", textAlign: "center", fontSize: 14, fontWeight: "500"}}>{hr}</Text>
+            style={{
+              paddingHorizontal: 10,
+              paddingVertical: 10,
+              borderWidth: 2,
+              borderRadius: 8,
+              borderColor: "#8D4698",
+              width: 66,
+              backgroundColor: `${hour === hr ? "#8D4698" : "#FFF"}`,
+            }}
+            onPress={() => setHour(hr)}
+          >
+            <Text
+              style={{
+                color: `${hour === hr ? "#FFF" : "#8D4698"}`,
+                textAlign: "center",
+                fontSize: 14,
+                fontWeight: "500",
+              }}
+            >
+              {hr}
+            </Text>
           </TouchableOpacity>
         ))}
       </View>
 
       <Spacer margin="xs" />
+      <ButtonPrimary title="Agendar" onPress={submitForm} />
 
+      <Spacer margin="xs" />
     </ViewContainer>
   );
 }

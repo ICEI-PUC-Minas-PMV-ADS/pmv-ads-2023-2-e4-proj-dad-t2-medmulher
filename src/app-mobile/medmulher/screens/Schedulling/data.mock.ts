@@ -78,11 +78,63 @@ export const day = (name: string) => {
   }
 };
 
+export const dayConvert = (name: string) => {
+  switch (name) {
+    case "segunda-feira":
+      return "Monday";
+    case "terça-feira":
+      return "Tuesday";
+    case "quarta-feira":
+      return "Wednesday";
+    case "quinta-feira":
+      return "Thursday";
+    case "sexta-feira":
+      return "Friday";
+    case "sábado":
+      return "Saturday";
+    default:
+      return "Sunday";
+  }
+};
+
+export const monthConvert = (name: string) => {
+  switch (name) {
+    case "janeiro":
+      return "01";
+    case "fevereiro":
+      return "02";
+    case "março":
+      return "03";
+    case "abril":
+      return "04";
+    case "maio":
+      return "05";
+    case "junho":
+      return "06";
+    case "julho":
+      return "07";
+    case "agosto":
+      return "08";
+    case "setembro":
+      return "09";
+    case "outubro":
+      return "10";
+    case "novembro":
+      return "11";
+    default:
+      return "12";
+  }
+};
+
 export const dates = (num: number) => {
   const newArr = [];
 
   for (let i = 0; i < num; i++) {
-    newArr.push(`${i + 1}`);
+    if (i < 9) {
+      newArr.push(`0${i + 1}`);
+    } else {
+      newArr.push(`${i + 1}`);
+    }
   }
 
   return newArr;
