@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useUserContext, UserProvider } from "../../context/userContext";
 
 //Components
-import { Form, Title } from './style';
+import { Form, Title } from "./style";
 import ButtonSecundary from "../../components/Forms/ButtonSecundary";
 
 import { View, Text, TouchableOpacity, StatusBar } from "react-native";
@@ -24,9 +24,7 @@ const PersonalInfo = ({ navigation }) => {
     name: user[0].name,
     email: user[0].email,
     password: "**********",
-    fullName: user[0].fullName,
     cpf: user[0].cpf,
-    dateOfBirth: user[0].dateOfBirth,
     address: {
       logradouro: "",
       numero: "",
@@ -36,7 +34,6 @@ const PersonalInfo = ({ navigation }) => {
       estado: "",
       cep: "",
     },
-    sale: true,
   });
 
   async function submitForm() {
@@ -47,85 +44,80 @@ const PersonalInfo = ({ navigation }) => {
         return navigation.navigate("Profile");
       }
     } catch (error) {
-      alert('Falha ao atualizar dados');
+      alert("Falha ao atualizar dados");
       return error.message;
     }
   }
 
-
-return (
+  return (
     <SafeAreaView style={{ flex: 1, paddingTop: StatusBar.currentHeight }}>
-    <ViewContainer>
-      <Spacer margin={"sx"} />
+      <ViewContainer>
+        <Spacer margin={"sx"} />
 
         <Form>
-            <Title>Conta</Title>
-            <Label title="Email" />
-                <Input
-                placeholder={userActual.email}
-                onChangeText={(ev) =>
-                  setUserActual((old) => {
-                    return { ...old, email: ev };
-                    })
-                }
-                
-                />
-        <Spacer margin="xx" />
-        <Label title="Senha" />
-        <Input
-          placeholder={userActual.password}
-          onChangeText={(ev) =>
-            setUserActual((old) => {
-              return { ...old, password: ev };
-            })
-          }
-        />
-        <Spacer margin="xx" />
-        <Title>Pessoal</Title>
-        <Spacer margin="ms" />
-        <Label title="Nome completo" />
-        <Input
-          placeholder={userActual.fullName}
-          onChangeText={(ev) =>
-            setUserActual((old) => {
-              return { ...old, fullName: ev };
-            })
-          }
-        />
-        <Spacer margin="xx" />
-        <Label title="Data de nascimento" />
-        <Input
-          placeholder={userActual.dateOfBirth}
-          onChangeText={(ev) =>
-            setUserActual((old) => {
-              return { ...old, dateOfBirth: ev };
-            })
-          }
-        />
-        <Spacer margin="xx" />
-        <Label title="CPF" />
-        <Input
-          placeholder={userActual.cpf}
-          onChangeText={(ev) =>
-            setUserActual((old) => {
-              return { ...old, cpf: ev };
-            })
-          }
-        />
+          <Title>Conta</Title>
+          <Label title="Email" />
+          <Input
+            placeholder="Email"
+            onChangeText={(ev) =>
+              setUserActual((old) => {
+                return { ...old, email: ev };
+              })
+            }
+            value={userActual.email}
+          />
+          <Spacer margin="xx" />
+          <Label title="Senha" />
+          <Input
+            placeholder="*********"
+            onChangeText={(ev) =>
+              setUserActual((old) => {
+                return { ...old, password: ev };
+              })
+            }
+          />
+          <Spacer margin="xx" />
+          <Title>Pessoal</Title>
+          <Spacer margin="ms" />
+          <Label title="Nome completo" />
+          <Input
+            placeholder="Nome completo"
+            onChangeText={(ev) =>
+              setUserActual((old) => {
+                return { ...old, name: ev };
+              })
+            }
+            value={userActual.name}
+          />
+          <Spacer margin="xx" />
+          <Label title="CPF" />
+          <Input
+            placeholder="000.000.000-00"
+            onChangeText={(ev) =>
+              setUserActual((old) => {
+                return { ...old, cpf: ev };
+              })
+            }
+            value={userActual.cpf}
+          />
 
-        <Spacer margin="xx" />
-        <View style = {{flexDirection: 'row', justifyContent: 'space-between' }}>
-            
-            <ButtonSecundary50 title="Cancelar" onPress={() => navigation.navigate("Profile")} />
+          <Spacer margin="xx" />
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <ButtonSecundary50
+              title="Cancelar"
+              onPress={() => navigation.navigate("Profile")}
+            />
             <ButtonPrimary50 title="Cadastrar" onPress={submitForm} />
-        </View>
-      </Form>
-    </ViewContainer>
-    <ButtonNavBar navigation={navigation} />
-    </SafeAreaView>
-    
-);
+          </View>
+        </Form>
+        <Spacer margin="xx" />
 
-}
+      </ViewContainer>
+      <ButtonNavBar navigation={navigation} />
+    </SafeAreaView>
+  );
+};
 
 export default PersonalInfo;

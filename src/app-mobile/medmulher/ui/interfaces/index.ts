@@ -7,7 +7,7 @@ export interface IUser {
     cpf?: string,
     dateOfBirth?: string,
     address?: IAddress,
-    sale: boolean
+    sale?: boolean
 }
 
 export interface IConsultation {
