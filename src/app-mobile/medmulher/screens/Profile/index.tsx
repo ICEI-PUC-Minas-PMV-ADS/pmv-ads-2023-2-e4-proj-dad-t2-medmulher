@@ -24,10 +24,10 @@ import { useUserContext } from "../../context/userContext";
 import { deleteUsers } from "../../services/api";
 
 function Profile({ navigation }) {
-  const {user} = useUserContext()
+  const {user, setUser} = useUserContext()
   
   async function removeUser() {
-    const response = await deleteUsers(user.id);
+    const response = await deleteUsers(user[0]._id);
 
     if(response === "success delete"){
       alert("Usuário deletado com sucesso!");
@@ -86,11 +86,24 @@ function Profile({ navigation }) {
           >
             <ButtonSecundary
               title="Sair da conta"
-              onPress={() =>
-                navigation.reset({
-                  index: 0,
-                  routes: [{ name: "Inicial" }],
-                })
+              onPress={() =>{
+                setUser({
+                  id: 0,
+                  name: "",
+                  email: "",
+                  password: "**********",
+                  cpf: "",
+                  address: {
+                    logradouro: "",
+                    numero: "",
+                    complemento: "",
+                    bairro: "",
+                    cidade: "",
+                    estado: "",
+                    cep: "",
+                  },
+                });
+                navigation.navigate("Login")}
               }
               style={{ marginRight: 5, borderBlockColor: "#8D4698", borderLeftColor: "#8D4698", borderRightColor: "#8D4698" }}
             />

@@ -55,13 +55,6 @@ export const postUsers = async (data: IUser) => {
       password: data.password,
       cpf: data.cpf,
     });
-    /* const response: AxiosResponse<IAuth> = await apiBase.post("users/", {
-            name,
-            email,
-            password,
-            cpf,
-          });
-        */
     if (response.status >= 200 || response.status < 300) {
       return "success post";
     }
@@ -131,3 +124,15 @@ export const getDoctors = async () => {
     return error;
   }
 };
+
+export const createConsult = async (data: any) => {
+  try {
+    const response = await apiBase.post(`/consultations/${data.patient_id}/consult`, data);
+
+    if (response.status === 201) {
+      return response;
+    }
+  } catch (error) {
+    return error;
+  }
+}
