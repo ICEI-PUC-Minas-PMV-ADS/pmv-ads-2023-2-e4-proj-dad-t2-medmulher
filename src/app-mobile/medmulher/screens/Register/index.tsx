@@ -28,7 +28,7 @@ function Register({ navigation }) {
       bairro: "",
       cidade: "",
       estado: "",
-      cep: ""
+      cep: "",
     },
     sale: option,
   });
@@ -38,7 +38,8 @@ function Register({ navigation }) {
       const response = await postUsers(user);
 
       if (response === "success post") {
-        return navigation.navigate("Inicial");
+        alert("Cadastro efetuado com sucesso!");
+        return navigation.navigate("Login");
       }
 
       alert(
@@ -59,7 +60,6 @@ function Register({ navigation }) {
         }
       }
     }
-
 
     if (checkName(user.name)) {
       if (checkEmail(user.email)) {
@@ -94,7 +94,7 @@ function Register({ navigation }) {
             })
           }
         />
-        <Spacer margin="xx"/>
+        <Spacer margin="xx" />
         <Label title="CPF" />
         <Input
           placeholder="CPF"
@@ -118,7 +118,7 @@ function Register({ navigation }) {
         <Label title="Confirme a senha" />
         <Input placeholder="Confirme a senha" onChangeText={setConfirmPass} />
         <Spacer margin="ls" />
-       
+
         <Spacer margin="xs" />
         <SubTitle>
           Sua senha deve conter: {"\n"} {"\n"}- Crie uma senha com no mínimo 8
@@ -134,4 +134,4 @@ function Register({ navigation }) {
   );
 }
 
-export default Register;
+export default Register;
