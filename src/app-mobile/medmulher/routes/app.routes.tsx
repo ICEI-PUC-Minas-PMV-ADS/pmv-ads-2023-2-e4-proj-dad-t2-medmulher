@@ -51,7 +51,6 @@ function AppRoutes() {
       <Stack.Screen name="Informacoes Pessoais" component={PersonalInfo} />
       <Stack.Screen name="Agendamento" component={Schedulling} />
       <Stack.Screen name="sidebar" component={ButtonNavBar} />
-      <Stack.Screen name="Profile" component={Profile} />
     </Stack.Navigator>
   );
 }
