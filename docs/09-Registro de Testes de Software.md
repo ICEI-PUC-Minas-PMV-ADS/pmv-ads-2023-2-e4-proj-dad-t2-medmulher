@@ -53,6 +53,11 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 | Passos |  1) Acessar a aplicação “Med Mulher” </br> 2) Visualizar a área de login </br> 3) Fazer cadastro caso ainda não tenha se cadastrado </br> 4) Fazer login no sistema </br> 5) Ir para a página de agendamento de consultas </br> 6) Agendar consulta |
 | Resultado Obtido | Agendamento realizado com sucesso. |
 
+- **Login do paciente**:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/32d82265-c898-4fa1-9a23-d21c1f5643d1)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/7d78a97b-00ff-4b88-9bba-ef4bb03b1841)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/3e0df29d-fb85-4079-b1d8-216bb8dd7b74)
 
 - **Cadastro do paciente**:
   
@@ -64,6 +69,32 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/cfd1b1a8-3b04-40f0-a4e3-776eda89e2fa)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/228ae32d-f64e-4748-9a19-aa66eb68337c)
 
+- **Recuperação de senha do paciente**:
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/1b06e416-5ecf-4ba6-9bbe-43eb71d6dc06)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/01c510e2-02a4-4658-ad61-397de9b77095)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/b265f610-4b03-4017-922f-95124f761667)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/9f840e66-cc21-4129-ae80-e6c6ed7eb1b7)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/2089b12e-317e-441c-a7b8-2b15cd60b1d0)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/de7c64b6-fc3a-4445-a09b-99564868be4f)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/3e0df29d-fb85-4079-b1d8-216bb8dd7b74)
+
+- **Tela de Home do paciente**:
+  
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/7d3ede5e-1f24-4581-a651-a540c948d2b8)
+
+- **Informações pessoais do paciente**:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/5a14ed91-5ee5-4718-b1b2-2ee390d7965c)
+
+- **Agendamento do paciente**:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/4051534b-c250-4f5a-8579-09efd6ccbb82)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/c8559f64-39a3-4982-9c35-9f2d53e12787)
+
+- **Consultas do paciente**:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/e20aff71-bea9-4120-99f2-78ae391a4e3b)
 
 
 ### Evidências do teste realizado

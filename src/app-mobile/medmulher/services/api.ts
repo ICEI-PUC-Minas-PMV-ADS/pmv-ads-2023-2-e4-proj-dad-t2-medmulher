@@ -3,11 +3,24 @@ import { IAddress, IAuth, IBooks, IUser } from "../ui/interfaces";
 import { Alert } from "react-native";
 
 export const apiBase = axios.create({
-  baseURL: "http://192.168.0.176:3000/",
+  baseURL: "http://10.0.2.2:3000/",
   headers: {
     "Content-Type": "application/json",
   },
 });
+
+export const getConsultation = async () => {
+  try {
+    const response = await apiBase.get(`/consultations/`);
+
+    if (response.status === 200) {
+      return response.data;
+    }
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
 
 export const getUsers = async () => {
   try {
@@ -42,13 +55,6 @@ export const postUsers = async (data: IUser) => {
       password: data.password,
       cpf: data.cpf,
     });
-    /* const response: AxiosResponse<IAuth> = await apiBase.post("users/", {
-            name,
-            email,
-            password,
-            cpf,
-          });
-        */
     if (response.status >= 200 || response.status < 300) {
       return "success post";
     }
@@ -106,3 +112,27 @@ export const resetPassword = async (email: string, password: string) => {
     return { auth: false, message: "Erro ao redefinir a senha" };
   }
 };
+
+export const getDoctors = async () => {
+  try {
+    const response = await apiBase.get("doctors/");
+
+    if (response.status === 200) {
+      return response.data;
+    }
+  } catch (error) {
+    return error;
+  }
+};
+
+export const createConsult = async (data: any) => {
+  try {
+    const response = await apiBase.post(`/consultations/${data.patient_id}/consult`, data);
+
+    if (response.status === 201) {
+      return response;
+    }
+  } catch (error) {
+    return error;
+  }
+}

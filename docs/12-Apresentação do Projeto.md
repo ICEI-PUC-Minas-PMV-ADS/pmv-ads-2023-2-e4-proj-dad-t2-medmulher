@@ -14,3 +14,7 @@
 
 ### Etapa 3 - Vídeo da apresentação
 <a href="https://drive.google.com/file/d/1Ghr_QICtNaLyS6RPfUf2HX7ZDqQy4o7q/view?usp=drive_link"> Etapa 3</a>
+
+### Etapa 4 - Vídeo da apresentação
+<a href="https://drive.google.com/file/d/1_ENIMgBbS9ShBcH5exVmrC-qOR6G4ZWz/view?usp=drive_link"> Etapa 4</a>
+

@@ -15,7 +15,7 @@ function ButtonNavBar(props) {
         <Icon name="home" size={30} color="#767676"/>
         <Label title="Home" />
       </TouchableOpacity>
-      <TouchableOpacity  style={{alignItems:"center"}}>
+      <TouchableOpacity  style={{alignItems:"center"}} onPress={() => props.navigation.navigate("Agendamento")}>
         <Icon name="calendar" size={30} color="#767676" />
         <Label title="Agendar" />
       </TouchableOpacity>

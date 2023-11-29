@@ -7,8 +7,17 @@ export interface IUser {
     cpf?: string,
     dateOfBirth?: string,
     address?: IAddress,
-    sale: boolean
+    sale?: boolean
 }
+
+export interface IConsultation {
+    nameDoctor: string,
+    specialty: string,
+    schedulle_date?: string,
+    hour: number,
+}
+
+
 
 export interface IBooks {
     userId: number,
