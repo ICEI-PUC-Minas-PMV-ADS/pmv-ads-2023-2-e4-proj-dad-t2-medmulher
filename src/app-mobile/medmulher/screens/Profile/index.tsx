@@ -31,10 +31,7 @@ function Profile({ navigation }) {
 
     if(response === "success delete"){
       alert("Usuário deletado com sucesso!");
-      return navigation.reset({
-        index: 0,
-        routes: [{ name: "Inicial" }],
-      })
+      return navigation.navigate("Login")
     }
 
     alert("Ocorreu um erro ao tentar deletar seu usuário.")
@@ -54,7 +51,7 @@ function Profile({ navigation }) {
         <Spacer margin="xx" />
         <ButtonSecundary
           title="Minhas consultas"
-          onPress={() => navigation.navigate("Consultas")}
+          onPress={() => navigation.navigate("Minhas Consultas")}
           style={{ marginRight: 5, borderBlockColor: "#8D4698", borderLeftColor: "#8D4698", borderRightColor: "#8D4698"}}
           
         />

@@ -29,7 +29,7 @@ function RedefinePassword({ navigation }) {
 
         if (resetResponse.auth) {
           Alert.alert("Success", "Senha redefinida com sucesso!");
-          return navigation.navigate("Inicial");
+          return navigation.navigate("Login");
         } else {
           Alert.alert(
             "Error",

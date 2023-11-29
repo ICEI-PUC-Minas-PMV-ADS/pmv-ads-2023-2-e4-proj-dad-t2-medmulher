@@ -38,7 +38,8 @@ function Register({ navigation }) {
       const response = await postUsers(user);
 
       if (response === "success post") {
-        return navigation.navigate("Inicial");
+        alert("Cadastro efetuado com sucesso!");
+        return navigation.navigate("Login");
       }
 
       alert(
