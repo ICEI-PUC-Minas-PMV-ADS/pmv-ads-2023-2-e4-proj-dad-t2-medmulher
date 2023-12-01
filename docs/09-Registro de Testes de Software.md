@@ -85,7 +85,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 - **Informações pessoais do paciente**:
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/5a14ed91-5ee5-4718-b1b2-2ee390d7965c)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/447fcf66-ef33-4b96-8cf2-a84d22b3c962)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/64f3ec2c-258c-4154-b71b-0959d94037b0)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher/assets/103009155/e691d9e0-4424-4ad9-b049-050347e4be86)
 
