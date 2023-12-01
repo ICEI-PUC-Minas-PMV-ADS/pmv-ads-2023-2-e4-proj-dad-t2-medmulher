@@ -20,7 +20,7 @@
 
 ### Etapa 5 - 
  Slides da apresentação 
-[![Documentação](/docs/img/MedMulherapresentação.pdf)]
+[![Apresentação](/docs/MedMulherapresentação.pdf)]
 
 Vídeo Pit
 <a href=""> Etapa 5</a>
