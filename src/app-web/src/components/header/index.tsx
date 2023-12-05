@@ -23,7 +23,7 @@ const Header = () => {
   const isMobile = window.innerWidth < 480;
 
   const handleMenu = () => {
-    if(!isMobile) return;
+    if (!isMobile) return;
     setMenuItems(!menuItems);
   };
 
@@ -35,7 +35,6 @@ const Header = () => {
         <nav className="header-menu-home">
           {!isMobile && (
             <>
-              <MdLogout className="loggout" color={"8D4698"} cursor="pointer" onClick={Logout} />
               <ul className="header-menu-item-home">
                 <li>
                   <Link to="/inicio">Início</Link>
@@ -53,12 +52,7 @@ const Header = () => {
           )}
 
           <div className="nav-buttons-home">
-            <MdAccountCircle color={"#8D4698"} />
-            <MdExpandMore
-              color={"#1E1E1E"}
-              cursor="pointer"
-              onClick={handleMenu}
-            />
+            <MdLogout className="loggout" color={"8D4698"} cursor="pointer" onClick={Logout} />
 
             {menuItems ? (
               <aside className="drawer">
