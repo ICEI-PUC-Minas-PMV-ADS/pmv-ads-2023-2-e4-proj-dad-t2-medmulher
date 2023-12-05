@@ -1,8 +1,6 @@
 import Logo from "../../assets/Logo-rosa.svg";
 import {
-  MdAccountCircle,
   MdClose,
-  MdExpandMore,
   MdLogout,
 } from "react-icons/md";
 import "../../styles/components/Header.css";
