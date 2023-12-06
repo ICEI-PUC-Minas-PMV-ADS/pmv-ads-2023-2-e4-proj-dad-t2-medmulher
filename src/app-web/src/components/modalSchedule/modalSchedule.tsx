@@ -34,9 +34,6 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
     { value: "Friday", label: "Sexta" },
   ];
 
-  //MENSAGEM DE SUCESSO/ERRO
-  const [addSucesso, setAddSucesso] = useState(false);
-
   //REQUISIÇÃO POST
   const postSchedulleDoctor = async (id: string, data: InfoShedulle) => {
     try {
@@ -46,7 +43,6 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
       );
 
       if (response.status === 200) {
-        setAddSucesso(true);
         return response.data;
       }
     } catch (erro) {
@@ -86,21 +82,16 @@ export function Modal({ isOpen, setOpenModal }: IModal) {
 
       try {
         await postSchedulleDoctor(id, infoShedulle);
+        alert("Cadastro efetuado com sucesso!");
+        return window.location.reload();
+
       } catch (erro) {
         console.error("Erro ao enviar dados:", erro);
+        return alert("Erro ao adicionar novo horário de agendamento!");
       }
     },
     [formState]
   );
-
-  if (addSucesso) {
-    //add modal de sucesso
-    return (
-      <div>
-        <p>Cadatrado com sucesso!</p>
-      </div>
-    );
-  }
 
   const getDct = async () => {
     const response = await getDoctors();
