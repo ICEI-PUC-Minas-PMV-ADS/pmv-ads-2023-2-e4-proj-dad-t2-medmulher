@@ -144,9 +144,9 @@ const Profile = () => {
               <div key={index}>
                 <div className="schedulle-day">
                   <h3 className="day">{conversor(item.date)}</h3>
-                  <button className="secundary" type="button">
+                  {/* <button className="secundary" type="button">
                     <MdEdit />{" "}
-                  </button>
+                  </button> */}
                 </div>
                 <div className="schedulle-cards">
                   {item.hours.map((hour: any, i: number) => (

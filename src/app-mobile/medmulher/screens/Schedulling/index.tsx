@@ -39,7 +39,6 @@ function Schedulling({ navigation }) {
 
   const [docs, setDocs] = useState<any>();
   const [doctor, setDoctor] = useState<any>();
-  const [convertDay, setConvertDay] = useState("");
   const [mDays, setMDays] = useState<any>();
   const [hour, setHour] = useState<string>("");
 
@@ -64,7 +63,7 @@ function Schedulling({ navigation }) {
       observation: "",
       doctor_id: doctor._id,
       schedulle_date: `2023-${monthConvert(valueMt)}-${valueDay}`,
-      day: `${dayConvert(valueDt)}`,
+      day: dayConvert(valueDt),
       patient_id: user[0]._id,
       patient_name: user[0].name,
       hour: hour,
@@ -74,7 +73,7 @@ function Schedulling({ navigation }) {
     const response = await createConsult(data);
 
     if(response.status === 201){
-      return alert("Agendamento efetudo com sucesso!")
+      return  alert("Agendamento efetudo com sucesso!")
     }
     
     return alert("Agendamento não efetudo! Este horário não está disponível!")
@@ -130,11 +129,6 @@ function Schedulling({ navigation }) {
                 color="#7a4183"
                 title={item.name}
                 onPress={() => {
-                  setConvertDay("");
-                  if (item.consultation_date.length > 0) {
-                    const d = day(item.consultation_date[0].day);
-                    setConvertDay(d);
-                  }
                   setDoctor(item);
                   setValueDc(item.name.toLowerCase());
                   setOpenDc(!openDc);
@@ -145,11 +139,6 @@ function Schedulling({ navigation }) {
           />
         )}
       </ScrollView>
-      <Text>
-        {convertDay
-          ? `O Dr. ${doctor.name} só atende nos seguintes dias da semana: ${convertDay}`
-          : ""}
-      </Text>
       <Spacer margin="lx" />
 
       <Text style={{ fontSize: 16, textAlign: "left", color: "#404040" }}>

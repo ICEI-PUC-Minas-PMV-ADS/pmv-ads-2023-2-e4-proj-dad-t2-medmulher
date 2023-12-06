@@ -155,9 +155,9 @@ class DoctorController {
     ) {
       const schedulle = consultation_date.filter(
         (element) => element.schedulle_date === schedulle_date
-      )[0];
+      );
 
-      if (schedulle.hours.find((hr) => hr.hour === hours.hour)) {
+      if (schedulle.find((hr) => hr.hours[0].hour === hours.hour)) {
         res
           .status(403)
           .json({ message: "Este horário não está disponível!", status: 403 });

@@ -56,10 +56,10 @@ const ProfileSection = () => {
           <MdDelete />
           Deletar médico
         </button>
-        <button className="secundary">
+        {/* <button className="secundary">
           <MdEdit />
           Editar médico
-        </button>
+        </button> */}
       </div>
 
       {isOpen && (
