@@ -24,4 +24,4 @@ keywords:
   - Consultas	
 repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher
 version: 1.0.0
-date-released: 2024-06-23
+date-released: 2023-12-05
