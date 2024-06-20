@@ -15,8 +15,8 @@ authors:
     given-names: Sarah 
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Wilson
-    given-names: José
+    family-names: Vilela Cardoso
+    given-names: Leonardo 
 
 keywords:
   - Clínica
