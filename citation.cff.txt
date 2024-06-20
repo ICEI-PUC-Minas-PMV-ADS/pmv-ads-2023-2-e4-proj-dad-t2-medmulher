@@ -1,0 +1,27 @@
+message: Please cite this software using these metadata.
+title: MedMulher
+authors:
+  - family-names: Alkmim de Oliveira 
+    given-names: Fabiana
+  - family-names: Nordson Silva dos Santos
+    given-names: Herbert 
+  - family-names: Alves dos Santos Rosolem
+    given-names: Leticia 
+  - family-names: Penido de Souza
+    given-names: Rafael 
+  - family-names: Bicalho Cruz Magalhães
+    given-names: Ramon 
+  - family-names: Ellem Teixeira Ildelfonso
+    given-names: Sarah 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Wilson
+    given-names: José
+
+keywords:
+  - Clínica
+  - Agendamento 
+  - Consultas	
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t2-medmulher
+version: 1.0.0
+date-released: 2024-06-23
